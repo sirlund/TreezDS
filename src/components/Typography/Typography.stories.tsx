@@ -76,9 +76,9 @@ type Story = StoryObj<typeof Typography>;
 export const Headings: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      <div style={{ marginBottom: '8px' }}>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '8px' }}>Roboto Font Family</h3>
-        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Used for headings and display text</p>
+      <div style={{ marginBottom: '8px', padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Roboto Font Family</h3>
+        <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', margin: 0 }}>Used for headings and display text</p>
       </div>
       <Typography variant="headings-h1" as="h1">
         H1 - The quick brown fox jumps over the lazy dog
@@ -108,28 +108,28 @@ export const Headings: Story = {
 export const BodyText: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '8px' }}>Circular Std Font Family</h3>
-        <p style={{ fontSize: '14px', color: '#666', margin: 0, marginBottom: '16px' }}>Used for body text and UI elements</p>
+      <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Circular Std Font Family</h3>
+        <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', margin: 0 }}>Used for body text and UI elements</p>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <div>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
           <Typography variant="body-large">
             Body Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
           </Typography>
-          <small style={{ color: '#666' }}>Perfect for important content and introductory paragraphs</small>
+          <p style={{ fontSize: '12px', fontFamily: 'Circular Std', color: '#6b7280', marginTop: '8px', margin: 0 }}>Perfect for important content and introductory paragraphs</p>
         </div>
-        <div>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
           <Typography variant="body-medium">
             Body Medium - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </Typography>
-          <small style={{ color: '#666' }}>Default body text for most content</small>
+          <p style={{ fontSize: '12px', fontFamily: 'Circular Std', color: '#6b7280', marginTop: '8px', margin: 0 }}>Default body text for most content</p>
         </div>
-        <div>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
           <Typography variant="body-small">
             Body Small - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Typography>
-          <small style={{ color: '#666' }}>For secondary information and captions</small>
+          <p style={{ fontSize: '12px', fontFamily: 'Circular Std', color: '#6b7280', marginTop: '8px', margin: 0 }}>For secondary information and captions</p>
         </div>
       </div>
     </div>
@@ -139,13 +139,13 @@ export const BodyText: Story = {
 export const Labels: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '8px' }}>Label Styles</h3>
-        <p style={{ fontSize: '14px', color: '#666', margin: 0, marginBottom: '16px' }}>For form labels, UI components, and interactive elements</p>
+      <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Label Styles</h3>
+        <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', margin: 0 }}>For form labels, UI components, and interactive elements</p>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-        <div>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#333' }}>Regular Weight</h4>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#4b5563' }}>Regular Weight</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Typography variant="label-large">Label Large</Typography>
             <Typography variant="label-medium">Label Medium</Typography>
@@ -153,8 +153,8 @@ export const Labels: Story = {
             <Typography variant="label-x small">Label X Small</Typography>
           </div>
         </div>
-        <div>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#333' }}>Strong Weight</h4>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#4b5563' }}>Strong Weight</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Typography variant="label-large strong">Label Large Strong</Typography>
             <Typography variant="label-medium strong">Label Medium Strong</Typography>
@@ -179,8 +179,8 @@ export const Playground: Story = {
 export const SpecializedText: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '16px' }}>Capitalized Text</h3>
+      <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>Capitalized Text</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <Typography variant="capitalized text-large">Capitalized Text Large</Typography>
           <Typography variant="capitalized text-large strong">Capitalized Text Large Strong</Typography>
@@ -188,19 +188,19 @@ export const SpecializedText: Story = {
         </div>
       </div>
 
-      <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '16px' }}>Link Styles</h3>
+      <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>Link Styles</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <Typography variant="label link-large link" as="a" color="#1976d2">
+          <Typography variant="label link-large link" as="a" color="#6baa32">
             Large Link
           </Typography>
-          <Typography variant="label link-medium link" as="a" color="#1976d2">
+          <Typography variant="label link-medium link" as="a" color="#6baa32">
             Medium Link
           </Typography>
-          <Typography variant="label link-small link" as="a" color="#1976d2">
+          <Typography variant="label link-small link" as="a" color="#6baa32">
             Small Link
           </Typography>
-          <Typography variant="label link-x small link" as="a" color="#1976d2">
+          <Typography variant="label link-x small link" as="a" color="#6baa32">
             X Small Link
           </Typography>
         </div>
@@ -213,11 +213,11 @@ export const FontShowcase: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
       <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '16px' }}>Font Family Usage</h3>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>Font Family Usage</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-          <div style={{ padding: '20px', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>
-            <h4 style={{ fontFamily: 'Roboto', fontSize: '16px', marginBottom: '12px', color: '#333' }}>Roboto</h4>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>Used for headings and display text</p>
+          <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+            <h4 style={{ fontFamily: 'Roboto', fontSize: '18px', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Roboto</h4>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', marginBottom: '16px' }}>Used for headings and display text</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <Typography variant="headings-h3">Page Title</Typography>
               <Typography variant="headings-h5">Section Header</Typography>
@@ -225,9 +225,9 @@ export const FontShowcase: Story = {
             </div>
           </div>
           
-          <div style={{ padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px' }}>
-            <h4 style={{ fontFamily: 'Circular Std', fontSize: '16px', marginBottom: '12px', color: '#333' }}>Circular Std</h4>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>Used for body text and UI elements</p>
+          <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+            <h4 style={{ fontFamily: 'Circular Std', fontSize: '18px', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Circular Std</h4>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', marginBottom: '16px' }}>Used for body text and UI elements</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <Typography variant="body-medium">This is body text for reading</Typography>
               <Typography variant="label-medium strong">Form Label</Typography>
@@ -244,10 +244,10 @@ export const UsageExamples: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
       <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '16px' }}>✅ Good Examples</h3>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>✅ Good Examples</h3>
         
-        <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f8fff8', borderRadius: '8px', border: '1px solid #d4edda' }}>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#155724' }}>Proper Heading Hierarchy</h4>
+        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Proper Heading Hierarchy</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Typography variant="headings-h2" as="h2">Main Article Title</Typography>
             <Typography variant="headings-h4" as="h3">Section Heading</Typography>
@@ -256,39 +256,39 @@ export const UsageExamples: Story = {
           </div>
         </div>
 
-        <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f8fff8', borderRadius: '8px', border: '1px solid #d4edda' }}>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#155724' }}>Form Layout</h4>
+        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Form Layout</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div>
               <Typography variant="label-medium strong" as="label">Email Address</Typography>
-              <div style={{ padding: '8px 12px', border: '1px solid #ccc', borderRadius: '4px', marginTop: '4px' }}>
+              <div style={{ padding: '8px 12px', border: '1px solid #e5e7eb', borderRadius: '8px', marginTop: '4px', backgroundColor: '#fff' }}>
                 <Typography variant="body-medium">user@example.com</Typography>
               </div>
-              <Typography variant="label-small" color="#666">We'll never share your email</Typography>
+              <Typography variant="label-small" color="#6b7280">We'll never share your email</Typography>
             </div>
           </div>
         </div>
       </div>
 
       <div>
-        <h3 style={{ fontFamily: 'system-ui', fontSize: '18px', marginBottom: '16px' }}>❌ Avoid These</h3>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>❌ Avoid These</h3>
         
-        <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#fff8f8', borderRadius: '8px', border: '1px solid #f5c6cb', opacity: 0.7 }}>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#721c24' }}>Skipping Heading Levels</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#991b1b' }}>Skipping Heading Levels</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', opacity: 0.7 }}>
             <Typography variant="headings-h1">Main Title</Typography>
             <Typography variant="headings-h5">❌ Skipped H2, H3, H4</Typography>
-            <p style={{ fontSize: '12px', color: '#721c24', margin: 0 }}>This breaks accessibility and visual hierarchy</p>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>This breaks accessibility and visual hierarchy</p>
           </div>
         </div>
 
-        <div style={{ padding: '16px', backgroundColor: '#fff8f8', borderRadius: '8px', border: '1px solid #f5c6cb', opacity: 0.7 }}>
-          <h4 style={{ fontSize: '14px', marginBottom: '12px', color: '#721c24' }}>Inconsistent Text Sizes</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#991b1b' }}>Inconsistent Text Sizes</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', opacity: 0.7 }}>
             <Typography variant="body-large">Some content here</Typography>
             <Typography variant="label-small">❌ Then jumping to very small text</Typography>
             <Typography variant="headings-h3">❌ Then very large text</Typography>
-            <p style={{ fontSize: '12px', color: '#721c24', margin: 0 }}>Creates visual chaos and poor user experience</p>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>Creates visual chaos and poor user experience</p>
           </div>
         </div>
       </div>

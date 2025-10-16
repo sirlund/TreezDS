@@ -127,7 +127,7 @@ export const Overview: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', padding: '24px' }}>
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Variants</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Variants</h3>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Button variant="primary">Primary</Button>
           <Button variant="secondary">Secondary</Button>
@@ -136,7 +136,7 @@ export const Overview: Story = {
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Sizes</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Sizes</h3>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Button size="small">Small</Button>
           <Button size="medium">Medium</Button>
@@ -145,7 +145,7 @@ export const Overview: Story = {
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>With Icons</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>With Icons</h3>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Button iconBefore={<span>←</span>}>Back</Button>
           <Button variant="secondary" iconAfter={<span>→</span>}>Next</Button>
@@ -154,7 +154,7 @@ export const Overview: Story = {
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>States</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>States</h3>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Button>Default</Button>
           <Button disabled>Disabled</Button>
@@ -169,55 +169,65 @@ export const UsageExamples: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', padding: '24px' }}>
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>✅ Good Examples</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>✅ Good Examples</h3>
         
         <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px', fontFamily: 'system-ui', fontSize: '14px', color: '#666' }}>Form Actions</h4>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <Button variant="primary">Save Changes</Button>
-            <Button variant="secondary">Cancel</Button>
+          <h4 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Form Actions</h4>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <Button variant="primary">Save Changes</Button>
+              <Button variant="secondary">Cancel</Button>
+            </div>
           </div>
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px', fontFamily: 'system-ui', fontSize: '14px', color: '#666' }}>Navigation</h4>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <Button variant="secondary" iconBefore={<span>←</span>}>Back</Button>
-            <Button variant="primary" iconAfter={<span>→</span>}>Continue</Button>
+          <h4 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Navigation</h4>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <Button variant="secondary" iconBefore={<span>←</span>}>Back</Button>
+              <Button variant="primary" iconAfter={<span>→</span>}>Continue</Button>
+            </div>
           </div>
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px', fontFamily: 'system-ui', fontSize: '14px', color: '#666' }}>List Actions</h4>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <Button variant="tertiary" size="small" iconBefore={<span>✏️</span>}>Edit</Button>
-            <Button variant="tertiary" size="small" iconBefore={<span>🗑️</span>}>Delete</Button>
-            <Button variant="tertiary" size="small" iconBefore={<span>📋</span>}>Copy</Button>
+          <h4 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>List Actions</h4>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <Button variant="tertiary" size="small" iconBefore={<span>✏️</span>}>Edit</Button>
+              <Button variant="tertiary" size="small" iconBefore={<span>🗑️</span>}>Delete</Button>
+              <Button variant="tertiary" size="small" iconBefore={<span>📋</span>}>Copy</Button>
+            </div>
           </div>
         </div>
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>❌ Avoid These</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>❌ Avoid These</h3>
         
         <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px', fontFamily: 'system-ui', fontSize: '14px', color: '#666' }}>Multiple Primary Buttons</h4>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', opacity: 0.6 }}>
-            <Button variant="primary">Save</Button>
-            <Button variant="primary">Send</Button>
-            <Button variant="primary">Submit</Button>
+          <h4 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Multiple Primary Buttons</h4>
+          <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center', opacity: 0.6 }}>
+              <Button variant="primary">Save</Button>
+              <Button variant="primary">Send</Button>
+              <Button variant="primary">Submit</Button>
+            </div>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', marginTop: '12px', margin: 0 }}>❌ Too many competing primary actions</p>
           </div>
-          <p style={{ fontSize: '12px', color: '#999', marginTop: '4px' }}>❌ Too many competing primary actions</p>
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px', fontFamily: 'system-ui', fontSize: '14px', color: '#666' }}>Vague Labels</h4>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', opacity: 0.6 }}>
-            <Button variant="primary">Click Here</Button>
-            <Button variant="secondary">Submit</Button>
-            <Button variant="tertiary">Go</Button>
+          <h4 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Vague Labels</h4>
+          <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center', opacity: 0.6 }}>
+              <Button variant="primary">Click Here</Button>
+              <Button variant="secondary">Submit</Button>
+              <Button variant="tertiary">Go</Button>
+            </div>
+            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', marginTop: '12px', margin: 0 }}>❌ Labels don't describe the action clearly</p>
           </div>
-          <p style={{ fontSize: '12px', color: '#999', marginTop: '4px' }}>❌ Labels don't describe the action clearly</p>
         </div>
       </div>
     </div>
@@ -241,11 +251,11 @@ export const TechnicalSpecs: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', padding: '24px' }}>
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Size Comparison</h3>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Size Comparison</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {['primary', 'secondary', 'tertiary'].map((variant) => (
             <div key={variant} style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              <span style={{ width: '80px', fontSize: '14px', textTransform: 'capitalize' }}>{variant}:</span>
+              <span style={{ width: '80px', fontSize: '14px', fontFamily: 'Circular Std', fontWeight: '500', textTransform: 'capitalize', color: '#4b5563' }}>{variant}:</span>
               <Button variant={variant as any} size="small">Small</Button>
               <Button variant={variant as any} size="medium">Medium</Button>
               <Button variant={variant as any} size="large">Large</Button>
@@ -255,43 +265,49 @@ export const TechnicalSpecs: Story = {
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Padding Differences</h3>
-        <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Padding Differences</h3>
+        <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', marginBottom: '16px' }}>
           Tertiary buttons have reduced horizontal padding for visual balance
         </p>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <Button variant="primary">Primary (20px)</Button>
-          <Button variant="secondary">Secondary (20px)</Button>
-          <Button variant="tertiary">Tertiary (10px)</Button>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <Button variant="primary">Primary (20px)</Button>
+            <Button variant="secondary">Secondary (20px)</Button>
+            <Button variant="tertiary">Tertiary (10px)</Button>
+          </div>
         </div>
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Icon Spacing</h3>
-        <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Icon Spacing</h3>
+        <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', marginBottom: '16px' }}>
           Icon buttons automatically adjust padding for proper visual alignment
         </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-            <Button iconBefore={<span>+</span>}>With Icon</Button>
-            <Button>Without Icon</Button>
-          </div>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-            <Button variant="secondary" iconAfter={<span>→</span>}>Icon After</Button>
-            <Button variant="tertiary" iconBefore={<span>⚙️</span>} iconAfter={<span>↗</span>}>Both Icons</Button>
+        <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+              <Button iconBefore={<span>+</span>}>With Icon</Button>
+              <Button>Without Icon</Button>
+            </div>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+              <Button variant="secondary" iconAfter={<span>→</span>}>Icon After</Button>
+              <Button variant="tertiary" iconBefore={<span>⚙️</span>} iconAfter={<span>↗</span>}>Both Icons</Button>
+            </div>
           </div>
         </div>
       </div>
 
       <div>
-        <h3 style={{ marginBottom: '16px', fontFamily: 'system-ui', fontSize: '18px' }}>Accessibility</h3>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <Button>Keyboard Focusable</Button>
-          <Button disabled>Screen Reader Compatible</Button>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Accessibility</h3>
+        <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <Button>Keyboard Focusable</Button>
+            <Button disabled>Screen Reader Compatible</Button>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#15803d', marginTop: '12px', margin: 0 }}>
+            All buttons support keyboard navigation and include proper ARIA attributes
+          </p>
         </div>
-        <p style={{ fontSize: '12px', color: '#666', marginTop: '8px' }}>
-          All buttons support keyboard navigation and include proper ARIA attributes
-        </p>
       </div>
     </div>
   ),
