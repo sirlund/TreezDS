@@ -12,9 +12,9 @@ export interface ButtonProps {
 
   /**
    * Button size
-   * - `small`: 8px vertical padding, 12px/6px horizontal
-   * - `medium`: 8px vertical padding, 20px/10px horizontal (default)
-   * - `large`: 12px vertical padding, 24px/12px horizontal
+   * - `small`: 32px height
+   * - `medium`: 40px height (default)
+   * - `large`: 52px height
    */
   size?: 'small' | 'medium' | 'large';
 
@@ -44,10 +44,15 @@ export interface ButtonProps {
 }
 
 /**
- * Button component from Treez Design System
+ * Button v2 (beta) - Treez Design System
  *
- * Implements the Button v2 (beta) design with three variants (Primary, Secondary, Tertiary)
- * and three sizes (Small, Medium, Large).
+ * The Button component allows users to create visually appealing experiences with
+ * flexible customization options. It supports three different types of buttons:
+ * Primary (filled), Secondary (outlined), and Tertiary (text).
+ *
+ * Additionally, buttons can be created in three different sizes: Medium (default), Large, and Small.
+ *
+ * @see https://www.figma.com/design/zPEk7VNZnVzhGaNCnalP6o/Design-System?node-id=16340-114580
  *
  * @example
  * ```tsx

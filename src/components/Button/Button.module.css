@@ -3,32 +3,24 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px; /* spaceXSmall */
   border: none;
   cursor: pointer;
-  font-family: 'Inter', 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   transition: all 0.15s ease-in-out;
   text-decoration: none;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .button:disabled {
-  opacity: 0.4;
   cursor: not-allowed;
-}
-
-.button:not(:disabled):hover {
-  transform: translateY(-1px);
-  filter: brightness(0.95);
-}
-
-.button:not(:disabled):active {
-  transform: translateY(0);
+  color: #949494; /* text-disabled */
 }
 
 .button:not(:disabled):focus-visible {
-  outline: 2px solid var(--color-button-focus-outline);
+  outline: 2px solid #1a4007; /* accent-green10 */
   outline-offset: 2px;
 }
 
@@ -46,80 +38,108 @@
 
 /* Primary (Filled) variant */
 .primary {
-  background-color: var(--color-button-primary-bg);
-  color: var(--color-button-primary-text);
+  background-color: #a9e079; /* primary-main */
+  color: #0f1709; /* text-primary */
+  border: 1px solid transparent;
 }
 
 .primary:not(:disabled):hover {
-  background-color: var(--color-button-primary-hover);
+  background-color: #8ccc52; /* primary-dark */
 }
 
 .primary:not(:disabled):active {
-  background-color: var(--color-button-primary-active);
+  background-color: #8ccc52; /* primary-dark */
+}
+
+.primary:disabled {
+  background-color: #e6e6e6; /* neutral-grey04 */
+  color: #949494; /* text-disabled */
 }
 
 /* Secondary (Outlined) variant */
 .secondary {
-  background-color: transparent;
-  color: var(--color-button-secondary-text);
-  border: 1px solid var(--color-button-secondary-border);
+  background-color: #ffffff; /* neutral-white */
+  color: #0f1709; /* text-primary */
+  border: 1px solid #bfbfbf; /* neutral-grey05 */
 }
 
 .secondary:not(:disabled):hover {
-  background-color: var(--color-button-secondary-hover-bg);
+  background-color: #f0f0f0; /* neutral-grey03 */
+  border-color: #1a1a1a; /* neutral-black */
 }
 
 .secondary:not(:disabled):active {
-  background-color: var(--color-button-secondary-active-bg);
+  background-color: #e6e6e6; /* neutral-grey04 */
+  border-color: #1a1a1a; /* neutral-black */
+}
+
+.secondary:disabled {
+  background-color: #ffffff; /* neutral-white */
+  border-color: #e6e6e6; /* neutral-grey04 */
+  color: #949494; /* text-disabled */
 }
 
 /* Tertiary (Text) variant */
 .tertiary {
   background-color: transparent;
-  color: var(--color-button-tertiary-text);
+  color: #0f1709; /* text-primary */
   border: none;
 }
 
 .tertiary:not(:disabled):hover {
-  background-color: var(--color-button-tertiary-hover-bg);
+  background-color: #f0f0f0; /* neutral-grey03 */
 }
 
 .tertiary:not(:disabled):active {
-  background-color: var(--color-button-tertiary-active-bg);
+  background-color: #e6e6e6; /* neutral-grey04 */
+}
+
+.tertiary:disabled {
+  background-color: transparent;
+  color: #949494; /* text-disabled */
 }
 
 /* Size variants - from Figma exact measurements */
+/* Small: 32px height */
 .small {
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-size: 12px;
+  height: 32px;
+  padding: 4px 12px; /* space2xSmall spaceSmall */
+  border-radius: 12px; /* radiusSmall */
+  font-size: 12px; /* labelSmallStrong */
   line-height: 16px;
+  font-weight: 500;
 }
 
 .small.tertiary {
-  padding: 8px 6px;
+  padding: 4px 8px; /* space2xSmall spaceXSmall */
 }
 
+/* Medium: 40px height (default) */
 .medium {
-  padding: 8px 20px;
-  border-radius: 16px;
-  font-size: 14px;
-  line-height: 20px;
+  height: 40px;
+  padding: 8px 20px; /* spaceXSmall spaceLarge */
+  border-radius: 16px; /* radiusMedium */
+  font-size: 15px; /* labelLargeStrong */
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .medium.tertiary {
-  padding: 8px 10px;
+  padding: 8px 12px; /* spaceXSmall spaceSmall */
 }
 
+/* Large: 52px height */
 .large {
-  padding: 12px 24px;
-  border-radius: 16px;
-  font-size: 15px;
+  height: 52px;
+  padding: 12px 24px; /* spaceSmall spaceXLarge */
+  border-radius: 16px; /* radiusMedium */
+  font-size: 15px; /* labelLargeStrong */
   line-height: 24px;
+  font-weight: 500;
 }
 
 .large.tertiary {
-  padding: 12px 12px;
+  padding: 12px 12px; /* spaceSmall spaceSmall */
 }
 
 /* Full width variant */

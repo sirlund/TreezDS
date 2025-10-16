@@ -147,6 +147,43 @@ export const WithIcons: Story = {
   ),
 };
 
+// All button states
+export const States: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Button States</h3>
+        <p style={{ marginBottom: '16px', fontFamily: 'Circular Std', fontSize: '14px', color: '#6b7280' }}>
+          Buttons support multiple interaction states: enabled (default), hovered, pressed, focused, and disabled.
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Primary States</h4>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <Button variant="primary">Enabled</Button>
+              <Button variant="primary" disabled>Disabled</Button>
+            </div>
+          </div>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Secondary States</h4>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <Button variant="secondary">Enabled</Button>
+              <Button variant="secondary" disabled>Disabled</Button>
+            </div>
+          </div>
+          <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
+            <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#4b5563' }}>Tertiary States</h4>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <Button variant="tertiary">Enabled</Button>
+              <Button variant="tertiary" disabled>Disabled</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
 // Do's and Don'ts in 2-column card layout
 export const DosAndDonts: Story = {
   render: () => (
