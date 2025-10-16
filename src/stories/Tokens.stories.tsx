@@ -24,12 +24,23 @@ export default meta;
 type Story = StoryObj;
 
 // Shared Components
-const TokenCard = ({ children, style = {} }: { children: React.ReactNode; style?: React.CSSProperties }) => (
+const TokenCard = ({ 
+  children, 
+  style = {}, 
+  variant = 'column' 
+}: { 
+  children: React.ReactNode; 
+  style?: React.CSSProperties;
+  variant?: 'column' | 'row';
+}) => (
   <div style={{
     padding: '16px',
     border: '1px solid #e0e0e0',
     borderRadius: '8px',
     backgroundColor: '#fff',
+    display: variant === 'row' ? 'flex' : 'block',
+    alignItems: variant === 'row' ? 'center' : 'stretch',
+    gap: variant === 'row' ? '16px' : '0',
     ...style
   }}>
     {children}
@@ -82,8 +93,8 @@ const ColorSwatch = ({ name, value, cssVar }: { name: string; value: string; css
 );
 
 const SpacingToken = ({ name, value, cssVar }: { name: string; value: string; cssVar: string }) => (
-  <TokenCard>
-    <div style={{ marginBottom: '12px' }}>
+  <TokenCard variant="row">
+    <div style={{ flex: 1, minWidth: 0 }}>
       <div style={{
         fontWeight: '600',
         fontSize: '13px',
@@ -96,7 +107,7 @@ const SpacingToken = ({ name, value, cssVar }: { name: string; value: string; cs
         fontFamily: 'monospace',
         fontSize: '12px',
         color: '#666',
-        marginBottom: '8px'
+        marginBottom: '4px'
       }}>
         {value}
       </div>
@@ -122,7 +133,8 @@ const SpacingToken = ({ name, value, cssVar }: { name: string; value: string; cs
       justifyContent: 'center',
       fontSize: '12px',
       color: '#0f1709',
-      fontWeight: '500'
+      fontWeight: '500',
+      flexShrink: 0
     }}>
       {value}
     </div>
@@ -130,8 +142,8 @@ const SpacingToken = ({ name, value, cssVar }: { name: string; value: string; cs
 );
 
 const RadiusToken = ({ name, value, cssVar }: { name: string; value: string; cssVar: string }) => (
-  <TokenCard>
-    <div style={{ marginBottom: '12px' }}>
+  <TokenCard variant="row">
+    <div style={{ flex: 1, minWidth: 0 }}>
       <div style={{
         fontWeight: '600',
         fontSize: '13px',
@@ -144,7 +156,7 @@ const RadiusToken = ({ name, value, cssVar }: { name: string; value: string; css
         fontFamily: 'monospace',
         fontSize: '12px',
         color: '#666',
-        marginBottom: '8px'
+        marginBottom: '4px'
       }}>
         {value}
       </div>
@@ -165,12 +177,21 @@ const RadiusToken = ({ name, value, cssVar }: { name: string; value: string; css
       height: '100px',
       backgroundColor: '#a9e079',
       borderRadius: value,
-      border: '2px solid #6baa32'
+      border: '2px solid #6baa32',
+      flexShrink: 0
     }} />
   </TokenCard>
 );
 
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+const Section = ({ 
+  title, 
+  children,
+  layout = 'grid' 
+}: { 
+  title: string; 
+  children: React.ReactNode;
+  layout?: 'grid' | 'list';
+}) => (
   <div style={{ marginBottom: '48px' }}>
     <h2 style={{
       fontFamily: 'Inter, sans-serif',
@@ -181,10 +202,14 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     }}>
       {title}
     </h2>
-    <div style={{
+    <div style={layout === 'grid' ? {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
       gap: '16px'
+    } : {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
     }}>
       {children}
     </div>
@@ -476,7 +501,7 @@ export const Spacing: Story = {
         </p>
       </div>
 
-      <Section title="Spacing Scale">
+      <Section title="Spacing Scale" layout="list">
         {Object.entries(spacing).map(([key, value]) => (
           <SpacingToken
             key={key}
@@ -487,7 +512,7 @@ export const Spacing: Story = {
         ))}
       </Section>
 
-      <Section title="Size Scale (Beta)">
+      <Section title="Size Scale (Beta)" layout="list">
         {Object.entries(size).map(([key, value]) => (
           <SpacingToken
             key={key}
@@ -527,7 +552,7 @@ export const Radius: Story = {
         </p>
       </div>
 
-      <Section title="Border Radius Scale">
+      <Section title="Border Radius Scale" layout="list">
         {Object.entries(radius).map(([key, value]) => (
           <RadiusToken
             key={key}
