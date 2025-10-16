@@ -10,43 +10,9 @@ const meta: Meta<typeof Typography> = {
     docs: {
       description: {
         component: `
-# Typography System
+The Typography component allows users to create visually appealing text with consistent styling across the design system. It supports multiple type styles including headings (H1-H7), body text, labels, and links.
 
-A comprehensive typography system using two carefully selected fonts to create clear visual hierarchy and excellent readability.
-
-## Font Families
-
-- **Roboto** - Used for headings and display text for strong visual impact
-- **Circular Std** - Used for labels, body text, and UI elements for optimal readability
-
-## Type Scale
-
-- **Headings (H1-H7)** - Roboto font for clear hierarchy and emphasis
-- **Body Text** - Circular Std in large, medium, and small sizes
-- **Labels** - Circular Std for form labels and UI text
-- **Links** - Circular Std with appropriate styling for interactive elements
-
-## ✅ Do's
-
-- Use headings (H1-H7) to establish clear content hierarchy
-- Choose body text sizes based on content importance and reading distance
-- Use label styles for form elements and UI components
-- Maintain consistent line spacing for readability
-- Combine font weights appropriately (regular/strong)
-
-## ❌ Don'ts
-
-- Don't skip heading levels (e.g., H1 to H3 without H2)
-- Don't use too many different text sizes in one interface
-- Don't use small text for important information
-- Don't mix fonts outside the established system
-- Don't use text that's too light against light backgrounds
-
-## Accessibility
-
-- All text meets WCAG contrast requirements
-- Semantic HTML elements support screen readers
-- Consistent spacing improves readability for all users
+The system uses two font families: Roboto for headings and display text, and Circular Std for body text, labels, and UI elements. Each style comes with predefined sizes and weights to ensure clear visual hierarchy and optimal readability.
         `,
       },
     },
@@ -72,6 +38,27 @@ A comprehensive typography system using two carefully selected fonts to create c
 
 export default meta;
 type Story = StoryObj<typeof Typography>;
+
+// Main example - shown first
+export const Example: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <Typography variant="headings-h2" as="h2">
+        Typography System
+      </Typography>
+      <Typography variant="body-large">
+        A comprehensive typography system using Roboto for headings and Circular Std for body text, creating clear visual hierarchy and excellent readability.
+      </Typography>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <Typography variant="headings-h4" as="h3">Section Heading</Typography>
+        <Typography variant="body-medium">
+          This is body text at the medium size, perfect for most content and reading experiences.
+        </Typography>
+        <Typography variant="label-medium strong" as="label">Form Label</Typography>
+      </div>
+    </div>
+  ),
+};
 
 export const Headings: Story = {
   render: () => (
@@ -170,10 +157,88 @@ export const Labels: Story = {
 // Interactive playground for testing
 export const Playground: Story = {
   args: {
-    variant: 'headings-h1',
-    as: 'h1',
+    variant: 'headings-h2',
+    as: 'h2',
     children: 'The quick brown fox jumps over the lazy dog',
   },
+};
+
+// Do's and Don'ts in 2-column card layout
+export const DosAndDonts: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', maxWidth: '1200px' }}>
+      {/* DO's Column */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <h3 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#15803d' }}>✅ Do's</h3>
+        
+        {/* Proper Hierarchy - Good */}
+        <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#15803d' }}>Follow heading hierarchy</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+            <Typography variant="headings-h2" as="h2">Page Title (H2)</Typography>
+            <Typography variant="headings-h4" as="h3">Section (H4)</Typography>
+            <Typography variant="headings-h6" as="h4">Subsection (H6)</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', margin: 0 }}>Maintain logical heading order for accessibility</p>
+        </div>
+
+        {/* Appropriate sizes - Good */}
+        <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#15803d' }}>Use appropriate text sizes</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+            <Typography variant="body-large">Important content in large size</Typography>
+            <Typography variant="body-medium">Regular content in medium</Typography>
+            <Typography variant="body-small">Secondary info in small</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', margin: 0 }}>Match text size to content importance</p>
+        </div>
+
+        {/* Good contrast - Good */}
+        <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#15803d' }}>Ensure good contrast</h4>
+          <div style={{ marginBottom: '8px' }}>
+            <Typography variant="body-medium" color="#1f2937">Dark text on light background</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', margin: 0 }}>Meet WCAG contrast requirements for readability</p>
+        </div>
+      </div>
+
+      {/* DON'T Column */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <h3 style={{ marginBottom: '8px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#991b1b' }}>❌ Don'ts</h3>
+        
+        {/* Skipping levels - Bad */}
+        <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#991b1b' }}>Skip heading levels</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px', opacity: 0.7 }}>
+            <Typography variant="headings-h1">Title (H1)</Typography>
+            <Typography variant="headings-h5">❌ Skipped to H5</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>This breaks screen reader navigation and hierarchy</p>
+        </div>
+
+        {/* Too many sizes - Bad */}
+        <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#991b1b' }}>Mix too many text sizes</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '8px', opacity: 0.7 }}>
+            <Typography variant="body-large">Large text</Typography>
+            <Typography variant="label-x small">Then tiny text</Typography>
+            <Typography variant="headings-h3">Then huge text</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>Creates visual chaos and poor readability</p>
+        </div>
+
+        {/* Poor contrast - Bad */}
+        <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
+          <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#991b1b' }}>Use low contrast text</h4>
+          <div style={{ marginBottom: '8px', opacity: 0.7 }}>
+            <Typography variant="body-medium" color="#d1d5db">Light gray on white background</Typography>
+          </div>
+          <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>Fails accessibility standards and hard to read</p>
+        </div>
+      </div>
+    </div>
+  ),
 };
 
 export const SpecializedText: Story = {
@@ -233,62 +298,6 @@ export const FontShowcase: Story = {
               <Typography variant="label-medium strong">Form Label</Typography>
               <Typography variant="label-small">Helper text</Typography>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ),
-};
-
-export const UsageExamples: Story = {
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-      <div>
-        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>✅ Good Examples</h3>
-        
-        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
-          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Proper Heading Hierarchy</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <Typography variant="headings-h2" as="h2">Main Article Title</Typography>
-            <Typography variant="headings-h4" as="h3">Section Heading</Typography>
-            <Typography variant="headings-h6" as="h4">Subsection</Typography>
-            <Typography variant="body-medium">Body text follows with appropriate contrast and spacing.</Typography>
-          </div>
-        </div>
-
-        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
-          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#15803d' }}>Form Layout</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div>
-              <Typography variant="label-medium strong" as="label">Email Address</Typography>
-              <div style={{ padding: '8px 12px', border: '1px solid #e5e7eb', borderRadius: '8px', marginTop: '4px', backgroundColor: '#fff' }}>
-                <Typography variant="body-medium">user@example.com</Typography>
-              </div>
-              <Typography variant="label-small" color="#6b7280">We'll never share your email</Typography>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '16px', color: '#1f2937' }}>❌ Avoid These</h3>
-        
-        <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
-          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#991b1b' }}>Skipping Heading Levels</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', opacity: 0.7 }}>
-            <Typography variant="headings-h1">Main Title</Typography>
-            <Typography variant="headings-h5">❌ Skipped H2, H3, H4</Typography>
-            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>This breaks accessibility and visual hierarchy</p>
-          </div>
-        </div>
-
-        <div style={{ padding: '20px', backgroundColor: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px' }}>
-          <h4 style={{ fontSize: '16px', fontFamily: 'Roboto', fontWeight: '500', marginBottom: '12px', color: '#991b1b' }}>Inconsistent Text Sizes</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', opacity: 0.7 }}>
-            <Typography variant="body-large">Some content here</Typography>
-            <Typography variant="label-small">❌ Then jumping to very small text</Typography>
-            <Typography variant="headings-h3">❌ Then very large text</Typography>
-            <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#991b1b', margin: 0 }}>Creates visual chaos and poor user experience</p>
           </div>
         </div>
       </div>
