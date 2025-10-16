@@ -1,0 +1,17 @@
+/**
+ * Radius Tokens - Auto-generated from Figma
+ * DO NOT EDIT MANUALLY - Run 'npm run tokens:transform' to regenerate
+ */
+
+:root {
+  /* Border Radius */
+  --radius-radius-none: 0px; /* Radius/radius-none */
+  --radius-radius-x-small: 8px; /* Radius/radius-x-small */
+  --radius-radius-medium: 16px; /* Radius/radius-medium */
+  --radius-radius-large: 20px; /* Radius/radius-large */
+  --radius-radius-2x-small: 6px; /* Radius/radius-2x-small */
+  --radius-radius-x-large: 24px; /* Radius/radius-x-large */
+  --radius-radius-2x-large: 32px; /* Radius/radius-2x-large */
+  --radius-radius-small: 12px; /* Radius/radius-small */
+  --radius-radius-full: 9999px; /* Radius/radius-full */
+}

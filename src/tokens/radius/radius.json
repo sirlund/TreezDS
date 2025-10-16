@@ -1,0 +1,85 @@
+{
+  "radius": [
+    {
+      "name": "Radius/radius-none",
+      "originalName": "Radius/radius-none",
+      "cssVar": "--radius-radius-none",
+      "tsName": "Radius-radius-none",
+      "value": "0px",
+      "rawValue": 0,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-x-small",
+      "originalName": "Radius/radius-x-small",
+      "cssVar": "--radius-radius-x-small",
+      "tsName": "Radius-radius-x-small",
+      "value": "8px",
+      "rawValue": 8,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-medium",
+      "originalName": "Radius/radius-medium",
+      "cssVar": "--radius-radius-medium",
+      "tsName": "Radius-radius-medium",
+      "value": "16px",
+      "rawValue": 16,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-large",
+      "originalName": "Radius/radius-large",
+      "cssVar": "--radius-radius-large",
+      "tsName": "Radius-radius-large",
+      "value": "20px",
+      "rawValue": 20,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-2x-small",
+      "originalName": "Radius/radius-2x-small",
+      "cssVar": "--radius-radius-2x-small",
+      "tsName": "Radius-radius-2x-small",
+      "value": "6px",
+      "rawValue": 6,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-x-large",
+      "originalName": "Radius/radius-x-large",
+      "cssVar": "--radius-radius-x-large",
+      "tsName": "Radius-radius-x-large",
+      "value": "24px",
+      "rawValue": 24,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-2x-large",
+      "originalName": "Radius/radius-2x-large",
+      "cssVar": "--radius-radius-2x-large",
+      "tsName": "Radius-radius-2x-large",
+      "value": "32px",
+      "rawValue": 32,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-small",
+      "originalName": "Radius/radius-small",
+      "cssVar": "--radius-radius-small",
+      "tsName": "Radius-radius-small",
+      "value": "12px",
+      "rawValue": 12,
+      "description": ""
+    },
+    {
+      "name": "Radius/radius-full",
+      "originalName": "Radius/radius-full",
+      "cssVar": "--radius-radius-full",
+      "tsName": "Radius-radius-full",
+      "value": "9999px",
+      "rawValue": 999,
+      "description": ""
+    }
+  ]
+}

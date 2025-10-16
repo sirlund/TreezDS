@@ -1,0 +1,151 @@
+/**
+ * Color Tokens - Auto-generated from Figma
+ * DO NOT EDIT MANUALLY - Run 'npm run tokens:transform' to regenerate
+ */
+
+:root {
+
+  /* Green Colors */
+  --color-green-green01: #fcfff5; /* Green/green01 */
+  --color-green-green02: #f3fae6; /* Green/green02 */
+  --color-green-green03: #e8f7cd; /* Green/green03 */
+  --color-green-green04: #dbf5b3; /* Green/green04 */
+  --color-green-green05: #a9e079; /* Green/green05 */
+  --color-green-green06: #8ccc52; /* Green/green06 */
+  --color-green-green07: #6baa32; /* Green/green07 */
+  --color-green-green08: #3e7a18; /* Green/green08 */
+  --color-green-green09: #295c07; /* Green/green09 */
+  --color-green-green10: #1a4007; /* Green/green10 */
+
+  /* Primary Colors */
+  --color-primary-primarymain: #a9e079; /* Primary/primaryMain */
+  --color-primary-primarylight: #e8f7cd; /* Primary/primaryLight */
+  --color-primary-primarydark: #8ccc52; /* Primary/primaryDark */
+
+  /* Bw Colors */
+  --color-bw-primaryblack: #1a1a1a; /* B&W/primaryBlack */
+  --color-bw-primarywhite: #ffffff; /* B&W/primaryWhite */
+
+  /* Greyscale Colors */
+  --color-greyscale-grey01: #f7f7f7; /* Greyscale/grey01 */
+  --color-greyscale-grey02: #f5f5f5; /* Greyscale/grey02 */
+  --color-greyscale-grey03: #f0f0f0; /* Greyscale/grey03 */
+  --color-greyscale-grey04: #e6e6e6; /* Greyscale/grey04 */
+  --color-greyscale-grey05: #bfbfbf; /* Greyscale/grey05 */
+  --color-greyscale-grey06: #8c8c8c; /* Greyscale/grey06 */
+  --color-greyscale-grey07: #737373; /* Greyscale/grey07 */
+  --color-greyscale-grey08: #595959; /* Greyscale/grey08 */
+  --color-greyscale-grey09: #404040; /* Greyscale/grey09 */
+  --color-greyscale-grey10: #262626; /* Greyscale/grey10 */
+
+  /* Secondary Colors */
+  --color-secondary-brown-brown01: #e2ccc0; /* Secondary/Brown/brown01 */
+  --color-secondary-brown-brown02: #c69278; /* Secondary/Brown/brown02 */
+  --color-secondary-brown-brown00: #f1eae6; /* Secondary/Brown/brown00 */
+  --color-secondary-orange-orange00: #f9e7da; /* Secondary/Orange/orange00 */
+  --color-secondary-orange-orange01: #fcc8a2; /* Secondary/Orange/orange01 */
+  --color-secondary-orange-orange02: #fba466; /* Secondary/Orange/orange02 */
+  --color-secondary-peach-peach00: #ffeded; /* Secondary/Peach/peach00 */
+  --color-secondary-peach-peach01: #f1d9d9; /* Secondary/Peach/peach01 */
+  --color-secondary-peach-peach02: #ff9696; /* Secondary/Peach/peach02 */
+  --color-secondary-blue-blue00: #f0f8ff; /* Secondary/Blue/blue00 */
+  --color-secondary-blue-blue01: #cfdeed; /* Secondary/Blue/blue01 */
+  --color-secondary-blue-blue02: #95c1ee; /* Secondary/Blue/blue02 */
+  --color-secondary-purple-purple00: #faf2fe; /* Secondary/Purple/purple00 */
+  --color-secondary-purple-purple01: #e0c6ec; /* Secondary/Purple/purple01 */
+  --color-secondary-purple-purple02: #c992e3; /* Secondary/Purple/purple02 */
+  --color-secondary-yellow-yellow00: #fdf8e5; /* Secondary/Yellow/yellow00 */
+  --color-secondary-yellow-yellow01: #fbf1cf; /* Secondary/Yellow/yellow01 */
+  --color-secondary-yellow-yellow02: #fde28b; /* Secondary/Yellow/yellow02 */
+
+  /* System Colors */
+  --color-system-info-infomain: #437dcf; /* System/Info/infoMain */
+  --color-system-info-infolight: #e1eefa; /* System/Info/infoLight */
+  --color-system-info-infodark: #3774ac; /* System/Info/infoDark */
+  --color-system-success-successmain: #309f56; /* System/Success/successMain */
+  --color-system-success-successlight: #e5f9ec; /* System/Success/successLight */
+  --color-system-success-successdark: #2e834b; /* System/Success/successDark */
+  --color-system-warning-warningmain: #e26815; /* System/Warning/warningMain */
+  --color-system-warning-warninglight: #fff3e1; /* System/Warning/warningLight */
+  --color-system-warning-warningdark: #b45210; /* System/Warning/warningDark */
+  --color-system-error-errormain: #da5050; /* System/Error/errorMain */
+  --color-system-error-errorlight: #fde3e3; /* System/Error/errorLight */
+  --color-system-error-errordark: #bd4141; /* System/Error/errorDark */
+
+  /* Text Colors */
+  --color-text-primaryblacktext: #0f1709; /* Text/primaryBlackText */
+  --color-text-secondarytext: #595959; /* Text/secondaryText */
+  --color-text-tertiarytext: #7a7a7a; /* Text/tertiaryText */
+  --color-text-disabledtext: #949494; /* Text/disabledText */
+  --color-text-primarywhitetext: #fafafa; /* Text/primaryWhiteText */
+
+  /* Brand Colors */
+  --color-brand-brandgreen: #6baa32; /* Brand/brandGreen */
+  --color-brand-sativagreen: #a9e079; /* Brand/sativaGreen */
+  --color-brand-midribgreen: #dbf5b3; /* Brand/midribGreen */
+
+  /* RGB values for alpha manipulation */
+  --color-green-green01-rgb: 252, 255, 245;
+  --color-green-green02-rgb: 243, 250, 230;
+  --color-green-green03-rgb: 232, 247, 205;
+  --color-green-green04-rgb: 219, 245, 179;
+  --color-green-green05-rgb: 169, 224, 121;
+  --color-green-green06-rgb: 140, 204, 82;
+  --color-green-green07-rgb: 107, 170, 50;
+  --color-green-green08-rgb: 62, 122, 24;
+  --color-green-green09-rgb: 41, 92, 7;
+  --color-green-green10-rgb: 26, 64, 7;
+  --color-primary-primarymain-rgb: 169, 224, 121;
+  --color-primary-primarylight-rgb: 232, 247, 205;
+  --color-primary-primarydark-rgb: 140, 204, 82;
+  --color-bw-primaryblack-rgb: 26, 26, 26;
+  --color-bw-primarywhite-rgb: 255, 255, 255;
+  --color-greyscale-grey01-rgb: 247, 247, 247;
+  --color-greyscale-grey02-rgb: 245, 245, 245;
+  --color-greyscale-grey03-rgb: 240, 240, 240;
+  --color-greyscale-grey04-rgb: 230, 230, 230;
+  --color-greyscale-grey05-rgb: 191, 191, 191;
+  --color-greyscale-grey06-rgb: 140, 140, 140;
+  --color-greyscale-grey07-rgb: 115, 115, 115;
+  --color-greyscale-grey08-rgb: 89, 89, 89;
+  --color-greyscale-grey09-rgb: 64, 64, 64;
+  --color-greyscale-grey10-rgb: 38, 38, 38;
+  --color-secondary-brown-brown01-rgb: 226, 204, 192;
+  --color-secondary-brown-brown02-rgb: 198, 146, 120;
+  --color-secondary-brown-brown00-rgb: 241, 234, 230;
+  --color-secondary-orange-orange00-rgb: 249, 231, 218;
+  --color-secondary-orange-orange01-rgb: 252, 200, 162;
+  --color-secondary-orange-orange02-rgb: 251, 164, 102;
+  --color-secondary-peach-peach00-rgb: 255, 237, 237;
+  --color-secondary-peach-peach01-rgb: 241, 217, 217;
+  --color-secondary-peach-peach02-rgb: 255, 150, 150;
+  --color-secondary-blue-blue00-rgb: 240, 248, 255;
+  --color-secondary-blue-blue01-rgb: 207, 222, 237;
+  --color-secondary-blue-blue02-rgb: 149, 193, 238;
+  --color-secondary-purple-purple00-rgb: 250, 242, 254;
+  --color-secondary-purple-purple01-rgb: 224, 198, 236;
+  --color-secondary-purple-purple02-rgb: 201, 146, 227;
+  --color-secondary-yellow-yellow00-rgb: 253, 248, 229;
+  --color-secondary-yellow-yellow01-rgb: 251, 241, 207;
+  --color-secondary-yellow-yellow02-rgb: 253, 226, 139;
+  --color-system-info-infomain-rgb: 67, 125, 207;
+  --color-system-info-infolight-rgb: 225, 238, 250;
+  --color-system-info-infodark-rgb: 55, 116, 172;
+  --color-system-success-successmain-rgb: 48, 159, 86;
+  --color-system-success-successlight-rgb: 229, 249, 236;
+  --color-system-success-successdark-rgb: 46, 131, 75;
+  --color-system-warning-warningmain-rgb: 226, 104, 21;
+  --color-system-warning-warninglight-rgb: 255, 243, 225;
+  --color-system-warning-warningdark-rgb: 180, 82, 16;
+  --color-system-error-errormain-rgb: 218, 80, 80;
+  --color-system-error-errorlight-rgb: 253, 227, 227;
+  --color-system-error-errordark-rgb: 189, 65, 65;
+  --color-text-primaryblacktext-rgb: 15, 23, 9;
+  --color-text-secondarytext-rgb: 89, 89, 89;
+  --color-text-tertiarytext-rgb: 122, 122, 122;
+  --color-text-disabledtext-rgb: 148, 148, 148;
+  --color-text-primarywhitetext-rgb: 250, 250, 250;
+  --color-brand-brandgreen-rgb: 107, 170, 50;
+  --color-brand-sativagreen-rgb: 169, 224, 121;
+  --color-brand-midribgreen-rgb: 219, 245, 179;
+}

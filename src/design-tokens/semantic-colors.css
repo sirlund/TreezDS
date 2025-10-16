@@ -1,0 +1,57 @@
+/**
+ * Semantic Color Variables for Treez Design System
+ * Auto-generated from semantic-colors.ts
+ */
+
+:root {
+  /* Brand Colors */
+  --color-brand-primary: #a9e079;
+  --color-brand-primary-dark: #6baa32;
+  --color-brand-primary-text: #0f1709;
+  --color-brand-secondary: #1a4007;
+
+  /* Neutral Colors */
+  --color-neutral-black: #000000;
+  --color-neutral-grey-900: #1a1a1a;
+  --color-neutral-grey-800: #262626;
+  --color-neutral-grey-700: #333333;
+  --color-neutral-grey-500: #595959;
+  --color-neutral-white: #ffffff;
+
+  /* Background Colors */
+  --color-bg-beige: #f1eae6;
+  --color-bg-peach: #f9e7da;
+  --color-bg-red: #ffeded;
+  --color-bg-blue: #f0f8ff;
+  --color-bg-purple: #faf2fe;
+  --color-bg-yellow: #fdf8e5;
+
+  /* State Colors */
+  --color-state-info: #437dcf;
+  --color-state-success: #309f56;
+  --color-state-warning: #e26815;
+  --color-state-error: #da5050;
+  --color-state-accent: #fde28b;
+
+  /* Button Colors */
+  --color-button-primary-bg: #a9e079;
+  --color-button-primary-text: #0f1709;
+  --color-button-primary-hover: #9cd367;
+  --color-button-primary-active: #8fc655;
+
+  --color-button-secondary-border: #1a4007;
+  --color-button-secondary-text: #1a4007;
+  --color-button-secondary-hover-bg: rgba(26, 64, 7, 0.04);
+  --color-button-secondary-active-bg: rgba(26, 64, 7, 0.08);
+
+  --color-button-tertiary-text: #1a4007;
+  --color-button-tertiary-hover-bg: rgba(26, 64, 7, 0.04);
+  --color-button-tertiary-active-bg: rgba(26, 64, 7, 0.08);
+
+  --color-button-focus-outline: #1a1a1a;
+
+  /* RGB values for alpha manipulation */
+  --color-button-primary-bg-rgb: 169, 224, 121;
+  --color-button-primary-text-rgb: 15, 23, 9;
+  --color-button-secondary-rgb: 26, 64, 7;
+}

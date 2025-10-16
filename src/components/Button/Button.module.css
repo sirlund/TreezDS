@@ -1,0 +1,128 @@
+/* Base button styles from Figma Button v2 (beta) component */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+.button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.button:not(:disabled):focus-visible {
+  outline: 2px solid var(--color-button-focus-outline);
+  outline-offset: 2px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Primary (Filled) variant */
+.primary {
+  background-color: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+
+.primary:not(:disabled):hover {
+  background-color: var(--color-button-primary-hover);
+}
+
+.primary:not(:disabled):active {
+  background-color: var(--color-button-primary-active);
+}
+
+/* Secondary (Outlined) variant */
+.secondary {
+  background-color: transparent;
+  color: var(--color-button-secondary-text);
+  border: 1px solid var(--color-button-secondary-border);
+}
+
+.secondary:not(:disabled):hover {
+  background-color: var(--color-button-secondary-hover-bg);
+}
+
+.secondary:not(:disabled):active {
+  background-color: var(--color-button-secondary-active-bg);
+}
+
+/* Tertiary (Text) variant */
+.tertiary {
+  background-color: transparent;
+  color: var(--color-button-tertiary-text);
+  border: none;
+}
+
+.tertiary:not(:disabled):hover {
+  background-color: var(--color-button-tertiary-hover-bg);
+}
+
+.tertiary:not(:disabled):active {
+  background-color: var(--color-button-tertiary-active-bg);
+}
+
+/* Size variants - from Figma exact measurements */
+.small {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.small.tertiary {
+  padding: 8px 6px;
+}
+
+.medium {
+  padding: 8px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.medium.tertiary {
+  padding: 8px 10px;
+}
+
+.large {
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.large.tertiary {
+  padding: 12px 12px;
+}
+
+/* Full width variant */
+.fullWidth {
+  width: 100%;
+}

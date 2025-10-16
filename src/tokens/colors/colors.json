@@ -1,0 +1,963 @@
+{
+  "green": [
+    {
+      "name": "Green/green01",
+      "originalName": "Green/green01",
+      "cssVar": "--color-green-green01",
+      "tsName": "Green-green01",
+      "hex": "#fcfff5",
+      "rgb": "252, 255, 245",
+      "rgba": {
+        "r": 0.9882352948188782,
+        "g": 1,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green02",
+      "originalName": "Green/green02",
+      "cssVar": "--color-green-green02",
+      "tsName": "Green-green02",
+      "hex": "#f3fae6",
+      "rgb": "243, 250, 230",
+      "rgba": {
+        "r": 0.9529411792755127,
+        "g": 0.9803921580314636,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green03",
+      "originalName": "Green/green03",
+      "cssVar": "--color-green-green03",
+      "tsName": "Green-green03",
+      "hex": "#e8f7cd",
+      "rgb": "232, 247, 205",
+      "rgba": {
+        "r": 0.9098039269447327,
+        "g": 0.9686274528503418,
+        "b": 0.8039215803146362,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green04",
+      "originalName": "Green/green04",
+      "cssVar": "--color-green-green04",
+      "tsName": "Green-green04",
+      "hex": "#dbf5b3",
+      "rgb": "219, 245, 179",
+      "rgba": {
+        "r": 0.8588235378265381,
+        "g": 0.9607843160629272,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green05",
+      "originalName": "Green/green05",
+      "cssVar": "--color-green-green05",
+      "tsName": "Green-green05",
+      "hex": "#a9e079",
+      "rgb": "169, 224, 121",
+      "rgba": {
+        "r": 0.6627451181411743,
+        "g": 0.8784313797950745,
+        "b": 0.4745098054409027,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green06",
+      "originalName": "Green/green06",
+      "cssVar": "--color-green-green06",
+      "tsName": "Green-green06",
+      "hex": "#8ccc52",
+      "rgb": "140, 204, 82",
+      "rgba": {
+        "r": 0.5490196347236633,
+        "g": 0.800000011920929,
+        "b": 0.32156863808631897,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green07",
+      "originalName": "Green/green07",
+      "cssVar": "--color-green-green07",
+      "tsName": "Green-green07",
+      "hex": "#6baa32",
+      "rgb": "107, 170, 50",
+      "rgba": {
+        "r": 0.41960784792900085,
+        "g": 0.6666666865348816,
+        "b": 0.19607843458652496,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green08",
+      "originalName": "Green/green08",
+      "cssVar": "--color-green-green08",
+      "tsName": "Green-green08",
+      "hex": "#3e7a18",
+      "rgb": "62, 122, 24",
+      "rgba": {
+        "r": 0.24313725531101227,
+        "g": 0.47843137383461,
+        "b": 0.0941176488995552,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green09",
+      "originalName": "Green/green09",
+      "cssVar": "--color-green-green09",
+      "tsName": "Green-green09",
+      "hex": "#295c07",
+      "rgb": "41, 92, 7",
+      "rgba": {
+        "r": 0.16078431904315948,
+        "g": 0.3607843220233917,
+        "b": 0.027450980618596077,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Green/green10",
+      "originalName": "Green/green10",
+      "cssVar": "--color-green-green10",
+      "tsName": "Green-green10",
+      "hex": "#1a4007",
+      "rgb": "26, 64, 7",
+      "rgba": {
+        "r": 0.10196078568696976,
+        "g": 0.250980406999588,
+        "b": 0.027450980618596077,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "primary": [
+    {
+      "name": "Primary/primaryMain",
+      "originalName": "Primary/primaryMain",
+      "cssVar": "--color-primary-primarymain",
+      "tsName": "Primary-primaryMain",
+      "hex": "#a9e079",
+      "rgb": "169, 224, 121",
+      "rgba": {
+        "r": 0.6627451181411743,
+        "g": 0.8784313797950745,
+        "b": 0.4745098054409027,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Primary/primaryLight",
+      "originalName": "Primary/primaryLight",
+      "cssVar": "--color-primary-primarylight",
+      "tsName": "Primary-primaryLight",
+      "hex": "#e8f7cd",
+      "rgb": "232, 247, 205",
+      "rgba": {
+        "r": 0.9098039269447327,
+        "g": 0.9686274528503418,
+        "b": 0.8039215803146362,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Primary/primaryDark",
+      "originalName": "Primary/primaryDark",
+      "cssVar": "--color-primary-primarydark",
+      "tsName": "Primary-primaryDark",
+      "hex": "#8ccc52",
+      "rgb": "140, 204, 82",
+      "rgba": {
+        "r": 0.5490196347236633,
+        "g": 0.800000011920929,
+        "b": 0.32156863808631897,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "bw": [
+    {
+      "name": "B&W/primaryBlack",
+      "originalName": "B&W/primaryBlack",
+      "cssVar": "--color-bw-primaryblack",
+      "tsName": "BW-primaryBlack",
+      "hex": "#1a1a1a",
+      "rgb": "26, 26, 26",
+      "rgba": {
+        "r": 0.10196078568696976,
+        "g": 0.10196078568696976,
+        "b": 0.10196078568696976,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "B&W/primaryWhite",
+      "originalName": "B&W/primaryWhite",
+      "cssVar": "--color-bw-primarywhite",
+      "tsName": "BW-primaryWhite",
+      "hex": "#ffffff",
+      "rgb": "255, 255, 255",
+      "rgba": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "greyscale": [
+    {
+      "name": "Greyscale/grey01",
+      "originalName": "Greyscale/grey01",
+      "cssVar": "--color-greyscale-grey01",
+      "tsName": "Greyscale-grey01",
+      "hex": "#f7f7f7",
+      "rgb": "247, 247, 247",
+      "rgba": {
+        "r": 0.9686274528503418,
+        "g": 0.9686274528503418,
+        "b": 0.9686274528503418,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey02",
+      "originalName": "Greyscale/grey02",
+      "cssVar": "--color-greyscale-grey02",
+      "tsName": "Greyscale-grey02",
+      "hex": "#f5f5f5",
+      "rgb": "245, 245, 245",
+      "rgba": {
+        "r": 0.9607843160629272,
+        "g": 0.9607843160629272,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey03",
+      "originalName": "Greyscale/grey03",
+      "cssVar": "--color-greyscale-grey03",
+      "tsName": "Greyscale-grey03",
+      "hex": "#f0f0f0",
+      "rgb": "240, 240, 240",
+      "rgba": {
+        "r": 0.9411764740943909,
+        "g": 0.9411764740943909,
+        "b": 0.9411764740943909,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey04",
+      "originalName": "Greyscale/grey04",
+      "cssVar": "--color-greyscale-grey04",
+      "tsName": "Greyscale-grey04",
+      "hex": "#e6e6e6",
+      "rgb": "230, 230, 230",
+      "rgba": {
+        "r": 0.9019607901573181,
+        "g": 0.9019607901573181,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey05",
+      "originalName": "Greyscale/grey05",
+      "cssVar": "--color-greyscale-grey05",
+      "tsName": "Greyscale-grey05",
+      "hex": "#bfbfbf",
+      "rgb": "191, 191, 191",
+      "rgba": {
+        "r": 0.7490196228027344,
+        "g": 0.7490196228027344,
+        "b": 0.7490196228027344,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey06",
+      "originalName": "Greyscale/grey06",
+      "cssVar": "--color-greyscale-grey06",
+      "tsName": "Greyscale-grey06",
+      "hex": "#8c8c8c",
+      "rgb": "140, 140, 140",
+      "rgba": {
+        "r": 0.5490196347236633,
+        "g": 0.5490196347236633,
+        "b": 0.5490196347236633,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey07",
+      "originalName": "Greyscale/grey07",
+      "cssVar": "--color-greyscale-grey07",
+      "tsName": "Greyscale-grey07",
+      "hex": "#737373",
+      "rgb": "115, 115, 115",
+      "rgba": {
+        "r": 0.45098039507865906,
+        "g": 0.45098039507865906,
+        "b": 0.45098039507865906,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey08",
+      "originalName": "Greyscale/grey08",
+      "cssVar": "--color-greyscale-grey08",
+      "tsName": "Greyscale-grey08",
+      "hex": "#595959",
+      "rgb": "89, 89, 89",
+      "rgba": {
+        "r": 0.3490196168422699,
+        "g": 0.3490196168422699,
+        "b": 0.3490196168422699,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey09",
+      "originalName": "Greyscale/grey09",
+      "cssVar": "--color-greyscale-grey09",
+      "tsName": "Greyscale-grey09",
+      "hex": "#404040",
+      "rgb": "64, 64, 64",
+      "rgba": {
+        "r": 0.250980406999588,
+        "g": 0.250980406999588,
+        "b": 0.250980406999588,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Greyscale/grey10",
+      "originalName": "Greyscale/grey10",
+      "cssVar": "--color-greyscale-grey10",
+      "tsName": "Greyscale-grey10",
+      "hex": "#262626",
+      "rgb": "38, 38, 38",
+      "rgba": {
+        "r": 0.14901961386203766,
+        "g": 0.14901961386203766,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "secondary": [
+    {
+      "name": "Secondary/Brown/brown01",
+      "originalName": "Secondary/Brown/brown01",
+      "cssVar": "--color-secondary-brown-brown01",
+      "tsName": "Secondary-Brown-brown01",
+      "hex": "#e2ccc0",
+      "rgb": "226, 204, 192",
+      "rgba": {
+        "r": 0.886274516582489,
+        "g": 0.800000011920929,
+        "b": 0.7529411911964417,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Brown/brown02",
+      "originalName": "Secondary/Brown/brown02",
+      "cssVar": "--color-secondary-brown-brown02",
+      "tsName": "Secondary-Brown-brown02",
+      "hex": "#c69278",
+      "rgb": "198, 146, 120",
+      "rgba": {
+        "r": 0.7764706015586853,
+        "g": 0.572549045085907,
+        "b": 0.47058823704719543,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Brown/brown00",
+      "originalName": "Secondary/Brown/brown00",
+      "cssVar": "--color-secondary-brown-brown00",
+      "tsName": "Secondary-Brown-brown00",
+      "hex": "#f1eae6",
+      "rgb": "241, 234, 230",
+      "rgba": {
+        "r": 0.9450980424880981,
+        "g": 0.9176470637321472,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Orange/orange00",
+      "originalName": "Secondary/Orange/orange00",
+      "cssVar": "--color-secondary-orange-orange00",
+      "tsName": "Secondary-Orange-orange00",
+      "hex": "#f9e7da",
+      "rgb": "249, 231, 218",
+      "rgba": {
+        "r": 0.9764705896377563,
+        "g": 0.9058823585510254,
+        "b": 0.8549019694328308,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Orange/orange01",
+      "originalName": "Secondary/Orange/orange01",
+      "cssVar": "--color-secondary-orange-orange01",
+      "tsName": "Secondary-Orange-orange01",
+      "hex": "#fcc8a2",
+      "rgb": "252, 200, 162",
+      "rgba": {
+        "r": 0.9882352948188782,
+        "g": 0.7843137383460999,
+        "b": 0.6352941393852234,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Orange/orange02",
+      "originalName": "Secondary/Orange/orange02",
+      "cssVar": "--color-secondary-orange-orange02",
+      "tsName": "Secondary-Orange-orange02",
+      "hex": "#fba466",
+      "rgb": "251, 164, 102",
+      "rgba": {
+        "r": 0.9843137264251709,
+        "g": 0.6431372761726379,
+        "b": 0.4000000059604645,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Peach/peach00",
+      "originalName": "Secondary/Peach/peach00",
+      "cssVar": "--color-secondary-peach-peach00",
+      "tsName": "Secondary-Peach-peach00",
+      "hex": "#ffeded",
+      "rgb": "255, 237, 237",
+      "rgba": {
+        "r": 1,
+        "g": 0.929411768913269,
+        "b": 0.929411768913269,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Peach/peach01",
+      "originalName": "Secondary/Peach/peach01",
+      "cssVar": "--color-secondary-peach-peach01",
+      "tsName": "Secondary-Peach-peach01",
+      "hex": "#f1d9d9",
+      "rgb": "241, 217, 217",
+      "rgba": {
+        "r": 0.9450980424880981,
+        "g": 0.8509804010391235,
+        "b": 0.8509804010391235,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Peach/peach02",
+      "originalName": "Secondary/Peach/peach02",
+      "cssVar": "--color-secondary-peach-peach02",
+      "tsName": "Secondary-Peach-peach02",
+      "hex": "#ff9696",
+      "rgb": "255, 150, 150",
+      "rgba": {
+        "r": 1,
+        "g": 0.5882353186607361,
+        "b": 0.5882353186607361,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Blue/blue00",
+      "originalName": "Secondary/Blue/blue00",
+      "cssVar": "--color-secondary-blue-blue00",
+      "tsName": "Secondary-Blue-blue00",
+      "hex": "#f0f8ff",
+      "rgb": "240, 248, 255",
+      "rgba": {
+        "r": 0.9411764740943909,
+        "g": 0.9725490212440491,
+        "b": 1,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Blue/blue01",
+      "originalName": "Secondary/Blue/blue01",
+      "cssVar": "--color-secondary-blue-blue01",
+      "tsName": "Secondary-Blue-blue01",
+      "hex": "#cfdeed",
+      "rgb": "207, 222, 237",
+      "rgba": {
+        "r": 0.8117647171020508,
+        "g": 0.8705882430076599,
+        "b": 0.929411768913269,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Blue/blue02",
+      "originalName": "Secondary/Blue/blue02",
+      "cssVar": "--color-secondary-blue-blue02",
+      "tsName": "Secondary-Blue-blue02",
+      "hex": "#95c1ee",
+      "rgb": "149, 193, 238",
+      "rgba": {
+        "r": 0.5843137502670288,
+        "g": 0.7568627595901489,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Purple/purple00",
+      "originalName": "Secondary/Purple/purple00",
+      "cssVar": "--color-secondary-purple-purple00",
+      "tsName": "Secondary-Purple-purple00",
+      "hex": "#faf2fe",
+      "rgb": "250, 242, 254",
+      "rgba": {
+        "r": 0.9803921580314636,
+        "g": 0.9490196108818054,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Purple/purple01",
+      "originalName": "Secondary/Purple/purple01",
+      "cssVar": "--color-secondary-purple-purple01",
+      "tsName": "Secondary-Purple-purple01",
+      "hex": "#e0c6ec",
+      "rgb": "224, 198, 236",
+      "rgba": {
+        "r": 0.8784313797950745,
+        "g": 0.7764706015586853,
+        "b": 0.9254902005195618,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Purple/purple02",
+      "originalName": "Secondary/Purple/purple02",
+      "cssVar": "--color-secondary-purple-purple02",
+      "tsName": "Secondary-Purple-purple02",
+      "hex": "#c992e3",
+      "rgb": "201, 146, 227",
+      "rgba": {
+        "r": 0.7882353067398071,
+        "g": 0.572549045085907,
+        "b": 0.8901960849761963,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Yellow/yellow00",
+      "originalName": "Secondary/Yellow/yellow00",
+      "cssVar": "--color-secondary-yellow-yellow00",
+      "tsName": "Secondary-Yellow-yellow00",
+      "hex": "#fdf8e5",
+      "rgb": "253, 248, 229",
+      "rgba": {
+        "r": 0.9921568632125854,
+        "g": 0.9725490212440491,
+        "b": 0.8980392217636108,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Yellow/yellow01",
+      "originalName": "Secondary/Yellow/yellow01",
+      "cssVar": "--color-secondary-yellow-yellow01",
+      "tsName": "Secondary-Yellow-yellow01",
+      "hex": "#fbf1cf",
+      "rgb": "251, 241, 207",
+      "rgba": {
+        "r": 0.9843137264251709,
+        "g": 0.9450980424880981,
+        "b": 0.8117647171020508,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Secondary/Yellow/yellow02",
+      "originalName": "Secondary/Yellow/yellow02",
+      "cssVar": "--color-secondary-yellow-yellow02",
+      "tsName": "Secondary-Yellow-yellow02",
+      "hex": "#fde28b",
+      "rgb": "253, 226, 139",
+      "rgba": {
+        "r": 0.9921568632125854,
+        "g": 0.886274516582489,
+        "b": 0.545098066329956,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "system": [
+    {
+      "name": "System/Info/infoMain",
+      "originalName": "System/Info/infoMain",
+      "cssVar": "--color-system-info-infomain",
+      "tsName": "System-Info-infoMain",
+      "hex": "#437dcf",
+      "rgb": "67, 125, 207",
+      "rgba": {
+        "r": 0.26274511218070984,
+        "g": 0.4901960790157318,
+        "b": 0.8117647171020508,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Info/infoLight",
+      "originalName": "System/Info/infoLight",
+      "cssVar": "--color-system-info-infolight",
+      "tsName": "System-Info-infoLight",
+      "hex": "#e1eefa",
+      "rgb": "225, 238, 250",
+      "rgba": {
+        "r": 0.8823529481887817,
+        "g": 0.9333333373069763,
+        "b": 0.9803921580314636,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Info/infoDark",
+      "originalName": "System/Info/infoDark",
+      "cssVar": "--color-system-info-infodark",
+      "tsName": "System-Info-infoDark",
+      "hex": "#3774ac",
+      "rgb": "55, 116, 172",
+      "rgba": {
+        "r": 0.21568627655506134,
+        "g": 0.45490196347236633,
+        "b": 0.6745098233222961,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Success/successMain",
+      "originalName": "System/Success/successMain",
+      "cssVar": "--color-system-success-successmain",
+      "tsName": "System-Success-successMain",
+      "hex": "#309f56",
+      "rgb": "48, 159, 86",
+      "rgba": {
+        "r": 0.1882352977991104,
+        "g": 0.6235294342041016,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Success/successLight",
+      "originalName": "System/Success/successLight",
+      "cssVar": "--color-system-success-successlight",
+      "tsName": "System-Success-successLight",
+      "hex": "#e5f9ec",
+      "rgb": "229, 249, 236",
+      "rgba": {
+        "r": 0.8980392217636108,
+        "g": 0.9764705896377563,
+        "b": 0.9254902005195618,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Success/successDark",
+      "originalName": "System/Success/successDark",
+      "cssVar": "--color-system-success-successdark",
+      "tsName": "System-Success-successDark",
+      "hex": "#2e834b",
+      "rgb": "46, 131, 75",
+      "rgba": {
+        "r": 0.18039216101169586,
+        "g": 0.5137255191802979,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Warning/warningMain",
+      "originalName": "System/Warning/warningMain",
+      "cssVar": "--color-system-warning-warningmain",
+      "tsName": "System-Warning-warningMain",
+      "hex": "#e26815",
+      "rgb": "226, 104, 21",
+      "rgba": {
+        "r": 0.886274516582489,
+        "g": 0.40784314274787903,
+        "b": 0.08235294371843338,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Warning/warningLight",
+      "originalName": "System/Warning/warningLight",
+      "cssVar": "--color-system-warning-warninglight",
+      "tsName": "System-Warning-warningLight",
+      "hex": "#fff3e1",
+      "rgb": "255, 243, 225",
+      "rgba": {
+        "r": 1,
+        "g": 0.9529411792755127,
+        "b": 0.8823529481887817,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Warning/warningDark",
+      "originalName": "System/Warning/warningDark",
+      "cssVar": "--color-system-warning-warningdark",
+      "tsName": "System-Warning-warningDark",
+      "hex": "#b45210",
+      "rgb": "180, 82, 16",
+      "rgba": {
+        "r": 0.7058823704719543,
+        "g": 0.32156863808631897,
+        "b": 0.062745101749897,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Error/errorMain",
+      "originalName": "System/Error/errorMain",
+      "cssVar": "--color-system-error-errormain",
+      "tsName": "System-Error-errorMain",
+      "hex": "#da5050",
+      "rgb": "218, 80, 80",
+      "rgba": {
+        "r": 0.8549019694328308,
+        "g": 0.3137255012989044,
+        "b": 0.3137255012989044,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Error/errorLight",
+      "originalName": "System/Error/errorLight",
+      "cssVar": "--color-system-error-errorlight",
+      "tsName": "System-Error-errorLight",
+      "hex": "#fde3e3",
+      "rgb": "253, 227, 227",
+      "rgba": {
+        "r": 0.9921568632125854,
+        "g": 0.8901960849761963,
+        "b": 0.8901960849761963,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "System/Error/errorDark",
+      "originalName": "System/Error/errorDark",
+      "cssVar": "--color-system-error-errordark",
+      "tsName": "System-Error-errorDark",
+      "hex": "#bd4141",
+      "rgb": "189, 65, 65",
+      "rgba": {
+        "r": 0.7411764860153198,
+        "g": 0.2549019753932953,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "text": [
+    {
+      "name": "Text/primaryBlackText",
+      "originalName": "Text/primaryBlackText",
+      "cssVar": "--color-text-primaryblacktext",
+      "tsName": "Text-primaryBlackText",
+      "hex": "#0f1709",
+      "rgb": "15, 23, 9",
+      "rgba": {
+        "r": 0.05882352963089943,
+        "g": 0.09019608050584793,
+        "b": 0.03529411926865578,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Text/secondaryText",
+      "originalName": "Text/secondaryText",
+      "cssVar": "--color-text-secondarytext",
+      "tsName": "Text-secondaryText",
+      "hex": "#595959",
+      "rgb": "89, 89, 89",
+      "rgba": {
+        "r": 0.3490196168422699,
+        "g": 0.3490196168422699,
+        "b": 0.3490196168422699,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Text/tertiaryText",
+      "originalName": "Text/tertiaryText",
+      "cssVar": "--color-text-tertiarytext",
+      "tsName": "Text-tertiaryText",
+      "hex": "#7a7a7a",
+      "rgb": "122, 122, 122",
+      "rgba": {
+        "r": 0.47843137383461,
+        "g": 0.47843137383461,
+        "b": 0.47843137383461,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Text/disabledText",
+      "originalName": "Text/disabledText",
+      "cssVar": "--color-text-disabledtext",
+      "tsName": "Text-disabledText",
+      "hex": "#949494",
+      "rgb": "148, 148, 148",
+      "rgba": {
+        "r": 0.5803921818733215,
+        "g": 0.5803921818733215,
+        "b": 0.5803921818733215,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Text/primaryWhiteText",
+      "originalName": "Text/primaryWhiteText",
+      "cssVar": "--color-text-primarywhitetext",
+      "tsName": "Text-primaryWhiteText",
+      "hex": "#fafafa",
+      "rgb": "250, 250, 250",
+      "rgba": {
+        "r": 0.9803921580314636,
+        "g": 0.9803921580314636,
+        "b": 0.9803921580314636,
+        "a": 1
+      },
+      "description": ""
+    }
+  ],
+  "brand": [
+    {
+      "name": "Brand/brandGreen",
+      "originalName": "Brand/brandGreen",
+      "cssVar": "--color-brand-brandgreen",
+      "tsName": "Brand-brandGreen",
+      "hex": "#6baa32",
+      "rgb": "107, 170, 50",
+      "rgba": {
+        "r": 0.41960784792900085,
+        "g": 0.6666666865348816,
+        "b": 0.19607843458652496,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Brand/sativaGreen",
+      "originalName": "Brand/sativaGreen",
+      "cssVar": "--color-brand-sativagreen",
+      "tsName": "Brand-sativaGreen",
+      "hex": "#a9e079",
+      "rgb": "169, 224, 121",
+      "rgba": {
+        "r": 0.6627451181411743,
+        "g": 0.8784313797950745,
+        "b": 0.4745098054409027,
+        "a": 1
+      },
+      "description": ""
+    },
+    {
+      "name": "Brand/midribGreen",
+      "originalName": "Brand/midribGreen",
+      "cssVar": "--color-brand-midribgreen",
+      "tsName": "Brand-midribGreen",
+      "hex": "#dbf5b3",
+      "rgb": "219, 245, 179",
+      "rgba": {
+        "r": 0.8588235378265381,
+        "g": 0.9607843160629272,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "description": ""
+    }
+  ]
+}

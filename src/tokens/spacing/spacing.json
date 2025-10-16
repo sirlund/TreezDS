@@ -1,0 +1,159 @@
+{
+  "spacing": [
+    {
+      "name": "Spacing/space-2x-small",
+      "originalName": "Spacing/space-2x-small",
+      "cssVar": "--spacing-space-2x-small",
+      "tsName": "Spacing-space-2x-small",
+      "value": "4px",
+      "rawValue": 4,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-x-small",
+      "originalName": "Spacing/space-x-small",
+      "cssVar": "--spacing-space-x-small",
+      "tsName": "Spacing-space-x-small",
+      "value": "8px",
+      "rawValue": 8,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-small",
+      "originalName": "Spacing/space-small",
+      "cssVar": "--spacing-space-small",
+      "tsName": "Spacing-space-small",
+      "value": "12px",
+      "rawValue": 12,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-medium",
+      "originalName": "Spacing/space-medium",
+      "cssVar": "--spacing-space-medium",
+      "tsName": "Spacing-space-medium",
+      "value": "16px",
+      "rawValue": 16,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-large",
+      "originalName": "Spacing/space-large",
+      "cssVar": "--spacing-space-large",
+      "tsName": "Spacing-space-large",
+      "value": "20px",
+      "rawValue": 20,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-x-large",
+      "originalName": "Spacing/space-x-large",
+      "cssVar": "--spacing-space-x-large",
+      "tsName": "Spacing-space-x-large",
+      "value": "24px",
+      "rawValue": 24,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-2x-large",
+      "originalName": "Spacing/space-2x-large",
+      "cssVar": "--spacing-space-2x-large",
+      "tsName": "Spacing-space-2x-large",
+      "value": "32px",
+      "rawValue": 32,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-3x-large",
+      "originalName": "Spacing/space-3x-large",
+      "cssVar": "--spacing-space-3x-large",
+      "tsName": "Spacing-space-3x-large",
+      "value": "48px",
+      "rawValue": 48,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-none",
+      "originalName": "Spacing/space-none",
+      "cssVar": "--spacing-space-none",
+      "tsName": "Spacing-space-none",
+      "value": "0px",
+      "rawValue": 0,
+      "description": ""
+    },
+    {
+      "name": "Spacing/space-3x-small",
+      "originalName": "Spacing/space-3x-small",
+      "cssVar": "--spacing-space-3x-small",
+      "tsName": "Spacing-space-3x-small",
+      "value": "2px",
+      "rawValue": 2,
+      "description": ""
+    }
+  ],
+  "sizes": [
+    {
+      "name": "🚧 Size (beta)/size-x-small",
+      "originalName": "🚧 Size (beta)/size-x-small",
+      "cssVar": "---size-beta-size-x-small",
+      "tsName": "-Size-beta-size-x-small",
+      "value": "12px",
+      "rawValue": 12,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-small",
+      "originalName": "🚧 Size (beta)/size-small",
+      "cssVar": "---size-beta-size-small",
+      "tsName": "-Size-beta-size-small",
+      "value": "18px",
+      "rawValue": 18,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-medium",
+      "originalName": "🚧 Size (beta)/size-medium",
+      "cssVar": "---size-beta-size-medium",
+      "tsName": "-Size-beta-size-medium",
+      "value": "20px",
+      "rawValue": 20,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-large",
+      "originalName": "🚧 Size (beta)/size-large",
+      "cssVar": "---size-beta-size-large",
+      "tsName": "-Size-beta-size-large",
+      "value": "24px",
+      "rawValue": 24,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-2x-large",
+      "originalName": "🚧 Size (beta)/size-2x-large",
+      "cssVar": "---size-beta-size-2x-large",
+      "tsName": "-Size-beta-size-2x-large",
+      "value": "48px",
+      "rawValue": 48,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-3x-large",
+      "originalName": "🚧 Size (beta)/size-3x-large",
+      "cssVar": "---size-beta-size-3x-large",
+      "tsName": "-Size-beta-size-3x-large",
+      "value": "64px",
+      "rawValue": 64,
+      "description": ""
+    },
+    {
+      "name": "🚧 Size (beta)/size-x-large",
+      "originalName": "🚧 Size (beta)/size-x-large",
+      "cssVar": "---size-beta-size-x-large",
+      "tsName": "-Size-beta-size-x-large",
+      "value": "32px",
+      "rawValue": 32,
+      "description": ""
+    }
+  ]
+}
