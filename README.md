@@ -2,12 +2,15 @@
 
 A React component library built from Figma design system tokens, featuring Storybook for component development and documentation.
 
+> 🤖 **For AI Agents**: See [`.cursorrules`](./.cursorrules) and [`.ai/instructions.md`](./.ai/instructions.md) for development guidelines and project context.
+
 ## Features
 
-- **Design Tokens**: Automatically extracted from Figma design system
+- **Design Tokens**: Automatically extracted from Figma design system via MCP
 - **React Components**: Built with TypeScript and CSS Modules
 - **Storybook**: Interactive component documentation and playground
 - **Type-Safe**: Full TypeScript support with auto-generated types from Figma
+- **Figma MCP Integration**: Direct design extraction without API tokens
 
 ## Getting Started
 
@@ -15,7 +18,7 @@ A React component library built from Figma design system tokens, featuring Story
 
 - Node.js 18+
 - npm or yarn
-- Figma access token (for updating design tokens)
+- Figma MCP configured (for updating design tokens)
 
 ### Font Note
 
@@ -61,17 +64,19 @@ Design tokens are automatically extracted from the Figma design system and conve
 
 ### Updating Design Tokens
 
-To update design tokens from Figma:
+> ⚠️ **Note**: Legacy npm scripts (`tokens:extract`, `tokens:generate`, `tokens:update`) use deprecated Figma API methods. These will be replaced with Figma MCP-based workflows. See [`.ai/figma-mcp-migration.md`](./.ai/figma-mcp-migration.md) for details.
 
+**Current Method** (Figma MCP - Recommended):
+1. Use Figma MCP tools to extract design context
+2. Transform extracted data with `scripts/transform-figma-tokens.js`
+3. Update semantic mappings in `src/design-tokens/semantic-colors.ts`
+
+**Legacy Method** (Deprecated):
 ```bash
-npm run tokens:extract   # Extract raw data from Figma
-npm run tokens:generate  # Generate tokens from extracted data
-```
-
-Or run both commands together:
-
-```bash
-npm run tokens:update
+# ⚠️ These scripts are deprecated and will be removed
+npm run tokens:extract   # Use Figma MCP instead
+npm run tokens:generate  # Use Figma MCP instead
+npm run tokens:update    # Use Figma MCP instead
 ```
 
 ### Available Token Categories

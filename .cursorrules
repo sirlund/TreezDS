@@ -1,0 +1,166 @@
+# TreezDS - AI Agent Instructions
+
+## Project Overview
+This is a React Design System library built from Figma designs, featuring Storybook for component documentation.
+
+## Tech Stack
+- **Framework**: React 19 + TypeScript
+- **Build**: Vite
+- **Documentation**: Storybook
+- **Testing**: Vitest + Playwright
+- **Design Source**: Figma (via MCP)
+
+## Critical: Figma Integration
+
+### ✅ USE FIGMA MCP (Recommended)
+This project has **Figma MCP enabled** for extracting designs. Always prefer using MCP tools:
+- `mcp_figma_get_design_context` - Extract component code and design tokens
+- `mcp_figma_get_metadata` - Get component structure and hierarchy
+- `mcp_figma_get_screenshot` - Generate visual previews
+
+**Figma File**: Key is embedded in MCP configuration
+**Node IDs**: Check `src/design-tokens/figma-file-metadata.json` for component references
+
+### ❌ AVOID Legacy Scripts (Deprecated)
+The following scripts use the old Figma REST API and should NOT be used:
+- `scripts/extract-figma-data.js` - Obsolete, use MCP instead
+- `scripts/extract-color-styles.js` - Obsolete, use MCP instead
+- `scripts/extract-colors-from-node.js` - Obsolete, use MCP instead
+- `scripts/find-button-component.js` - Obsolete, use MCP instead
+- `scripts/extract-button-component.js` - Obsolete, use MCP instead
+- `scripts/generate-button-from-figma.js` - Obsolete, use MCP instead
+- `scripts/generate-tokens.js` - Obsolete, use MCP instead
+
+These scripts are marked for removal. Do not suggest using them or `FIGMA_ACCESS_TOKEN`.
+
+### ✅ Useful Scripts to Keep
+- `scripts/transform-figma-tokens.js` - Transforms JSON exports to TypeScript/CSS tokens
+- `scripts/watch-icons.js` - Watches SVG files and updates icon registry
+
+## Project Structure
+
+### Design Tokens
+- **Location**: `src/design-tokens/` and `src/tokens/`
+- **Generated files**: `tokens.css`, `tokens.ts`, `semantic-colors.css`
+- **Source**: Extracted from Figma via MCP
+
+### Components
+- **Location**: `src/components/`
+- **Structure**: Each component has its own folder with:
+  - `ComponentName.tsx` - Main component
+  - `ComponentName.module.css` - Scoped styles
+  - `index.ts` - Exports
+  - `README.md` - Documentation
+
+### Available Components
+- `Button` - With variants (primary, secondary, tertiary) and sizes
+- `Typography` - Text styles from Figma design system
+- `Icon` - SVG icon system with dynamic loading
+
+## Development Workflow
+
+### Running the Project
+```bash
+npm run dev              # Start Vite dev server
+npm run storybook        # Start Storybook (preferred for development)
+npm run build            # Build library
+npm run build-storybook  # Build Storybook for deployment
+```
+
+### Adding New Components
+1. Extract design from Figma using MCP tools
+2. Create component folder in `src/components/`
+3. Implement component with TypeScript + CSS Modules
+4. Create Storybook story in component folder or `src/stories/`
+5. Export from `src/components/index.ts`
+
+### Updating Design Tokens
+When design changes in Figma:
+1. Use `mcp_figma_get_design_context` to extract updated tokens
+2. Update `src/design-tokens/` files manually or with transformation scripts
+3. Run `scripts/transform-figma-tokens.js` if working with JSON exports
+4. Verify changes in Storybook
+
+## Code Style & Conventions
+
+### TypeScript
+- Use functional components with hooks
+- Props should have explicit TypeScript interfaces
+- Prefer named exports over default exports
+- Use `type` for props, `interface` for extensible objects
+
+### CSS
+- Use CSS Modules for component styles
+- Reference design tokens via CSS variables: `var(--token-name)`
+- Follow BEM-like naming within modules
+- Mobile-first responsive design
+
+### File Naming
+- Components: PascalCase (`Button.tsx`)
+- Utilities: camelCase (`formatColor.ts`)
+- Styles: PascalCase with extension (`Button.module.css`)
+- Stories: PascalCase with `.stories.ts` (`Button.stories.ts`)
+
+## Testing
+- Component tests: Co-locate with components
+- Visual tests: Via Storybook + Chromatic
+- Unit tests: Vitest
+- E2E tests: Playwright
+
+## Important Notes
+
+### Fonts
+- Uses **Roboto** (Google Fonts) and **Inter** as fallback for Circular Std
+- See `FONTS.md` for commercial font setup
+
+### Documentation Files
+- `TOKEN-SYSTEM-SUMMARY.md` - Token system overview
+- `SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
+- `FONTS.md` - Font configuration
+- Component READMEs in each component folder
+
+## When Working on This Project
+
+1. **Always check Storybook first** - It's the source of truth for component behavior
+2. **Use MCP for Figma** - Never suggest using old API scripts
+3. **Follow existing patterns** - Check similar components before creating new ones
+4. **Update stories** - Every component change should reflect in Storybook
+5. **Maintain type safety** - TypeScript strict mode is enabled
+6. **Document as you go** - Update READMEs and comments
+
+## Common Tasks
+
+### Extract a New Component from Figma
+```typescript
+// Use MCP tool with node ID from Figma
+mcp_figma_get_design_context({
+  nodeId: "123:456",
+  fileKey: "extractFromMCP",
+  clientLanguages: "typescript,css",
+  clientFrameworks: "react"
+})
+```
+
+### Add a New Icon
+1. Export SVG from Figma to `imported-from-figma/`
+2. Run `npm run watch:icons` (or it auto-detects if running)
+3. Icon automatically added to `src/components/Icon/iconData.ts`
+4. Use: `<Icon name="icon-name" />`
+
+### Deploy Storybook
+```bash
+npm run deploy-storybook  # Builds and deploys to gh-pages
+```
+
+## Debugging
+
+- Storybook runs on port 6006
+- Vite dev server on port 5173 (default)
+- Check `storybook-static/` for built Storybook
+- Design token issues? Check `src/design-tokens/README.md`
+
+---
+
+**Last Updated**: October 2025
+**MCP Integration**: Figma Desktop MCP Active
+**Status**: Legacy scripts scheduled for deprecation
