@@ -81,7 +81,88 @@ scripts/
 └── [7 other files]            ❌ Deprecated - use MCP instead
 ```
 
-### 🎯 Component Development Pattern
+### � Icon System Architecture
+
+TreezDS uses a **dual icon system**: Material Symbols (primary) + Custom SVG icons (brand-specific).
+
+#### Material Symbols Rounded (Google Fonts)
+**Primary icon system** for standard UI icons.
+
+**Specifications**:
+- Variant: Rounded
+- Weight: 400
+- Grade: 0 (Normal)
+- Optical Size: 20px base (dynamic: 20-48px)
+- Fill: 0 (No fill / Outlined style)
+
+**How it works**:
+- Loaded via Google Fonts CDN (in `index.html` and `.storybook/preview-head.html`)
+- Renders using font ligatures (text → icon)
+- Icon names in snake_case (e.g., `settings`, `account_circle`)
+- No imports needed, minimal bundle impact
+
+**Available icons** (16 total):
+```typescript
+'account_circle', 'admin_panel_settings', 'apps', 'auto_graph',
+'dashboard', 'group', 'integration_instructions', 'loyalty',
+'payments', 'inventory', 'redeem', 'rocket_launch', 'settings',
+'smart_toy', 'storefront', 'verified'
+```
+
+**Adding new Material Symbols**:
+1. Search at https://fonts.google.com/icons (filter: Rounded)
+2. Copy snake_case name (e.g., `shopping_cart`)
+3. Add to `materialSymbolNames` array in `src/components/Icon/materialIconMap.ts`
+4. Use: `<Icon name="shopping_cart" size="m" />`
+
+**Key files**:
+- `src/components/Icon/materialIconMap.ts` - Icon registry
+- `src/components/Icon/Icon.module.css` - Font config with `font-variation-settings`
+- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md` - Guide
+- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md` - Technical migration details
+
+#### Custom Icons (Treez Brand)
+**Secondary system** for Treez-specific product category icons.
+
+**Available icons** (6 total):
+```typescript
+'beverage', 'cbd', 'edible', 'extracts', 'flower', 'preroll'
+```
+
+**How it works**:
+- SVG paths stored in `customIconData.ts`
+- Extracted from Figma designs
+- Rendered as inline SVG with proper `fillRule` and `clipRule`
+- Updated via `watch:icons` script
+
+**Adding new custom icons**:
+1. Export SVG from Figma to `imported-from-figma/` folder
+2. Run `npm run watch:icons` (or auto-detects if watcher running)
+3. Icon added to `src/components/Icon/customIconData.ts`
+4. Use: `<Icon name="new-icon" size="m" />`
+
+**Icon sizes** (both systems):
+- `xs`: 12px
+- `s`: 18px
+- `m`: 20px (default)
+- `l`: 24px
+- `xl`: 48px
+
+**Important sizing note**:
+- Material Symbols: Uses `font-size` + dynamic `opsz` (optical size)
+- Custom icons: Uses SVG `viewBox` scaling
+- Both support all 5 sizes seamlessly
+
+**When to use which**:
+- **Material Symbols**: Standard UI (buttons, navigation, system icons)
+- **Custom Icons**: Treez brand/product-specific designs
+
+**Documentation**:
+- `src/components/Icon/MATERIAL-SYMBOLS-CONFIG.md` - Full configuration
+- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md` - Sizing explanation
+- `src/components/Icon/EXAMPLE-ADDING-ICONS.md` - Practical examples
+
+### �🎯 Component Development Pattern
 
 When creating/updating components:
 
@@ -166,8 +247,11 @@ A: Use Figma MCP tools, not the old scripts. Don't ask for FIGMA_ACCESS_TOKEN.
 **Q: How do I update colors/tokens?**  
 A: Extract with MCP, then use `scripts/transform-figma-tokens.js` if needed.
 
-**Q: How do I add an icon?**  
-A: Drop SVG in `imported-from-figma/`, run `npm run watch:icons`, use `<Icon name="icon-name" />`.
+**Q: How do I add a Material Symbols icon?**  
+A: Search at https://fonts.google.com/icons (Rounded style), add name to `materialSymbolNames` array in `src/components/Icon/materialIconMap.ts`, use `<Icon name="icon_name" size="m" />`.
+
+**Q: How do I add a custom Treez icon?**  
+A: Drop SVG in `imported-from-figma/`, run `npm run watch:icons`, use `<Icon name="icon-name" size="m" />`.
 
 **Q: How do I test components?**  
 A: Run `npm run storybook` and view/interact with components there.
@@ -180,13 +264,18 @@ A: No, they're deprecated. Use Figma MCP instead.
 
 ### 📚 Key Documentation Files
 
+**AI Instructions**:
 - `.cursorrules` - Detailed AI instructions (comprehensive version)
 - `.ai/instructions.md` - Quick reference guide
 - `.ai/figma-mcp-migration.md` - Figma MCP migration details
+- `docs/ai-context/` - Optimization plan and status
+
+**Development**:
 - `README.md` - Project overview
+- `docs/README.md` - Complete documentation index
+- `docs/development/` - Token system, colors, fonts, commit guide
+- `docs/migrations/` - Material Symbols migration history
 - `src/design-tokens/README.md` - Token usage guide
-- `TOKEN-SYSTEM-SUMMARY.md` - Token architecture
-- `FONTS.md` - Font setup instructions
 
 ### 🤝 Interaction Tips
 

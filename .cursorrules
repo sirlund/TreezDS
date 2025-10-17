@@ -55,7 +55,7 @@ These scripts are marked for removal. Do not suggest using them or `FIGMA_ACCESS
 ### Available Components
 - `Button` - With variants (primary, secondary, tertiary) and sizes
 - `Typography` - Text styles from Figma design system
-- `Icon` - SVG icon system with dynamic loading
+- `Icon` - Universal icon system (Material Symbols + Custom SVG icons)
 
 ## Development Workflow
 
@@ -80,6 +80,61 @@ When design changes in Figma:
 2. Update `src/design-tokens/` files manually or with transformation scripts
 3. Run `scripts/transform-figma-tokens.js` if working with JSON exports
 4. Verify changes in Storybook
+
+## Icon System
+
+### Material Symbols (Primary)
+TreezDS uses **Google Fonts Material Symbols Rounded** variable font for standard icons.
+
+**Configuration**:
+- **Variant**: Rounded
+- **Weight**: 400
+- **Grade**: 0 (Normal)
+- **Optical Size**: 20px (base), dynamic per size
+- **Fill**: 0 (No fill / Outlined)
+
+**Available Icons** (16 total):
+- Navigation: `apps`, `dashboard`, `settings`
+- Users: `account_circle`, `admin_panel_settings`, `group`
+- Commerce: `storefront`, `inventory`, `payments`, `redeem`, `loyalty`
+- System: `verified`, `rocket_launch`, `integration_instructions`, `auto_graph`, `smart_toy`
+
+**How it works**:
+- Renders using font ligatures (name → icon)
+- No imports needed, just add name to `materialSymbolNames` array
+- Automatic tree-shaking via Google Fonts CDN
+- Font loaded in `index.html` and `.storybook/preview-head.html`
+
+### Custom Icons (Treez-Specific)
+SVG icons extracted from Figma for brand-specific designs.
+
+**Available Icons** (6 total):
+- Product types: `beverage`, `cbd`, `edible`, `extracts`, `flower`, `preroll`
+
+**How it works**:
+- SVG paths stored in `customIconData.ts`
+- Rendered as inline SVG with `fillRule="evenodd"` and `clipRule="evenodd"`
+- Updated via `watch:icons` script
+
+### Icon Sizes
+All icons support 5 sizes (applies to both Material Symbols and Custom):
+- `xs`: 12px
+- `s`: 18px  
+- `m`: 20px (default)
+- `l`: 24px
+- `xl`: 48px
+
+**Important**: Material Symbols use `font-size` + `opsz` variation, Custom icons use SVG `viewBox` scaling.
+
+### When to Use Which
+- **Material Symbols**: Standard UI icons (settings, dashboard, users, etc.)
+- **Custom Icons**: Treez brand-specific icons (product categories, etc.)
+
+**Documentation**:
+- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md` - Step-by-step guide
+- `src/components/Icon/MATERIAL-SYMBOLS-CONFIG.md` - Technical details
+- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md` - Migration from old @mui/icons-material
+- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md` - How sizing works
 
 ## Code Style & Conventions
 
@@ -111,12 +166,13 @@ When design changes in Figma:
 
 ### Fonts
 - Uses **Roboto** (Google Fonts) and **Inter** as fallback for Circular Std
-- See `FONTS.md` for commercial font setup
+- See `docs/development/FONTS.md` for commercial font setup
 
 ### Documentation Files
-- `TOKEN-SYSTEM-SUMMARY.md` - Token system overview
-- `SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
-- `FONTS.md` - Font configuration
+- `docs/development/TOKEN-SYSTEM-SUMMARY.md` - Token system overview
+- `docs/development/SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
+- `docs/development/FONTS.md` - Font configuration
+- `docs/README.md` - Complete documentation index
 - Component READMEs in each component folder
 
 ## When Working on This Project
@@ -141,11 +197,24 @@ mcp_figma_get_design_context({
 })
 ```
 
-### Add a New Icon
+### Add Material Symbols Icon (Recommended)
+1. Search icon at https://fonts.google.com/icons (filter: Style = Rounded)
+2. Add icon name to `src/components/Icon/materialIconMap.ts`:
+   ```typescript
+   export const materialSymbolNames = [
+     // ... existing icons
+     'new_icon_name', // snake_case from Google Fonts
+   ] as const;
+   ```
+3. Use: `<Icon name="new_icon_name" size="m" />`
+
+**Specifications**: Material Symbols Rounded, Weight 400, Grade 0, Optical Size 20px, No Fill
+
+### Add Custom Treez Icon
 1. Export SVG from Figma to `imported-from-figma/`
-2. Run `npm run watch:icons` (or it auto-detects if running)
-3. Icon automatically added to `src/components/Icon/iconData.ts`
-4. Use: `<Icon name="icon-name" />`
+2. Run `npm run watch:icons` (auto-detects if running)
+3. Icon added to `src/components/Icon/customIconData.ts`
+4. Use: `<Icon name="custom-icon-name" size="m" />`
 
 ### Deploy Storybook
 ```bash
@@ -158,9 +227,11 @@ npm run deploy-storybook  # Builds and deploys to gh-pages
 - Vite dev server on port 5173 (default)
 - Check `storybook-static/` for built Storybook
 - Design token issues? Check `src/design-tokens/README.md`
+- Complete documentation: `docs/README.md`
 
 ---
 
 **Last Updated**: October 2025
 **MCP Integration**: Figma Desktop MCP Active
 **Status**: Legacy scripts scheduled for deprecation
+**Documentation**: Organized in `docs/` directory

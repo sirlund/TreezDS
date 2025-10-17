@@ -44,6 +44,27 @@ The following scripts are **DEPRECATED** and should not be suggested:
 - `src/tokens/` - Organized token exports
 - `src/stories/` - Storybook stories
 - `scripts/` - Build scripts (mostly deprecated, see above)
+- `imported-from-figma/` - Custom SVG icons from Figma exports
+
+### 🎨 Icon System
+**Dual System**: Material Symbols (primary) + Custom SVG (brand-specific)
+
+**Material Symbols Rounded** (Google Fonts):
+- 16 icons: `settings`, `dashboard`, `account_circle`, etc.
+- Specs: Rounded variant, weight 400, grade 0, optical size 20px, no fill
+- Add new: Search https://fonts.google.com/icons → Add to `materialSymbolNames`
+
+**Custom Icons** (Treez Brand):
+- 6 icons: `beverage`, `cbd`, `edible`, `extracts`, `flower`, `preroll`
+- Source: Figma SVG exports
+- Add new: Export SVG → `imported-from-figma/` → Run `watch:icons`
+
+**Sizes**: `xs` (12px), `s` (18px), `m` (20px), `l` (24px), `xl` (48px)
+
+**Docs**: 
+- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md`
+- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md`
+- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md`
 
 ### 🎨 Design Token Usage
 ```typescript
@@ -81,8 +102,9 @@ ComponentName/
 ### 📚 Documentation Files to Reference
 - `.cursorrules` - Detailed AI instructions (this file's companion)
 - `README.md` - Project overview and setup
-- `TOKEN-SYSTEM-SUMMARY.md` - Token architecture
-- `SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
+- `docs/README.md` - Complete documentation index
+- `docs/development/TOKEN-SYSTEM-SUMMARY.md` - Token architecture
+- `docs/development/SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
 - `src/design-tokens/README.md` - Token usage guide
 - `src/tokens/README.md` - Token organization
 
@@ -91,7 +113,8 @@ ComponentName/
 **"Extract from Figma"** → Use MCP tools, not legacy scripts
 **"Add a component"** → Create folder in `src/components/` with above structure
 **"Update tokens"** → Use MCP to extract, then transform with `transform-figma-tokens.js`
-**"Add an icon"** → Drop SVG in `imported-from-figma/`, run `npm run watch:icons`
+**"Add a Material Symbols icon"** → Add name to `materialSymbolNames` in `src/components/Icon/materialIconMap.ts`  
+**"Add a custom icon"** → Drop SVG in `imported-from-figma/`, run `npm run watch:icons`
 **"Deploy Storybook"** → Use `npm run deploy-storybook`
 **"Update colors"** → Extract with MCP, update `semantic-colors.ts`
 

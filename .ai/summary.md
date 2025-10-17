@@ -94,6 +94,13 @@ TreezDS/
 2. Sync changes to `.claude/project-instructions.md`
 3. Update `.ai/instructions.md` quick reference
 4. Keep `.ai/figma-mcp-migration.md` current on Figma workflow
+5. Update icon documentation when icon system changes
+
+### Recent Updates
+- **October 17, 2025**: Icon system migrated to Material Symbols Rounded (Google Fonts)
+  - Removed dependency on `@mui/icons-material`
+  - Added dual system: Material Symbols (16 icons) + Custom SVG (6 icons)
+  - Documentation: `MATERIAL-SYMBOLS-MIGRATION.md`, `MATERIAL-SYMBOLS-SIZES-FIX.md`
 
 ### Consistency Check
 All files should agree on:
@@ -121,9 +128,10 @@ All files should agree on:
 ### Most Important Points for AI
 1. 🚨 **Use Figma MCP**, not old API scripts
 2. 🎨 **Develop in Storybook** (`npm run storybook`)
-3. 📁 **Follow component structure** pattern
-4. 🎯 **Use design tokens** from `/design-tokens` and `/tokens`
-5. ✅ **TypeScript strict mode** - explicit types required
+3. 🎭 **Icon System**: Material Symbols (primary) + Custom SVG (brand-specific)
+4. 📁 **Follow component structure** pattern
+5. 🎯 **Use design tokens** from `/design-tokens` and `/tokens`
+6. ✅ **TypeScript strict mode** - explicit types required
 
 ---
 

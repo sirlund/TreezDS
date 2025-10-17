@@ -22,7 +22,7 @@ A React component library built from Figma design system tokens, featuring Story
 
 ### Font Note
 
-The design system uses **Roboto** (via Google Fonts) and **Circular Std**. Since Circular Std is a commercial font, the project currently uses **Inter** as a fallback. See [FONTS.md](./FONTS.md) for instructions on adding the actual Circular Std font files.
+The design system uses **Roboto** (via Google Fonts) and **Circular Std**. Since Circular Std is a commercial font, the project currently uses **Inter** as a fallback. See [docs/development/FONTS.md](./docs/development/FONTS.md) for instructions on adding the actual Circular Std font files.
 
 ### Installation
 
@@ -64,20 +64,29 @@ Design tokens are automatically extracted from the Figma design system and conve
 
 ### Updating Design Tokens
 
-> ⚠️ **Note**: Legacy npm scripts (`tokens:extract`, `tokens:generate`, `tokens:update`) use deprecated Figma API methods. These will be replaced with Figma MCP-based workflows. See [`.ai/figma-mcp-migration.md`](./.ai/figma-mcp-migration.md) for details.
-
-**Current Method** (Figma MCP - Recommended):
-1. Use Figma MCP tools to extract design context
-2. Transform extracted data with `scripts/transform-figma-tokens.js`
-3. Update semantic mappings in `src/design-tokens/semantic-colors.ts`
-
-**Legacy Method** (Deprecated):
+**With Figma MCP** (Recommended):
 ```bash
-# ⚠️ These scripts are deprecated and will be removed
-npm run tokens:extract   # Use Figma MCP instead
-npm run tokens:generate  # Use Figma MCP instead
-npm run tokens:update    # Use Figma MCP instead
+# Interactive extraction workflow
+npm run mcp:extract
+
+# Extract only colors
+npm run mcp:colors
+
+# Generate all tokens
+npm run mcp:tokens
 ```
+
+See [scripts/mcp/README.md](./scripts/mcp/README.md) for complete workflow documentation.
+
+**Legacy Scripts** (⚠️ Deprecated):
+```bash
+# These scripts will be removed - use MCP instead
+npm run tokens:extract   # ⚠️ Deprecated
+npm run tokens:generate  # ⚠️ Deprecated
+npm run tokens:update    # ⚠️ Deprecated
+```
+
+See [docs/migrations/LEGACY-TO-MCP-MIGRATION.md](./docs/migrations/LEGACY-TO-MCP-MIGRATION.md) for migration guide.
 
 ### Available Token Categories
 
@@ -180,7 +189,16 @@ The scripts will:
 - **Vite** - Build tool
 - **Storybook 9** - Component development and documentation
 - **CSS Modules** - Scoped styling
-- **Figma API** - Design token extraction
+- **Figma MCP** - Design token extraction
+
+## Documentation
+
+📚 **[Complete Documentation](./docs/README.md)** - Organized guides and references
+
+Quick links:
+- [Development Guides](./docs/development/) - Tokens, colors, fonts
+- [Migration History](./docs/migrations/) - Material Symbols migration
+- [AI Context](./docs/ai-context/) - Optimization plan and AI instructions
 
 ## Contributing
 
@@ -188,6 +206,7 @@ The scripts will:
 2. Add Storybook stories alongside components
 3. Use design tokens from `src/design-tokens/tokens.ts`
 4. Run `npm run storybook` to preview changes
+5. See [docs/development/COMMIT-GUIDE.md](./docs/development/COMMIT-GUIDE.md) for commit conventions
 
 ## License
 
