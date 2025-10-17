@@ -1,0 +1,40 @@
+/* Icon base styles */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-black, #1a1a1a);
+  flex-shrink: 0;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon sizes matching Figma design system */
+.xs {
+  width: 12px;
+  height: 12px;
+}
+
+.s {
+  width: 18px;
+  height: 18px;
+}
+
+.m {
+  width: 20px;
+  height: 20px;
+}
+
+.l {
+  width: 24px;
+  height: 24px;
+}
+
+.xl {
+  width: 48px;
+  height: 48px;
+}
