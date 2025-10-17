@@ -1,16 +1,20 @@
 import React from 'react';
 import styles from './Icon.module.css';
-import { iconData, iconNames } from './iconData';
+import { customIconData, customIconNames, type CustomIconName } from './customIconData';
+import { materialIconNames, type MaterialIconName } from './materialIconMap';
 
 export type IconSize = 'xs' | 's' | 'm' | 'l' | 'xl';
-export type IconName = typeof iconNames[number];
+export type IconName = MaterialIconName | CustomIconName;
 
 export interface IconProps {
   /**
    * Icon name from the design system
-   * Available icons: admin_panel_settings, settings, group, verified, account_circle,
+   *
+   * Material Design icons: admin_panel_settings, settings, group, verified, account_circle,
    * storefront, integration_instructions, rocket_launch, product, dashboard, loyalty,
    * redeem, payments, apps, auto_graph
+   *
+   * Custom Treez icons: beverage, cbd, edible, extracts, flower, preroll
    */
   name: IconName;
 
@@ -37,15 +41,19 @@ export interface IconProps {
 /**
  * Icon component - Treez Design System
  *
- * Displays Material Design icons in various sizes.
- * All icons are sourced from the design system and maintain consistent sizing.
+ * Supports both Material Symbols icons and custom Treez icons.
+ * Material Symbols are rendered using Google's variable font (Rounded variant, weight 400, grade 0, optical size 20px).
+ * Custom icons are loaded from the design system SVG data.
  *
  * @see https://www.figma.com/design/zPEk7VNZnVzhGaNCnalP6o/Design-System?node-id=16340-111853
  *
  * @example
  * ```tsx
- * <Icon name="home" size="m" />
- * <Icon name="settings" size="l" color="#1A1A1A" />
+ * // Material Symbol icon
+ * <Icon name="settings" size="m" />
+ *
+ * // Custom Treez icon
+ * <Icon name="flower" size="l" color="#1A1A1A" />
  * ```
  */
 export const Icon: React.FC<IconProps> = ({
@@ -63,30 +71,58 @@ export const Icon: React.FC<IconProps> = ({
     .filter(Boolean)
     .join(' ');
 
-  const icon = iconData[name];
+  // Check if this is a custom icon
+  if (customIconNames.includes(name as CustomIconName)) {
+    const icon = customIconData[name as CustomIconName];
 
-  if (!icon) {
-    console.warn(`Icon "${name}" not found in icon data`);
-    return null;
+    if (!icon) {
+      console.warn(`Custom icon "${name}" not found in icon data`);
+      return null;
+    }
+
+    return (
+      <span
+        className={iconClasses}
+        style={color ? { color } : undefined}
+        role="img"
+        aria-label={ariaLabel || name.replace(/_/g, ' ')}
+      >
+        <svg
+          className={styles.svg}
+          fill="currentColor"
+          viewBox={icon.viewBox}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d={icon.path} fillRule="evenodd" clipRule="evenodd" />
+        </svg>
+      </span>
+    );
   }
 
-  return (
-    <span
-      className={iconClasses}
-      style={color ? { color } : undefined}
-      role="img"
-      aria-label={ariaLabel || name.replace(/_/g, ' ')}
-    >
-      <svg
-        className={styles.svg}
-        fill="currentColor"
-        viewBox={icon.viewBox}
-        xmlns="http://www.w3.org/2000/svg"
+  // Check if this is a Material Symbol icon
+  if (materialIconNames.includes(name as MaterialIconName)) {
+    // Material Symbols uses snake_case names directly as the icon ligature
+    // e.g., "settings" displays the settings icon
+    return (
+      <span
+        className={`${iconClasses} ${styles.materialSymbol}`}
+        style={color ? { color } : undefined}
+        role="img"
+        aria-label={ariaLabel || name.replace(/_/g, ' ')}
       >
-        <path d={icon.path} />
-      </svg>
-    </span>
-  );
+        {name}
+      </span>
+    );
+  }
+
+  console.warn(`Icon "${name}" not found in either custom or Material icon sets`);
+  return null;
 };
 
 Icon.displayName = 'Icon';
+
+// Export all icon names for use in stories/docs
+export const allIconNames: IconName[] = [
+  ...materialIconNames,
+  ...customIconNames,
+];

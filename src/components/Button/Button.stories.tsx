@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import { allIconNames } from '../Icon/Icon';
 
 const meta: Meta<typeof Button> = {
   title: 'Design System/Button',
@@ -51,6 +52,16 @@ Additionally, buttons can be created in three different sizes: Medium (default),
         type: { summary: 'boolean' },
         defaultValue: { summary: 'false' },
       },
+    },
+    iconBefore: {
+      control: 'select',
+      options: [undefined, ...allIconNames],
+      description: 'Icon name to display before the button text',
+    },
+    iconAfter: {
+      control: 'select',
+      options: [undefined, ...allIconNames],
+      description: 'Icon name to display after the button text',
     },
   },
 };
@@ -138,9 +149,9 @@ export const WithIcons: Story = {
       <div>
         <h3 style={{ marginBottom: '16px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', color: '#1f2937' }}>Buttons with Icons</h3>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <Button iconBefore={<span>←</span>}>Back</Button>
-          <Button variant="secondary" iconAfter={<span>→</span>}>Next</Button>
-          <Button variant="tertiary" iconBefore={<span>+</span>}>Add</Button>
+          <Button iconBefore="dashboard">Dashboard</Button>
+          <Button variant="secondary" iconAfter="rocket_launch">Launch</Button>
+          <Button variant="tertiary" iconBefore="settings">Settings</Button>
         </div>
       </div>
     </div>
@@ -207,7 +218,7 @@ export const DosAndDonts: Story = {
           <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#15803d' }}>Use descriptive labels</h4>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
             <Button variant="primary">Save Changes</Button>
-            <Button variant="secondary" iconAfter={<span>→</span>}>Continue to Payment</Button>
+            <Button variant="secondary" iconAfter="payments">Continue to Payment</Button>
           </div>
           <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', margin: 0 }}>Labels clearly describe what will happen</p>
         </div>
@@ -216,8 +227,8 @@ export const DosAndDonts: Story = {
         <div style={{ padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px' }}>
           <h4 style={{ marginBottom: '12px', fontFamily: 'Roboto', fontWeight: '500', fontSize: '16px', color: '#15803d' }}>Use tertiary in lists</h4>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
-            <Button variant="tertiary" size="small" iconBefore={<span>✏️</span>}>Edit</Button>
-            <Button variant="tertiary" size="small" iconBefore={<span>🗑️</span>}>Delete</Button>
+            <Button variant="tertiary" size="small">Edit</Button>
+            <Button variant="tertiary" size="small">Delete</Button>
           </div>
           <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#166534', margin: 0 }}>Tertiary buttons work well for repeated actions</p>
         </div>
@@ -316,12 +327,12 @@ export const TechnicalSpecs: Story = {
         <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              <Button iconBefore={<span>+</span>}>With Icon</Button>
+              <Button iconBefore="product">With Icon</Button>
               <Button>Without Icon</Button>
             </div>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              <Button variant="secondary" iconAfter={<span>→</span>}>Icon After</Button>
-              <Button variant="tertiary" iconBefore={<span>⚙️</span>} iconAfter={<span>↗</span>}>Both Icons</Button>
+              <Button variant="secondary" iconAfter="rocket_launch">Icon After</Button>
+              <Button variant="tertiary" iconBefore="settings" iconAfter="verified">Both Icons</Button>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Button.module.css';
+import { Icon } from '../Icon/Icon';
+import type { IconName } from '../Icon/Icon';
 
 export interface ButtonProps {
   /**
@@ -18,11 +20,11 @@ export interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
 
-  /** Icon to display before the button text */
-  iconBefore?: React.ReactNode;
+  /** Icon name to display before the button text */
+  iconBefore?: IconName;
 
-  /** Icon to display after the button text */
-  iconAfter?: React.ReactNode;
+  /** Icon name to display after the button text */
+  iconAfter?: IconName;
 
   /** Button content */
   children: React.ReactNode;
@@ -60,8 +62,12 @@ export interface ButtonProps {
  *   Click me
  * </Button>
  *
- * <Button variant="secondary" iconBefore={<Icon />}>
- *   With Icon
+ * <Button variant="secondary" iconBefore="rocket_launch">
+ *   Launch
+ * </Button>
+ *
+ * <Button variant="tertiary" iconBefore="settings" iconAfter="verified">
+ *   Settings
  * </Button>
  * ```
  */
@@ -87,6 +93,9 @@ export const Button: React.FC<ButtonProps> = ({
     .filter(Boolean)
     .join(' ');
 
+  // Map button size to icon size
+  const iconSize = size === 'small' ? 's' : size === 'large' ? 'm' : 's';
+
   return (
     <button
       type={type}
@@ -94,9 +103,17 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
     >
-      {iconBefore && <span className={styles.icon}>{iconBefore}</span>}
+      {iconBefore && (
+        <span className={styles.icon}>
+          <Icon name={iconBefore} size={iconSize} />
+        </span>
+      )}
       <span className={styles.label}>{children}</span>
-      {iconAfter && <span className={styles.icon}>{iconAfter}</span>}
+      {iconAfter && (
+        <span className={styles.icon}>
+          <Icon name={iconAfter} size={iconSize} />
+        </span>
+      )}
     </button>
   );
 };

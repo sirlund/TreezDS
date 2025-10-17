@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon } from './Icon';
-import { iconNames } from './iconData';
+import { Icon, allIconNames } from './Icon';
+import { materialIconNames } from './materialIconMap';
+import { customIconNames } from './customIconData';
 
 const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
@@ -12,8 +13,8 @@ const meta: Meta<typeof Icon> = {
   argTypes: {
     name: {
       control: 'select',
-      options: iconNames,
-      description: 'Icon name from the design system',
+      options: allIconNames,
+      description: 'Icon name from the design system (Material Design + Custom Treez icons)',
     },
     size: {
       control: 'select',
@@ -57,102 +58,186 @@ export const WithColor: Story = {
   },
 };
 
-export const AllIcons: Story = {
+export const MaterialDesignIcons: Story = {
   render: () => (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(6, 1fr)',
-        gap: '24px',
-        padding: '24px',
-      }}
-    >
-      {iconNames.map((iconName) => (
-        <div
-          key={iconName}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '8px',
-          }}
-        >
-          <Icon name={iconName} size="l" />
-          <span
+    <div>
+      <h3 style={{ marginBottom: '16px', fontWeight: 600 }}>
+        Material Design Icons (from @mui/icons-material)
+      </h3>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(6, 1fr)',
+          gap: '24px',
+          padding: '24px',
+          border: '1px solid #e0e0e0',
+          borderRadius: '8px',
+        }}
+      >
+        {materialIconNames.map((iconName) => (
+          <div
+            key={iconName}
             style={{
-              fontSize: '12px',
-              textAlign: 'center',
-              color: '#666',
-              wordBreak: 'break-word',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '8px',
             }}
           >
-            {iconName.replace(/_/g, ' ')}
-          </span>
-        </div>
-      ))}
+            <Icon name={iconName} size="l" />
+            <span
+              style={{
+                fontSize: '12px',
+                textAlign: 'center',
+                color: '#666',
+                wordBreak: 'break-word',
+              }}
+            >
+              {iconName.replace(/_/g, ' ')}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   ),
 };
 
-export const AdminPanelSettings: Story = {
-  args: {
-    name: 'admin_panel_settings',
-    size: 'l',
-  },
+export const CustomTreezIcons: Story = {
+  render: () => (
+    <div>
+      <h3 style={{ marginBottom: '16px', fontWeight: 600 }}>
+        Custom Treez Icons
+      </h3>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(6, 1fr)',
+          gap: '24px',
+          padding: '24px',
+          border: '1px solid #e0e0e0',
+          borderRadius: '8px',
+          backgroundColor: '#f5f5f5',
+        }}
+      >
+        {customIconNames.map((iconName) => (
+          <div
+            key={iconName}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <Icon name={iconName} size="l" />
+            <span
+              style={{
+                fontSize: '12px',
+                textAlign: 'center',
+                color: '#666',
+                wordBreak: 'break-word',
+              }}
+            >
+              {iconName.replace(/_/g, ' ')}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  ),
 };
 
+export const AllIcons: Story = {
+  render: () => (
+    <div>
+      <div style={{ marginBottom: '32px' }}>
+        <h3 style={{ marginBottom: '16px', fontWeight: 600 }}>
+          Material Design Icons ({materialIconNames.length})
+        </h3>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(6, 1fr)',
+            gap: '24px',
+            padding: '24px',
+            border: '1px solid #e0e0e0',
+            borderRadius: '8px',
+          }}
+        >
+          {materialIconNames.map((iconName) => (
+            <div
+              key={iconName}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              <Icon name={iconName} size="l" />
+              <span
+                style={{
+                  fontSize: '12px',
+                  textAlign: 'center',
+                  color: '#666',
+                  wordBreak: 'break-word',
+                }}
+              >
+                {iconName.replace(/_/g, ' ')}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 style={{ marginBottom: '16px', fontWeight: 600 }}>
+          Custom Treez Icons ({customIconNames.length})
+        </h3>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(6, 1fr)',
+            gap: '24px',
+            padding: '24px',
+            border: '1px solid #e0e0e0',
+            borderRadius: '8px',
+            backgroundColor: '#f5f5f5',
+          }}
+        >
+          {customIconNames.map((iconName) => (
+            <div
+              key={iconName}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              <Icon name={iconName} size="l" />
+              <span
+                style={{
+                  fontSize: '12px',
+                  textAlign: 'center',
+                  color: '#666',
+                  wordBreak: 'break-word',
+                }}
+              >
+                {iconName.replace(/_/g, ' ')}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+// Individual Material Design icon examples
 export const Settings: Story = {
   args: {
     name: 'settings',
-    size: 'l',
-  },
-};
-
-export const Group: Story = {
-  args: {
-    name: 'group',
-    size: 'l',
-  },
-};
-
-export const Verified: Story = {
-  args: {
-    name: 'verified',
-    size: 'l',
-  },
-};
-
-export const AccountCircle: Story = {
-  args: {
-    name: 'account_circle',
-    size: 'l',
-  },
-};
-
-export const Storefront: Story = {
-  args: {
-    name: 'storefront',
-    size: 'l',
-  },
-};
-
-export const IntegrationInstructions: Story = {
-  args: {
-    name: 'integration_instructions',
-    size: 'l',
-  },
-};
-
-export const RocketLaunch: Story = {
-  args: {
-    name: 'rocket_launch',
-    size: 'l',
-  },
-};
-
-export const Product: Story = {
-  args: {
-    name: 'product',
     size: 'l',
   },
 };
@@ -164,37 +249,24 @@ export const Dashboard: Story = {
   },
 };
 
-export const Loyalty: Story = {
+// Individual Custom Treez icon examples
+export const Flower: Story = {
   args: {
-    name: 'loyalty',
+    name: 'flower',
     size: 'l',
   },
 };
 
-export const Redeem: Story = {
+export const CBD: Story = {
   args: {
-    name: 'redeem',
+    name: 'cbd',
     size: 'l',
   },
 };
 
-export const Payments: Story = {
+export const Edible: Story = {
   args: {
-    name: 'payments',
-    size: 'l',
-  },
-};
-
-export const Apps: Story = {
-  args: {
-    name: 'apps',
-    size: 'l',
-  },
-};
-
-export const AutoGraph: Story = {
-  args: {
-    name: 'auto_graph',
+    name: 'edible',
     size: 'l',
   },
 };
