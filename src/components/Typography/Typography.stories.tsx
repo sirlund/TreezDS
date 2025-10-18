@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Typography } from './Typography';
-import { typography } from '../../design-tokens/tokens';
+import { typographyLegacy as typography } from '../../design-tokens/typography';
 
 const meta: Meta<typeof Typography> = {
   title: 'Design System/Typography',
@@ -98,6 +98,7 @@ export const BodyText: Story = {
       <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
         <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Circular Std Font Family</h3>
         <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', margin: 0 }}>Used for body text and UI elements</p>
+        <p style={{ fontSize: '12px', fontFamily: 'Circular Std', color: '#f59e0b', marginTop: '8px', fontWeight: '500', margin: 0 }}>⚠️ Currently using Inter as fallback (Circular Std is a commercial font)</p>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
@@ -127,8 +128,9 @@ export const Labels: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
-        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Label Styles</h3>
+        <h3 style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '20px', marginBottom: '8px', color: '#1f2937' }}>Circular Std Font Family</h3>
         <p style={{ fontSize: '14px', fontFamily: 'Circular Std', color: '#6b7280', margin: 0 }}>For form labels, UI components, and interactive elements</p>
+        <p style={{ fontSize: '12px', fontFamily: 'Circular Std', color: '#f59e0b', marginTop: '8px', fontWeight: '500', margin: 0 }}>⚠️ Using Inter as substitute (see docs/development/FONTS.md)</p>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
         <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>

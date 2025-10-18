@@ -1,6 +1,23 @@
-# Treez Design System - Color Tokens
+# Treez Design System - Design Tokens
 
-This directory contains color tokens for the Treez Design System, extracted from Figma and organized into semantic categories.
+This directory contains design tokens for the Treez Design System, extracted from Figma and organized for easy consumption.
+
+## Structure
+
+```
+src/design-tokens/
+├── index.ts                    # Main export file
+├── README.md                   # This file
+├── semantic-colors.ts          # Semantic color palette
+├── semantic-colors.css         # CSS variables for colors
+└── typography/                 # Typography token system
+    ├── index.ts               # Typography exports
+    ├── README.md              # Typography documentation
+    ├── primitives.ts          # Base values (font sizes, weights, etc.)
+    ├── primitives.css         # CSS primitives
+    ├── semantic.ts            # Component tokens (headings, body, etc.)
+    └── semantic.css           # CSS semantic tokens
+```
 
 ## Files
 
@@ -15,24 +32,34 @@ The main semantic color palette organized by purpose:
 ### `semantic-colors.css`
 CSS custom properties (CSS variables) for all semantic colors. Import this file to use colors in your CSS.
 
-### `colors.ts` (Auto-generated)
-Raw color tokens extracted from Figma. These have non-semantic names based on Figma layer structure.
+### `typography/`
+Professional typography token system with two layers:
+- **Primitives**: Base values (font sizes, weights, line heights, etc.) - don't use directly
+- **Semantics**: Component-level tokens (headings, body, labels, links, caps) - use these!
 
-### `colors.css` (Auto-generated)
-CSS variables for raw Figma colors.
+See [`typography/README.md`](./typography/README.md) for detailed documentation.
 
 ## Usage
 
 ### In TypeScript/JavaScript
 
 ```typescript
-import { colors, buttonColors } from '@/design-tokens';
+import { colors, buttonColors, typography } from '@/design-tokens';
 
 // Use brand colors
 const primaryColor = colors.brand.primary; // '#a9e079'
 
 // Use button colors
 const bgColor = buttonColors.primaryBg; // '#a9e079'
+
+// Use typography tokens (modern nested structure)
+const h1Styles = typography.headings.h1;
+const bodyStyles = typography.body.large;
+const labelStyles = typography.labels.small;
+
+// Or use legacy flat structure
+import { typographyLegacy } from '@/design-tokens';
+const h1Styles = typographyLegacy['headings-h1'];
 ```
 
 ### In CSS/CSS Modules
@@ -90,16 +117,20 @@ Pre-defined colors for button states:
 - `error`: Red for error states
 - `accent`: Yellow accent color
 
-## Updating Colors
+## Updating Tokens
 
-Colors are extracted from Figma using the extraction scripts in `/scripts`:
-- `extract-colors-from-node.js` - Extracts colors from a specific Figma node
-- `extract-color-styles.js` - Extracts color styles from Figma
+Design tokens are extracted from Figma using the MCP workflow scripts in `/scripts/mcp`:
+- `npm run mcp:extract` - Interactive design extraction
+- `npm run mcp:colors` - Extract color tokens
+- `npm run mcp:tokens` - Generate all tokens
+
+See `/scripts/mcp/README.md` for detailed workflow instructions.
 
 After running extraction:
 1. Update `semantic-colors.ts` with any new semantic mappings
 2. Update `semantic-colors.css` with corresponding CSS variables
-3. Document any new color categories
+3. Typography tokens are auto-generated in `typography/tokens.ts` and `typography/tokens.css`
+4. Document any new color categories or typography styles
 
 ## Best Practices
 

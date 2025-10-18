@@ -1,10 +1,10 @@
 import React from 'react';
-import { typography, type TypographyToken } from '../../design-tokens/tokens';
+import { typographyLegacy as typography, type TypographyTokenName } from '../../design-tokens/typography';
 import styles from './Typography.module.css';
 
 export interface TypographyProps {
   /** The typography variant to use from the design system */
-  variant: TypographyToken;
+  variant: TypographyTokenName;
   /** The HTML element to render */
   as?: keyof JSX.IntrinsicElements;
   /** Content to display */
@@ -27,16 +27,8 @@ export const Typography: React.FC<TypographyProps> = ({
 }) => {
   const typographyStyle = typography[variant];
 
-  // Map Circular Std to Inter (fallback) until Circular Std font is added
-  const getFontFamily = (fontFamily: string) => {
-    if (fontFamily === 'Circular Std') {
-      return "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
-    }
-    return `'${fontFamily}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
-  };
-
   const inlineStyles: React.CSSProperties = {
-    fontFamily: getFontFamily(typographyStyle.fontFamily),
+    fontFamily: typographyStyle.fontFamily,
     fontWeight: typographyStyle.fontWeight,
     fontSize: typographyStyle.fontSize,
     lineHeight: typographyStyle.lineHeight,

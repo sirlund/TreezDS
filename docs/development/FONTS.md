@@ -4,46 +4,56 @@
 
 The design system uses two main fonts:
 - **Roboto** - For headings and body text (loaded via Google Fonts ✅)
-- **Circular Std** - For labels and UI elements (using Inter as fallback ⚠️)
+- **Circular Std** - For labels and UI elements (✅ OTF files supported)
 
 ## Adding Circular Std Font
 
-Circular Std is a commercial font from [Lineto](https://lineto.com/typefaces/circular). To use the actual font instead of the Inter fallback:
+Circular Std is a commercial font from [Lineto](https://lineto.com/typefaces/circular). The system now supports OTF (OpenType Font) files:
 
 ### Step 1: Obtain Font Files
 
-Purchase a license for Circular Std and download these font files:
-- CircularStd-Book.woff2 / .woff (weight: 400)
-- CircularStd-Medium.woff2 / .woff (weight: 450)
-- CircularStd-Bold.woff2 / .woff (weight: 500)
+Purchase a license for Circular Std and obtain these font files:
+- CircularStd-Book.otf (Regular - weight: 400)
+- CircularStd-Medium.otf (Medium - weight: 450/500)
+- CircularStd-Bold.otf (Bold - weight: 600)
+
+**Supported formats**: OTF (OpenType Font), WOFF2, WOFF
 
 ### Step 2: Add Fonts to Project
 
-1. Create the fonts directory:
-   ```bash
-   mkdir -p public/fonts
-   ```
+Copy your Circular Std font files to `public/fonts/`:
 
-2. Copy your Circular Std font files to `public/fonts/`:
-   ```
-   public/fonts/
-   ├── CircularStd-Book.woff2
-   ├── CircularStd-Book.woff
-   ├── CircularStd-Medium.woff2
-   ├── CircularStd-Medium.woff
-   ├── CircularStd-Bold.woff2
-   └── CircularStd-Bold.woff
-   ```
+**For OTF files** (current setup):
+```
+public/fonts/
+├── CircularStd-Book.otf
+├── CircularStd-Medium.otf
+└── CircularStd-Bold.otf
+```
 
-### Step 3: Enable Font Loading
+**For WOFF/WOFF2 files** (alternative):
+```
+public/fonts/
+├── CircularStd-Book.woff2
+├── CircularStd-Book.woff
+├── CircularStd-Medium.woff2
+├── CircularStd-Medium.woff
+├── CircularStd-Bold.woff2
+└── CircularStd-Bold.woff
+```
 
-Uncomment the `@font-face` declarations in `src/styles/fonts.css`:
+See `public/fonts/README.md` for detailed naming requirements.
+
+### Step 3: Verify Font Loading
+
+The `@font-face` declarations are already configured in `src/styles/fonts.css` for OTF files:
+
+**Current configuration (OTF)**:
 
 ```css
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Book.woff2') format('woff2'),
-       url('/fonts/CircularStd-Book.woff') format('woff');
+  src: url('/fonts/CircularStd-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -51,8 +61,7 @@ Uncomment the `@font-face` declarations in `src/styles/fonts.css`:
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Medium.woff2') format('woff2'),
-       url('/fonts/CircularStd-Medium.woff') format('woff');
+  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
   font-weight: 450;
   font-style: normal;
   font-display: swap;
@@ -60,24 +69,33 @@ Uncomment the `@font-face` declarations in `src/styles/fonts.css`:
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Bold.woff2') format('woff2'),
-       url('/fonts/CircularStd-Bold.woff') format('woff');
-  font-weight: 500;
+  src: url('/fonts/CircularStd-Bold.otf') format('opentype');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 ```
 
-### Step 4: Update Typography Component
-
-Update `src/components/Typography/Typography.tsx` to remove the Inter fallback:
-
-```tsx
-const getFontFamily = (fontFamily: string) => {
-  // Now that Circular Std is loaded, use it directly
-  return `'${fontFamily}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
-};
+**If you have WOFF/WOFF2 files instead**, update the `src:` lines:
+```css
+src: url('/fonts/CircularStd-Book.woff2') format('woff2'),
+     url('/fonts/CircularStd-Book.woff') format('woff');
 ```
+
+### Step 4: Test Font Loading
+
+1. **Add your OTF files** to `public/fonts/`
+2. **Restart dev server**: `npm run dev` or `npm run storybook`
+3. **Open Storybook** and navigate to Typography → Labels
+4. **Verify**: Labels should now render in Circular Std (not Inter)
+
+The Typography component is already configured with proper fallback:
+```tsx
+// Circular Std with Inter fallback
+'Circular Std', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+```
+
+If Circular Std files are present, they'll load automatically. If missing, Inter will be used as fallback.
 
 ### Step 5: Verify
 

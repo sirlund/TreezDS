@@ -1,31 +1,26 @@
-/* Import Roboto from Google Fonts */
+/* Import Google Fonts - must be at the top of the file */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&display=swap');
 
 /*
   Circular Std Font
-
-  Note: Circular Std is a commercial font. You'll need to:
-  1. Purchase a license from Lineto.com
-  2. Add the font files to /public/fonts/
-  3. Uncomment the @font-face declarations below
-
-  Alternatively, you can use a fallback like 'Inter' or 'SF Pro' which have similar characteristics.
+  Commercial font loaded from /public/fonts/
+  Supports OTF (OpenType Font) format
 */
 
-/*
+/* Circular Std Book (Regular - Weight 400) */
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Book.woff2') format('woff2'),
-       url('/fonts/CircularStd-Book.woff') format('woff');
+  src: url('/fonts/CircularStd-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+/* Circular Std Medium (Weight 450/500) */
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Medium.woff2') format('woff2'),
-       url('/fonts/CircularStd-Medium.woff') format('woff');
+  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
   font-weight: 450;
   font-style: normal;
   font-display: swap;
@@ -33,21 +28,35 @@
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Bold.woff2') format('woff2'),
-       url('/fonts/CircularStd-Bold.woff') format('woff');
+  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
+/* Circular Std Bold (Weight 600) */
+@font-face {
+  font-family: 'Circular Std';
+  src: url('/fonts/CircularStd-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
+  Centralized Font Stack Configuration
+  Edit font fallbacks here - these are used throughout the app
 */
-
-/* Temporary fallback: Use Inter as a Circular Std substitute */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&display=swap');
-
-/* Global font fallback mapping */
 :root {
-  --font-circular: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Primary font stack: Circular Std → Inter → system fonts */
+  --font-family-circular: 'Circular Std', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Secondary font stack: Roboto → system fonts */
+  --font-family-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Legacy variable names (deprecated - use above) */
+  --font-circular: var(--font-family-circular);
+  --font-roboto: var(--font-family-roboto);
 }
 
 body {

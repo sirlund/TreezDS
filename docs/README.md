@@ -24,6 +24,7 @@ Essential guides for developers working on the design system.
 | [TOKEN-SYSTEM-SUMMARY.md](./development/TOKEN-SYSTEM-SUMMARY.md) | Design token architecture and usage |
 | [SEMANTIC-COLORS-IMPLEMENTATION.md](./development/SEMANTIC-COLORS-IMPLEMENTATION.md) | Color system and semantic tokens |
 | [FONTS.md](./development/FONTS.md) | Font configuration and setup |
+| [FONT-FALLBACKS.md](./development/FONT-FALLBACKS.md) | Centralized font fallback configuration |
 | [COMMIT-GUIDE.md](./development/COMMIT-GUIDE.md) | Git commit conventions |
 
 ### 🔄 Migration History
