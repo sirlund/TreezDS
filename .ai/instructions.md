@@ -16,7 +16,8 @@ React Design System Library with TypeScript + Vite + Storybook
 npm run storybook        # Start development (preferred)
 npm run dev              # Start Vite dev server
 npm run build            # Build library
-npm run watch:icons      # Watch for new SVG icons
+npm run watch:icons      # Watch for new SVG icons (auto-detect changes)
+npm run update:icons     # Manually regenerate icon data from SVGs
 ```
 
 ### 🚨 CRITICAL: Figma Integration
@@ -38,11 +39,13 @@ The following scripts are **DEPRECATED** and should not be suggested:
 
 **Never suggest** using `FIGMA_ACCESS_TOKEN` or running `npm run tokens:extract/generate/update`
 
-### 📁 Key Directories
+### 📁 Project Structure
 - `src/components/` - React components (Button, Typography, Icon)
-- `src/design-tokens/` - Design tokens (CSS + TS)
-- `src/tokens/` - Organized token exports
+- `src/figma-tokens/` - Primitive tokens (auto-generated from Figma)
+- `src/design-tokens/` - Semantic tokens (manually refined)
 - `src/stories/` - Storybook stories
+- `docs/guides/` - Development guides (fonts, tokens, icons)
+- `docs/CHANGELOG.md` - Project history
 - `scripts/` - Build scripts (mostly deprecated, see above)
 - `imported-from-figma/` - Custom SVG icons from Figma exports
 
@@ -102,11 +105,43 @@ ComponentName/
 ### 📚 Documentation Files to Reference
 - `.cursorrules` - Detailed AI instructions (this file's companion)
 - `README.md` - Project overview and setup
-- `docs/README.md` - Complete documentation index
-- `docs/development/TOKEN-SYSTEM-SUMMARY.md` - Token architecture
-- `docs/development/SEMANTIC-COLORS-IMPLEMENTATION.md` - Color system details
-- `src/design-tokens/README.md` - Token usage guide
-- `src/tokens/README.md` - Token organization
+- `docs/CHANGELOG.md` - Project history and major changes
+- `docs/guides/` - Development guides (fonts, tokens, colors, icons)
+- `src/figma-tokens/README.md` - Primitive tokens guide
+- `src/design-tokens/README.md` - Semantic tokens guide
+
+### 📝 Documentation Policy
+
+**IMPORTANT**: This project follows a strict documentation structure to avoid clutter.
+
+**✅ DO:**
+- Update `docs/CHANGELOG.md` for major changes
+- Add technical guides to `docs/guides/` (one topic per file)
+- Keep this file (`.ai/instructions.md`) updated with new patterns
+- Write all documentation in English
+
+**❌ DO NOT:**
+- Create temporary files like `SUMMARY.md`, `AUDIT.md`, `ANALYSIS.md`
+- Create dated files like `PHASE-1-COMPLETE.md`, `UPDATE-2025-10-18.md`
+- Duplicate information across multiple files
+- Create separate `ai-context/`, `migrations/`, or similar folders
+
+**Structure:**
+```
+docs/
+├── CHANGELOG.md ............ Project history (major changes only)
+└── guides/
+    ├── fonts.md ............ Font setup and configuration
+    ├── tokens.md ........... Token system architecture
+    └── icons.md ............ Icon system usage
+```
+
+**When to update CHANGELOG:**
+- Major feature additions
+- System refactors
+- Breaking changes
+- Important migrations
+- Keep entries concise (1-2 lines each)
 
 ### 🎯 When User Asks to...
 
@@ -114,7 +149,8 @@ ComponentName/
 **"Add a component"** → Create folder in `src/components/` with above structure
 **"Update tokens"** → Use MCP to extract, then transform with `transform-figma-tokens.js`
 **"Add a Material Symbols icon"** → Add name to `materialSymbolNames` in `src/components/Icon/materialIconMap.ts`  
-**"Add a custom icon"** → Drop SVG in `imported-from-figma/`, run `npm run watch:icons`
+**"Add a custom icon"** → Drop SVG in `imported-from-figma/`, run `npm run watch:icons` or `npm run update:icons`
+**"Update existing icons"** → Modify SVG in `imported-from-figma/`, run `npm run update:icons`
 **"Deploy Storybook"** → Use `npm run deploy-storybook`
 **"Update colors"** → Extract with MCP, update `semantic-colors.ts`
 

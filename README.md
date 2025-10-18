@@ -130,23 +130,32 @@ TreezDS/
 ├── src/
 │   ├── components/          # React components
 │   │   ├── Button/
-│   │   │   ├── Button.tsx
-│   │   │   ├── Button.module.css
-│   │   │   ├── Button.stories.tsx
-│   │   │   └── index.ts
 │   │   ├── Typography/
-│   │   │   └── ...
+│   │   ├── Icon/
 │   │   └── index.ts
-│   ├── design-tokens/       # Generated design tokens
+│   ├── figma-tokens/        # Auto-generated primitive tokens
+│   │   ├── colors/          # Color tokens by category
+│   │   ├── spacing/         # Spacing tokens
+│   │   ├── radius/          # Border radius tokens
+│   │   └── index.ts
+│   ├── design-tokens/       # Semantic/component tokens
 │   │   ├── tokens.ts        # TypeScript tokens
 │   │   ├── tokens.css       # CSS variables
-│   │   ├── tokens.json      # JSON tokens
+│   │   ├── semantic-colors.ts
 │   │   └── figma-*.json     # Raw Figma data
-│   └── stories/             # Additional Storybook stories
-│       └── DesignTokens.stories.tsx
+│   └── stories/             # Storybook stories
 ├── scripts/                 # Build and generation scripts
 │   ├── extract-figma-data.js
-│   └── generate-tokens.js
+│   ├── generate-tokens.js
+│   └── watch-icons.js
+├── docs/
+│   ├── guides/             # Development guides
+│   │   ├── tokens.md
+│   │   ├── fonts.md
+│   │   └── icons.md
+│   └── CHANGELOG.md        # Project history
+├── .ai/
+│   └── instructions.md     # AI documentation policy
 ├── .storybook/             # Storybook configuration
 └── package.json
 ```
@@ -196,9 +205,9 @@ The scripts will:
 📚 **[Complete Documentation](./docs/README.md)** - Organized guides and references
 
 Quick links:
-- [Development Guides](./docs/development/) - Tokens, colors, fonts
-- [Migration History](./docs/migrations/) - Material Symbols migration
-- [AI Context](./docs/ai-context/) - Optimization plan and AI instructions
+- [Development Guides](./docs/guides/) - Tokens, colors, fonts, icons
+- [Project Changelog](./docs/CHANGELOG.md) - Project history and migrations
+- [AI Instructions](./.ai/instructions.md) - Documentation policy and AI guidance
 
 ## Contributing
 
@@ -206,7 +215,6 @@ Quick links:
 2. Add Storybook stories alongside components
 3. Use design tokens from `src/design-tokens/tokens.ts`
 4. Run `npm run storybook` to preview changes
-5. See [docs/development/COMMIT-GUIDE.md](./docs/development/COMMIT-GUIDE.md) for commit conventions
 
 ## License
 
