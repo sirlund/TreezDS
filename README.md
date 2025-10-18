@@ -86,7 +86,7 @@ npm run tokens:generate  # ⚠️ Deprecated
 npm run tokens:update    # ⚠️ Deprecated
 ```
 
-See [docs/migrations/LEGACY-TO-MCP-MIGRATION.md](./docs/migrations/LEGACY-TO-MCP-MIGRATION.md) for migration guide.
+See [CHANGELOG.md](./docs/CHANGELOG.md) for migration history.
 
 ### Available Token Categories
 

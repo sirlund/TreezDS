@@ -4,8 +4,16 @@ import {
   primaryColors,
   bwColors,
   greyscaleColors,
-  secondaryColors,
-  systemColors,
+  brownColors,
+  orangeColors,
+  peachColors,
+  blueColors,
+  purpleColors,
+  yellowColors,
+  infoColors,
+  successColors,
+  warningColors,
+  errorColors,
   textColors,
   brandColors
 } from '../figma-tokens/colors/colors';
@@ -427,11 +435,16 @@ export const Colors: Story = {
         ))}
       </Section>
 
-      <Section 
+      <Section
         title="System Colors"
         description="Functional colors for success, error, warning, and info states"
       >
-        {Object.entries(systemColors).map(([key, value]) => (
+        {[
+          ...Object.entries(infoColors),
+          ...Object.entries(successColors),
+          ...Object.entries(warningColors),
+          ...Object.entries(errorColors)
+        ].map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}
@@ -497,11 +510,18 @@ export const Colors: Story = {
         ))}
       </Section>
 
-      <Section 
+      <Section
         title="Secondary Colors"
         description="Additional color palette for accents and variety"
       >
-        {Object.entries(secondaryColors).map(([key, value]) => (
+        {[
+          ...Object.entries(brownColors),
+          ...Object.entries(orangeColors),
+          ...Object.entries(peachColors),
+          ...Object.entries(blueColors),
+          ...Object.entries(purpleColors),
+          ...Object.entries(yellowColors)
+        ].map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}

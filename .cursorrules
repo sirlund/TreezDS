@@ -131,10 +131,8 @@ All icons support 5 sizes (applies to both Material Symbols and Custom):
 - **Custom Icons**: Treez brand-specific icons (product categories, etc.)
 
 **Documentation**:
-- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md` - Step-by-step guide
-- `src/components/Icon/MATERIAL-SYMBOLS-CONFIG.md` - Technical details
-- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md` - Migration from old @mui/icons-material
-- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md` - How sizing works
+- `src/components/Icon/README.md` - Complete icon documentation
+- `docs/guides/icons.md` - Quick reference overview
 
 ## Code Style & Conventions
 

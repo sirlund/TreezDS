@@ -118,8 +118,7 @@ TreezDS uses a **dual icon system**: Material Symbols (primary) + Custom SVG ico
 **Key files**:
 - `src/components/Icon/materialIconMap.ts` - Icon registry
 - `src/components/Icon/Icon.module.css` - Font config with `font-variation-settings`
-- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md` - Guide
-- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md` - Technical migration details
+- `src/components/Icon/README.md` - Complete documentation
 
 #### Custom Icons (Treez Brand)
 **Secondary system** for Treez-specific product category icons.
@@ -158,9 +157,8 @@ TreezDS uses a **dual icon system**: Material Symbols (primary) + Custom SVG ico
 - **Custom Icons**: Treez brand/product-specific designs
 
 **Documentation**:
-- `src/components/Icon/MATERIAL-SYMBOLS-CONFIG.md` - Full configuration
-- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md` - Sizing explanation
-- `src/components/Icon/EXAMPLE-ADDING-ICONS.md` - Practical examples
+- `src/components/Icon/README.md` - Complete icon documentation (technical reference, examples, troubleshooting)
+- `docs/guides/icons.md` - Quick reference overview
 
 ### �🎯 Component Development Pattern
 
@@ -267,14 +265,13 @@ A: No, they're deprecated. Use Figma MCP instead.
 **AI Instructions**:
 - `.cursorrules` - Detailed AI instructions (comprehensive version)
 - `.ai/instructions.md` - Quick reference guide
-- `.ai/figma-mcp-migration.md` - Figma MCP migration details
-- `docs/ai-context/` - Optimization plan and status
+- `.claude/project-instructions.md` - Claude Code specific instructions
 
 **Development**:
 - `README.md` - Project overview
 - `docs/README.md` - Complete documentation index
-- `docs/development/` - Token system, colors, fonts, commit guide
-- `docs/migrations/` - Material Symbols migration history
+- `docs/guides/` - Token system, colors, fonts, icons guides
+- `docs/CHANGELOG.md` - Project history and major changes
 - `src/design-tokens/README.md` - Token usage guide
 
 ### 🤝 Interaction Tips

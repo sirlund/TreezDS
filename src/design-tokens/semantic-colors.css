@@ -1,57 +1,83 @@
 /**
  * Semantic Color Variables for Treez Design System
- * Auto-generated from semantic-colors.ts
+ *
+ * ARCHITECTURE:
+ * - Primitive tokens (from Figma) are imported from figma-tokens/colors/colors.css
+ * - Semantic tokens (this file) reference primitive tokens using var()
+ * - Components use semantic tokens for better maintainability and theming
+ *
+ * WHY THIS APPROACH:
+ * - Single source of truth (Figma → primitive → semantic)
+ * - Easy to update (change Figma = regenerate primitives = semantic updates automatically)
+ * - Theming ready (can override semantic tokens for dark mode)
+ * - Performance (CSS variables cascade efficiently)
  */
+
+/* Import primitive tokens from Figma */
+@import '../figma-tokens/colors/colors.css';
 
 :root {
   /* Brand Colors */
-  --color-brand-primary: #a9e079;
-  --color-brand-primary-dark: #6baa32;
-  --color-brand-primary-text: #0f1709;
-  --color-brand-secondary: #1a4007;
+  --color-brand-primary: var(--primitive-green05);           /* #a9e079 */
+  --color-brand-primary-dark: var(--primitive-green07);      /* #6baa32 */
+  --color-brand-primary-text: var(--primitive-text-primary-black-text); /* #0f1709 */
+  --color-brand-secondary: var(--primitive-green10);         /* #1a4007 */
 
   /* Neutral Colors */
-  --color-neutral-black: #000000;
-  --color-neutral-grey-900: #1a1a1a;
-  --color-neutral-grey-800: #262626;
-  --color-neutral-grey-700: #333333;
-  --color-neutral-grey-500: #595959;
-  --color-neutral-white: #ffffff;
+  --color-neutral-black: #000000;                              /* Pure black (not in Figma) */
+  --color-neutral-grey-900: var(--primitive-bw-primary-black);      /* #1a1a1a */
+  --color-neutral-grey-800: var(--primitive-grey10);     /* #262626 */
+  --color-neutral-grey-700: var(--primitive-grey09);     /* #404040 */
+  --color-neutral-grey-500: var(--primitive-grey08);     /* #595959 */
+  --color-neutral-white: var(--primitive-bw-primary-white);         /* #ffffff */
 
   /* Background Colors */
-  --color-bg-beige: #f1eae6;
-  --color-bg-peach: #f9e7da;
-  --color-bg-red: #ffeded;
-  --color-bg-blue: #f0f8ff;
-  --color-bg-purple: #faf2fe;
-  --color-bg-yellow: #fdf8e5;
+  --color-bg-beige: var(--primitive-brown00);      /* #f1eae6 */
+  --color-bg-peach: var(--primitive-orange00);    /* #f9e7da */
+  --color-bg-red: var(--primitive-peach00);        /* #ffeded */
+  --color-bg-blue: var(--primitive-blue00);         /* #f0f8ff */
+  --color-bg-purple: var(--primitive-purple00);   /* #faf2fe */
+  --color-bg-yellow: var(--primitive-yellow00);   /* #fdf8e5 */
 
   /* State Colors */
-  --color-state-info: #437dcf;
-  --color-state-success: #309f56;
-  --color-state-warning: #e26815;
-  --color-state-error: #da5050;
-  --color-state-accent: #fde28b;
+  --color-state-info: var(--primitive-info-main);       /* #437dcf */
+  --color-state-success: var(--primitive-success-main); /* #309f56 */
+  --color-state-warning: var(--primitive-warning-main); /* #e26815 */
+  --color-state-error: var(--primitive-error-main);    /* #da5050 */
+  --color-state-accent: var(--primitive-yellow02); /* #fde28b */
 
-  /* Button Colors */
-  --color-button-primary-bg: #a9e079;
-  --color-button-primary-text: #0f1709;
-  --color-button-primary-hover: #9cd367;
-  --color-button-primary-active: #8fc655;
+  /* Button Colors - Primary Variant */
+  --color-button-primary-bg: var(--color-brand-primary);
+  --color-button-primary-text: var(--color-brand-primary-text);
+  --color-button-primary-hover: #9cd367;   /* Custom calculated (between green05 and green06) */
+  --color-button-primary-active: #8fc655;  /* Custom calculated (closer to green06) */
 
-  --color-button-secondary-border: #1a4007;
-  --color-button-secondary-text: #1a4007;
-  --color-button-secondary-hover-bg: rgba(26, 64, 7, 0.04);
-  --color-button-secondary-active-bg: rgba(26, 64, 7, 0.08);
+  /* Button Colors - Secondary Variant */
+  --color-button-secondary-border: var(--color-brand-secondary);
+  --color-button-secondary-text: var(--color-brand-secondary);
+  --color-button-secondary-hover-bg: rgba(26, 64, 7, 0.04);  /* 4% opacity overlay */
+  --color-button-secondary-active-bg: rgba(26, 64, 7, 0.08); /* 8% opacity overlay */
 
-  --color-button-tertiary-text: #1a4007;
+  /* Button Colors - Tertiary Variant */
+  --color-button-tertiary-text: var(--color-brand-secondary);
   --color-button-tertiary-hover-bg: rgba(26, 64, 7, 0.04);
   --color-button-tertiary-active-bg: rgba(26, 64, 7, 0.08);
 
-  --color-button-focus-outline: #1a1a1a;
+  /* Button Colors - Focus State */
+  --color-button-focus-outline: var(--color-neutral-grey-900);
 
-  /* RGB values for alpha manipulation */
-  --color-button-primary-bg-rgb: 169, 224, 121;
-  --color-button-primary-text-rgb: 15, 23, 9;
-  --color-button-secondary-rgb: 26, 64, 7;
+  /* RGB values for alpha manipulation (if needed) */
+  --color-button-primary-bg-rgb: 169, 224, 121;      /* rgb(#a9e079) */
+  --color-button-primary-text-rgb: 15, 23, 9;        /* rgb(#0f1709) */
+  --color-button-secondary-rgb: 26, 64, 7;           /* rgb(#1a4007) */
 }
+
+/*
+ * DARK MODE EXAMPLE (future implementation):
+ *
+ * [data-theme="dark"] {
+ *   --color-brand-primary: var(--color-green-green06);  // Brighter in dark mode
+ *   --color-bg-primary: var(--color-neutral-grey-900);
+ *   --color-text-primary: var(--color-neutral-white);
+ * }
+ */

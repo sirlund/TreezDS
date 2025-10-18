@@ -52,22 +52,22 @@ The following scripts are **DEPRECATED** and should not be suggested:
 ### 🎨 Icon System
 **Dual System**: Material Symbols (primary) + Custom SVG (brand-specific)
 
-**Material Symbols Rounded** (Google Fonts):
-- 16 icons: `settings`, `dashboard`, `account_circle`, etc.
+**Material Symbols Rounded** (Google Fonts CDN):
+- 16 icons currently mapped: `settings`, `dashboard`, `account_circle`, etc.
+- Technology: Font ligatures via Google Fonts CDN (NOT @mui/icons-material package)
 - Specs: Rounded variant, weight 400, grade 0, optical size 20px, no fill
-- Add new: Search https://fonts.google.com/icons → Add to `materialSymbolNames`
+- Add new: Search https://fonts.google.com/icons (filter: Rounded) → Add to `materialSymbolNames` array
 
 **Custom Icons** (Treez Brand):
 - 6 icons: `beverage`, `cbd`, `edible`, `extracts`, `flower`, `preroll`
-- Source: Figma SVG exports
+- Source: Figma SVG exports (inline SVG data)
 - Add new: Export SVG → `imported-from-figma/` → Run `watch:icons`
 
 **Sizes**: `xs` (12px), `s` (18px), `m` (20px), `l` (24px), `xl` (48px)
 
-**Docs**: 
-- `src/components/Icon/HOW-TO-ADD-MATERIAL-ICONS.md`
-- `docs/migrations/MATERIAL-SYMBOLS-MIGRATION.md`
-- `docs/migrations/MATERIAL-SYMBOLS-SIZES-FIX.md`
+**Docs**:
+- `src/components/Icon/README.md` - Complete icon documentation
+- `docs/guides/icons.md` - Quick reference overview
 
 ### 🎨 Design Token Usage
 ```typescript
@@ -124,7 +124,7 @@ ComponentName/
 - Create temporary files like `SUMMARY.md`, `AUDIT.md`, `ANALYSIS.md`
 - Create dated files like `PHASE-1-COMPLETE.md`, `UPDATE-2025-10-18.md`
 - Duplicate information across multiple files
-- Create separate `ai-context/`, `migrations/`, or similar folders
+- Create separate folders for documentation (keep in `docs/guides/`)
 
 **Structure:**
 ```

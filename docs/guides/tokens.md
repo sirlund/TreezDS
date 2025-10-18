@@ -233,4 +233,169 @@ Components (src/components/)
 
 ---
 
-**Key Takeaway**: Always use semantic tokens (`design-tokens/`) in your components, never primitive tokens directly.
+## TypeScript vs CSS Tokens: When to Use Each
+
+TreezDS provides tokens in **both formats** for different use cases.
+
+### Use CSS Variables When:
+
+✅ **Styling components** (CSS Modules, global styles)
+- Best for: Button styles, layout, backgrounds
+- Why: Native browser support, excellent performance
+- Example: `.button { background: var(--color-button-primary-bg); }`
+
+✅ **Dark mode / theming**
+- Best for: Any theme-dependent styles
+- Why: Runtime changes without re-render
+- Example: `[data-theme="dark"] { --color-bg: var(--color-neutral-grey-900); }`
+
+✅ **Static values**
+- Best for: Fixed styles that don't change
+- Why: Simpler, more maintainable
+
+✅ **Performance critical**
+- Best for: Large component trees
+- Why: CSS variables don't trigger React re-renders
+
+### Use TypeScript Tokens When:
+
+✅ **Conditional logic** (status colors, variants)
+```typescript
+import { stateColors } from '@/design-tokens';
+
+function StatusBadge({ status }: { status: 'success' | 'error' | 'warning' }) {
+  const color = stateColors[status]; // Dynamic based on prop
+  return <span style={{ color }}>{status}</span>;
+}
+```
+
+✅ **Dynamic calculations**
+```typescript
+import { spacing } from '@/primitive-tokens';
+
+function Card({ compact }: { compact?: boolean }) {
+  const padding = compact
+    ? `${spacing.xs} ${spacing.s}`
+    : `${spacing.m} ${spacing.l}`;
+
+  return <div style={{ padding }}>...</div>;
+}
+```
+
+✅ **Storybook controls**
+```typescript
+import { greenColors } from '@/primitive-tokens/colors';
+
+export const meta = {
+  argTypes: {
+    color: {
+      control: 'select',
+      options: Object.keys(greenColors), // Auto-generated!
+    },
+  },
+};
+```
+
+✅ **Type safety needed**
+```typescript
+type AllowedColor = keyof typeof brandColors; // TypeScript validates!
+
+function SafeCard({ color }: { color: AllowedColor }) {
+  return <div style={{ backgroundColor: brandColors[color] }}>...</div>;
+}
+```
+
+✅ **Complex inline styles** (like Typography component)
+```typescript
+import { typography } from '@/design-tokens/typography';
+
+const style = {
+  fontFamily: typography[variant].fontFamily,
+  fontSize: typography[variant].fontSize,
+  // ... dynamic based on variant prop
+};
+```
+
+### Comparison Table
+
+| Feature | CSS Variables | TypeScript Tokens |
+|---------|---------------|-------------------|
+| **Dark Mode** | ✅ Perfect (runtime change) | ❌ Requires re-render |
+| **Performance** | ✅ Excellent | ⚠️ Good (can be slower) |
+| **Type Safety** | ❌ No | ✅ Yes |
+| **Conditional Logic** | ❌ Limited | ✅ Perfect |
+| **Storybook Controls** | ⚠️ Manual setup | ✅ Automatic |
+| **Bundle Size** | ✅ Minimal | ⚠️ Grows with tokens |
+| **Browser Support** | ✅ Universal | ✅ Universal |
+
+### Real-World Example: Button Component
+
+**❌ BAD (hardcoded values):**
+```css
+.button {
+  background-color: #a9e079;  /* What is this? Where did it come from? */
+}
+```
+
+**✅ GOOD (CSS variables for styling):**
+```css
+@import '@/design-tokens/semantic-colors.css';
+
+.button {
+  background-color: var(--color-button-primary-bg);
+}
+
+.button:hover {
+  background-color: var(--color-button-primary-hover);
+}
+```
+
+**✅ ALSO GOOD (TypeScript for conditional logic):**
+```typescript
+import { buttonColors } from '@/design-tokens';
+
+function DynamicButton({ variant }: { variant: 'primary' | 'secondary' }) {
+  const bg = variant === 'primary'
+    ? buttonColors.primaryBg
+    : buttonColors.secondaryBg;
+
+  return <button style={{ backgroundColor: bg }}>...</button>;
+}
+```
+
+### Recommendation
+
+**Use this strategy:**
+- **90% CSS variables** → For component styles (Button.module.css, Card.module.css, etc.)
+- **10% TypeScript tokens** → For conditional logic, calculations, and type safety
+
+**Example structure:**
+```typescript
+// Button.tsx - TypeScript for conditional logic
+import { buttonColors } from '@/design-tokens';
+
+function Button({ variant, loading }) {
+  // Use TS for conditional/dynamic values
+  const loadingColor = loading ? buttonColors.disabled : buttonColors.primaryText;
+
+  return <button className={styles.button}>...</button>;
+}
+```
+
+```css
+/* Button.module.css - CSS variables for styling */
+@import '@/design-tokens/semantic-colors.css';
+
+.button {
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+
+.button:hover {
+  background: var(--color-button-primary-hover);
+}
+```
+
+---
+
+**Key Takeaway**: Always use semantic tokens (`design-tokens/`) in your components, never primitive tokens directly. Choose CSS variables for styling, TypeScript for logic.
