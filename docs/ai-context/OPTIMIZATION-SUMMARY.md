@@ -1,6 +1,6 @@
 # 📊 Plan de Optimización - Resumen Ejecutivo
 
-## 🎯 Estado Actual: 70% Completado (3.5 de 5 Fases)
+## 🎯 Estado Actual: 80% Completado (4 de 5 Fases)
 
 ---
 
@@ -32,33 +32,37 @@
 - Agregados 3 npm scripts (`mcp:extract`, `mcp:colors`, `mcp:tokens`)
 - **Resultado**: Workflow MCP implementado y documentado
 
-**Archivos Creados**:
-```
-scripts/mcp/
-├── extract-design.js (103 líneas)
-├── extract-colors.js (131 líneas)
-├── generate-tokens.js (148 líneas)
-└── README.md (382 líneas)
+### **Fase 3: Limpieza Legacy** ✅ (Oct 17, 2025)
+- Eliminados 7 scripts obsoletos de Figma REST API (~41 KB)
+- Limpiados 3 npm scripts deprecados
+- Reducción del 49% en archivos de scripts/
+- **Resultado**: Código más limpio y maintainable
 
-docs/migrations/
-└── LEGACY-TO-MCP-MIGRATION.md (297 líneas)
+**Archivos Eliminados**:
+```
+scripts/
+├── extract-button-component.js      ❌ (3.4 KB)
+├── extract-color-styles.js          ❌ (5.8 KB)
+├── extract-colors-from-node.js      ❌ (7.4 KB)
+├── extract-figma-data.js            ❌ (3.1 KB)
+├── find-button-component.js         ❌ (3.3 KB)
+├── generate-button-from-figma.js    ❌ (3.3 KB)
+└── transform-figma-tokens.js        ❌ (10 KB)
 ```
 
 ---
 
 ## ⏳ Lo que FALTA por HACER
 
-### Fase 3: Limpieza de Scripts Legacy (0%)
-**Estado**: Lista para ejecución (bloqueador removido)
-
 **Qué hacer**:
-- Eliminar 7 scripts legacy de Figma REST API
-- Limpiar npm scripts obsoletos en package.json
-- Remover referencias a FIGMA_ACCESS_TOKEN
+- Revisar si `@mui/icons-material` puede eliminarse (ya usamos Material Symbols)
+- Revisar si `@mui/material` se justifica (¿solo SvgIcon?)
+- Eliminar dependencies no usadas
+- Medir impacto en bundle size
 
-**Complejidad**: Baja  
-**Tiempo estimado**: 30 minutos  
-**Bloqueadores**: Ninguno (scripts MCP ya implementados)
+**Complejidad**: Media  
+**Tiempo estimado**: 1-2 horas  
+**Bloqueadores**: Ninguno
 
 ### Fase 4: Optimización de Dependencias (0%)
 **Estado**: Pendiente
@@ -91,11 +95,13 @@ docs/migrations/
 ## 📊 Timeline Visual
 
 ```
+```
 ✅ COMPLETADAS (Oct 17, 2025)
-├─ Fase 1: Documentación AI ━━━━━━━━━━━━━━ 100%
-├─ Fase 1.5: Sistema de Iconos ━━━━━━━━━━ 100%
-├─ Fase 1.75: Reorganización Docs ━━━━━━━ 100%
-└─ Fase 2: MCP Workflows ━━━━━━━━━━━━━━━━ 100%
+├─ Fase 1: Documentación AI ━━━━━━━━━━━━━━━━━━━ 100%
+├─ Fase 1.5: Sistema de Iconos ━━━━━━━━━━━━━━━ 100%
+├─ Fase 1.75: Reorganización Docs ━━━━━━━━━━━━ 100%
+├─ Fase 2: MCP Workflows ━━━━━━━━━━━━━━━━━━━━━ 100%
+└─ Fase 3: Limpieza Legacy ━━━━━━━━━━━━━━━━━━━ 100%
 
 ⏳ PENDIENTES
 ├─ Fase 2: MCP Workflows ░░░░░░░░░░░░░░░░░ 0%

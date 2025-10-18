@@ -46,9 +46,10 @@ Documentation for AI coding assistants and project status tracking.
 
 | Document | Description |
 |----------|-------------|
-| [OPTIMIZATION-PLAN-STATUS.md](./ai-context/OPTIMIZATION-PLAN-STATUS.md) | 5-phase optimization plan tracking (70% complete) |
+| [OPTIMIZATION-PLAN-STATUS.md](./ai-context/OPTIMIZATION-PLAN-STATUS.md) | 5-phase optimization plan tracking (80% complete) |
 | [OPTIMIZATION-SUMMARY.md](./ai-context/OPTIMIZATION-SUMMARY.md) | Executive summary of optimization |
 | [PHASE-2-COMPLETE.md](./ai-context/PHASE-2-COMPLETE.md) | ✅ Phase 2 completion report (MCP Workflows) |
+| [PHASE-3-COMPLETE.md](./ai-context/PHASE-3-COMPLETE.md) | ✅ Phase 3 completion report (Legacy Cleanup) |
 | [AI-INSTRUCTIONS-UPDATE.md](./ai-context/AI-INSTRUCTIONS-UPDATE.md) | AI instruction updates log |
 | [AI-UPDATE-COMPLETE.md](./ai-context/AI-UPDATE-COMPLETE.md) | AI update completion status |
 
