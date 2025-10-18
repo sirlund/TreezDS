@@ -6,6 +6,12 @@ Project history and major changes for TreezDS Design System.
 
 ## [Current] 2025-10-18
 
+### Scripts Cleanup
+- **MCP scripts removed**: Deleted 3 incomplete template scripts (`extract-design.js`, `extract-colors.js`, `generate-tokens.js`)
+- **npm commands cleaned**: Removed `mcp:extract`, `mcp:colors`, `mcp:tokens` (were non-functional)
+- **MCP README updated**: Documented real workflow (Plugin export + direct MCP tool usage)
+- **Workflow clarified**: Plugin export is primary method, MCP tools for advanced use cases only
+
 ### Component Documentation Complete
 - **Button README**: Created comprehensive 350-line documentation covering variants, sizes, icons, accessibility, props API, patterns, and troubleshooting
 - **Typography README**: Created comprehensive 400-line documentation with all 16+ variants, font families, usage examples, and semantic HTML guidelines

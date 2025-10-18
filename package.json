@@ -11,9 +11,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
-    "mcp:extract": "node scripts/mcp/extract-design.js",
-    "mcp:colors": "node scripts/mcp/extract-colors.js",
-    "mcp:tokens": "node scripts/mcp/generate-tokens.js",
     "tokens:generate": "node scripts/generate-tokens.js",
     "watch:icons": "node scripts/watch-icons.js",
     "update:icons": "node scripts/update-icons.js"
