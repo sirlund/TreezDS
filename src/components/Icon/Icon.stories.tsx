@@ -62,7 +62,7 @@ export const MaterialDesignIcons: Story = {
   render: () => (
     <div>
       <h3 style={{ marginBottom: '16px', fontWeight: 600 }}>
-        Material Design Icons (from @mui/icons-material)
+        Material Design Icons (Material Symbols Rounded via Google Fonts)
       </h3>
       <div
         style={{

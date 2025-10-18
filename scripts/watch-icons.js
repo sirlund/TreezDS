@@ -22,7 +22,7 @@ const CUSTOM_ICON_DATA_PATH = path.join(__dirname, '..', 'src', 'components', 'I
 
 console.log('🔍 Watching for custom Treez icon SVG files in:', WATCH_DIR);
 console.log('📝 Will update:', CUSTOM_ICON_DATA_PATH);
-console.log('ℹ️  Material Design icons are loaded from @mui/icons-material');
+console.log('ℹ️  Material Design icons are loaded from Material Symbols Rounded (Google Fonts)');
 console.log('');
 
 /**
