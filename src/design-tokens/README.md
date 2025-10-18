@@ -1,91 +1,154 @@
-# Treez Design System - Design Tokens
+# Design Tokens (Semánticos)
 
-This directory contains design tokens for the Treez Design System, extracted from Figma and organized for easy consumption.
+✏️ **TOKENS REFINADOS MANUALMENTE**  
+✅ **USAR ESTOS EN COMPONENTES**
 
-## Structure
+## 📋 Descripción
+
+Esta carpeta contiene **tokens semánticos** refinados manualmente. Estos tokens tienen significado contextual y son los que debes usar en componentes.
+
+Mientras que los **tokens primitivos** (`src/figma-tokens/`) tienen nombres técnicos como `Green-green06`, estos tokens tienen nombres semánticos como `success`, `primary`, `textPrimary`.
+
+## 📁 Estructura
 
 ```
-src/design-tokens/
-├── index.ts                    # Main export file
-├── README.md                   # This file
-├── semantic-colors.ts          # Semantic color palette
-├── semantic-colors.css         # CSS variables for colors
-└── typography/                 # Typography token system
-    ├── index.ts               # Typography exports
-    ├── README.md              # Typography documentation
-    ├── primitives.ts          # Base values (font sizes, weights, etc.)
-    ├── primitives.css         # CSS primitives
-    ├── semantic.ts            # Component tokens (headings, body, etc.)
-    └── semantic.css           # CSS semantic tokens
+design-tokens/
+├── index.ts .................... Export central
+├── README.md ................... Este archivo
+├── semantic-colors.ts .......... Paleta semántica de colores
+├── semantic-colors.css ......... Variables CSS de colores
+└── typography/ ................. Sistema de tipografía
+    ├── index.ts ................ Typography exports
+    ├── README.md ............... Documentación typography
+    ├── primitives.ts ........... Valores base (font sizes, weights, etc.)
+    ├── primitives.css .......... CSS primitives
+    ├── semantic.ts ............. Tokens componentes (headings, body, etc.)
+    └── semantic.css ............ CSS semantic tokens
 ```
 
-## Files
+## 🎨 Contenido
 
-### `semantic-colors.ts`
-The main semantic color palette organized by purpose:
-- **Brand Colors**: Primary brand greens
-- **Neutral Colors**: Greys and blacks
-- **Background Colors**: Various background tints
-- **State Colors**: Info, success, warning, error states
-- **Button Colors**: Button-specific color tokens
-
-### `semantic-colors.css`
-CSS custom properties (CSS variables) for all semantic colors. Import this file to use colors in your CSS.
+### `semantic-colors.ts/css`
+Paleta de colores organizada por propósito:
+- **Brand Colors**: Colores primarios de marca
+- **Neutral Colors**: Grises y negros
+- **Background Colors**: Fondos y tints
+- **State Colors**: Info, success, warning, error
+- **Button Colors**: Colores específicos para botones
 
 ### `typography/`
-Professional typography token system with two layers:
-- **Primitives**: Base values (font sizes, weights, line heights, etc.) - don't use directly
-- **Semantics**: Component-level tokens (headings, body, labels, links, caps) - use these!
+Sistema profesional de tipografía con dos capas:
+- **Primitives**: Valores base (no usar directamente)
+- **Semantics**: Tokens de componentes (h1-h7, body, labels, links) - **usar estos!**
 
-See [`typography/README.md`](./typography/README.md) for detailed documentation.
+Ver [`typography/README.md`](./typography/README.md) para documentación detallada.
 
-## Usage
+## 🔗 Relación con Figma Tokens
 
-### In TypeScript/JavaScript
+Estos tokens **refinan** los primitivos de Figma con significado semántico:
+
+```
+figma-tokens/              design-tokens/
+(Valores crudos)      →   (Significado contextual)
+────────────────          ─────────────────────────
+Green-green06        →    colors.success
+Primary-primaryMain  →    colors.brand.primary
+BW-primaryBlack      →    colors.neutral.textPrimary
+```
+
+## ✅ Uso Recomendado
+
+### En TypeScript/JavaScript
 
 ```typescript
 import { colors, buttonColors, typography } from '@/design-tokens';
 
-// Use brand colors
+// Usar brand colors
 const primaryColor = colors.brand.primary; // '#a9e079'
 
-// Use button colors
+// Usar button colors
 const bgColor = buttonColors.primaryBg; // '#a9e079'
 
-// Use typography tokens (modern nested structure)
+// Usar typography tokens (estructura moderna nested)
 const h1Styles = typography.headings.h1;
 const bodyStyles = typography.body.large;
 const labelStyles = typography.labels.small;
 
-// Or use legacy flat structure
+// O usar estructura legacy flat (para compatibilidad)
 import { typographyLegacy } from '@/design-tokens';
 const h1Styles = typographyLegacy['headings-h1'];
 ```
 
-### In CSS/CSS Modules
+### En CSS/CSS Modules
 
 ```css
-/* Import the semantic colors CSS */
+/* Importar semantic colors CSS */
 @import '@/design-tokens/semantic-colors.css';
+@import '@/design-tokens/typography/semantic.css';
 
 .myButton {
   background-color: var(--color-button-primary-bg);
   color: var(--color-button-primary-text);
+  font-family: var(--typography-label-large-font-family);
 }
 
 .myButton:hover {
   background-color: var(--color-button-primary-hover);
 }
+
+.heading {
+  font-family: var(--typography-h1-font-family);
+  font-size: var(--typography-h1-font-size);
+  font-weight: var(--typography-h1-font-weight);
+  line-height: var(--typography-h1-line-height);
+}
 ```
 
-### In React Components
+### En React Components
 
 ```tsx
-import { buttonColors } from '@/design-tokens';
+import { buttonColors, typography } from '@/design-tokens';
 
 function MyComponent() {
   return (
-    <div style={{ backgroundColor: buttonColors.primaryBg }}>
+    <div style={{ 
+      backgroundColor: buttonColors.primaryBg,
+      ...typography.headings.h1 
+    }}>
+      Mi Componente
+    </div>
+  );
+}
+```
+
+## 🎯 Best Practices
+
+1. ✅ **Siempre** usa estos tokens semánticos en componentes
+2. ❌ **NO** uses tokens primitivos de `figma-tokens/` directamente
+3. ✅ **Prefiere** CSS variables en archivos CSS
+4. ✅ **Usa** imports TypeScript cuando necesites valores dinámicos
+5. ✅ **Consulta** Storybook para ver todos los tokens disponibles
+
+## 🔄 Actualización de Tokens
+
+### Cuándo Actualizar
+- Cambios en colores de marca
+- Nuevos estados o variantes
+- Ajustes en tipografía
+- Nuevos tokens semánticos necesarios
+
+### Cómo Actualizar
+1. Editar archivos correspondientes en `src/design-tokens/`
+2. Si necesitas nuevos primitivos, actualizar desde Figma primero
+3. Probar en Storybook
+4. Commit cambios
+
+## 📚 Ver También
+
+- [`src/figma-tokens/`](../figma-tokens/README.md) - Tokens primitivos de Figma
+- [`typography/README.md`](./typography/README.md) - Sistema de tipografía completo
+- [`docs/ai-context/STRUCTURE-ANALYSIS.md`](../../docs/ai-context/STRUCTURE-ANALYSIS.md) - Análisis de estructura
+- Storybook: Design System → Typography / Tokens
       Content
     </div>
   );

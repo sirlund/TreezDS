@@ -1,9 +1,9 @@
 import type { Preview } from '@storybook/react-vite'
 import '../src/styles/fonts.css'
 import '../src/design-tokens/semantic-colors.css'
-import '../src/tokens/colors/colors.css'
-import '../src/tokens/spacing/spacing.css'
-import '../src/tokens/radius/radius.css'
+import '../src/figma-tokens/colors/colors.css'
+import '../src/figma-tokens/spacing/spacing.css'
+import '../src/figma-tokens/radius/radius.css'
 
 const preview: Preview = {
   parameters: {

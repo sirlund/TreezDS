@@ -8,9 +8,9 @@ import {
   systemColors,
   textColors,
   brandColors
-} from '../tokens/colors/colors';
-import { spacing, size } from '../tokens/spacing/spacing';
-import { radius } from '../tokens/radius/radius';
+} from '../figma-tokens/colors/colors';
+import { spacing, size } from '../figma-tokens/spacing/spacing';
+import { radius } from '../figma-tokens/radius/radius';
 
 const meta: Meta = {
   title: 'Design System/Tokens',
