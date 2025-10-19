@@ -1,24 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-  greenColors,
-  primaryColors,
-  bwColors,
-  greyscaleColors,
-  brownColors,
-  orangeColors,
-  peachColors,
-  blueColors,
-  purpleColors,
-  yellowColors,
-  infoColors,
-  successColors,
-  warningColors,
-  errorColors,
-  textColors,
-  brandColors
-} from '../figma-tokens/colors/colors';
-import { spacing, size } from '../figma-tokens/spacing/spacing';
-import { radius } from '../figma-tokens/radius/radius';
+import { primitiveColors } from '../figma-tokens/colors/colors';
+import { primitiveSpacing, primitiveSize } from '../figma-tokens/spacing/spacing';
+import { primitiveRadius } from '../figma-tokens/radius/radius';
+import { brandColors, neutralColors, stateColors, textColors, buttonColors } from '../design-tokens/semantic-colors';
 
 const meta: Meta = {
   title: 'Design System/Tokens',
@@ -31,13 +15,77 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
+// Helper to group primitive colors by category
+const groupPrimitiveColors = () => {
+  const groups: Record<string, Record<string, string>> = {
+    Green: {},
+    Greyscale: {},
+    'B&W': {},
+    Primary: {},
+    Text: {},
+    Brand: {},
+    'System-Info': {},
+    'System-Success': {},
+    'System-Warning': {},
+    'System-Error': {},
+    'Secondary-Brown': {},
+    'Secondary-Orange': {},
+    'Secondary-Peach': {},
+    'Secondary-Blue': {},
+    'Secondary-Purple': {},
+    'Secondary-Yellow': {},
+  };
+
+  Object.entries(primitiveColors).forEach(([key, value]) => {
+    const parts = key.split('-');
+
+    if (key.startsWith('Green-')) {
+      groups.Green[key] = value;
+    } else if (key.startsWith('Greyscale-')) {
+      groups.Greyscale[key] = value;
+    } else if (key.startsWith('B&W-')) {
+      groups['B&W'][key] = value;
+    } else if (key.startsWith('Primary-')) {
+      groups.Primary[key] = value;
+    } else if (key.startsWith('Text-')) {
+      groups.Text[key] = value;
+    } else if (key.startsWith('Brand-')) {
+      groups.Brand[key] = value;
+    } else if (key.startsWith('System-Info-')) {
+      groups['System-Info'][key] = value;
+    } else if (key.startsWith('System-Success-')) {
+      groups['System-Success'][key] = value;
+    } else if (key.startsWith('System-Warning-')) {
+      groups['System-Warning'][key] = value;
+    } else if (key.startsWith('System-Error-')) {
+      groups['System-Error'][key] = value;
+    } else if (key.startsWith('Secondary-Brown-')) {
+      groups['Secondary-Brown'][key] = value;
+    } else if (key.startsWith('Secondary-Orange-')) {
+      groups['Secondary-Orange'][key] = value;
+    } else if (key.startsWith('Secondary-Peach-')) {
+      groups['Secondary-Peach'][key] = value;
+    } else if (key.startsWith('Secondary-Blue-')) {
+      groups['Secondary-Blue'][key] = value;
+    } else if (key.startsWith('Secondary-Purple-')) {
+      groups['Secondary-Purple'][key] = value;
+    } else if (key.startsWith('Secondary-Yellow-')) {
+      groups['Secondary-Yellow'][key] = value;
+    }
+  });
+
+  return groups;
+};
+
+const colorGroups = groupPrimitiveColors();
+
 // Shared Components
-const TokenCard = ({ 
-  children, 
-  style = {}, 
-  variant = 'column' 
-}: { 
-  children: React.ReactNode; 
+const TokenCard = ({
+  children,
+  style = {},
+  variant = 'column'
+}: {
+  children: React.ReactNode;
   style?: React.CSSProperties;
   variant?: 'column' | 'row';
 }) => (
@@ -211,13 +259,13 @@ const RadiusToken = ({ name, value, cssVar }: { name: string; value: string; css
   </TokenCard>
 );
 
-const Section = ({ 
-  title, 
+const Section = ({
+  title,
   children,
   layout = 'grid',
   description
-}: { 
-  title: string; 
+}: {
+  title: string;
   children: React.ReactNode;
   layout?: 'grid' | 'list';
   description?: string;
@@ -273,7 +321,7 @@ const PageContainer = ({ children }: { children: React.ReactNode }) => (
 );
 
 const PageHeader = ({ title, description }: { title: string; description: string }) => (
-  <div style={{ 
+  <div style={{
     marginBottom: '64px',
     paddingBottom: '32px',
     borderBottom: '1px solid #e5e7eb'
@@ -328,7 +376,7 @@ const ExampleCard = ({ title, children }: { title: string; children: React.React
 export const Overview: Story = {
   render: () => (
     <PageContainer>
-      <PageHeader 
+      <PageHeader
         title="Design Tokens"
         description="Complete design token system for the Treez Design System. All tokens are auto-generated from Figma and available as TypeScript constants and CSS custom properties for consistent styling across your application."
       />
@@ -345,7 +393,7 @@ export const Overview: Story = {
           <div style={{ fontSize: '14px', color: '#6b7280', fontFamily: 'Roboto' }}>Color Tokens</div>
         </div>
         <div style={{ padding: '24px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
-          <div style={{ fontSize: '36px', fontWeight: '500', color: '#6baa32', marginBottom: '8px', fontFamily: 'Roboto' }}>11</div>
+          <div style={{ fontSize: '36px', fontWeight: '500', color: '#6baa32', marginBottom: '8px', fontFamily: 'Roboto' }}>10</div>
           <div style={{ fontSize: '14px', color: '#6b7280', fontFamily: 'Roboto' }}>Spacing Values</div>
         </div>
         <div style={{ padding: '24px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
@@ -359,26 +407,26 @@ export const Overview: Story = {
       </div>
 
       {/* Usage Guide */}
-      <Section 
+      <Section
         title="How to Use Tokens"
         description="Import and use design tokens in your components for consistent styling"
       >
         <ExampleCard title="CSS Custom Properties">
           <CodeBlock>{`.button {
-  background-color: var(--color-primary-500);
-  padding: var(--spacing-medium);
-  border-radius: var(--radius-small);
+  background-color: var(--primitive-Green-green05);
+  padding: var(--primitive-Spacing-space-medium);
+  border-radius: var(--primitive-Radius-radius-small);
 }`}</CodeBlock>
         </ExampleCard>
 
         <ExampleCard title="TypeScript/React">
-          <CodeBlock>{`import { primaryColors } from '@/tokens/colors/colors';
-import { spacing } from '@/tokens/spacing/spacing';
+          <CodeBlock>{`import { primitiveColors } from '@/figma-tokens';
+import { primitiveSpacing } from '@/figma-tokens';
 
 const Button = () => (
   <button style={{
-    backgroundColor: primaryColors['Primary-primary-500'],
-    padding: spacing['Spacing-space-medium']
+    backgroundColor: primitiveColors['Green-green05'],
+    padding: primitiveSpacing['Spacing-space-medium']
   }}>
     Click me
   </button>
@@ -387,9 +435,9 @@ const Button = () => (
 
         <ExampleCard title="Import Styles">
           <CodeBlock>{`// In your main CSS file
-@import '@/tokens/colors/colors.css';
-@import '@/tokens/spacing/spacing.css';
-@import '@/tokens/radius/radius.css';`}</CodeBlock>
+@import '@/figma-tokens/colors/colors.css';
+@import '@/figma-tokens/spacing/spacing.css';
+@import '@/figma-tokens/radius/radius.css';`}</CodeBlock>
         </ExampleCard>
       </Section>
     </PageContainer>
@@ -407,126 +455,112 @@ export const Colors: Story = {
         description="Complete color palette for the Treez Design System including brand colors, system states, text colors, and more. All colors are accessible and meet WCAG contrast requirements."
       />
 
-      <Section 
-        title="Brand Colors"
-        description="Primary brand colors for your application identity"
+      <Section
+        title="Semantic Colors - Brand"
+        description="High-level brand colors for common use"
       >
         {Object.entries(brandColors).map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}
             value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
-          />
-        ))}
-      </Section>
-
-      <Section 
-        title="Primary Colors"
-        description="Main color palette with various shades and tints"
-      >
-        {Object.entries(primaryColors).map(([key, value]) => (
-          <ColorSwatch
-            key={key}
-            name={key}
-            value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
+            cssVar={`--color-brand-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`}
           />
         ))}
       </Section>
 
       <Section
-        title="System Colors"
+        title="Semantic Colors - State"
         description="Functional colors for success, error, warning, and info states"
       >
-        {[
-          ...Object.entries(infoColors),
-          ...Object.entries(successColors),
-          ...Object.entries(warningColors),
-          ...Object.entries(errorColors)
-        ].map(([key, value]) => (
+        {Object.entries(stateColors).map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}
             value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
+            cssVar={`--color-state-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`}
           />
         ))}
       </Section>
 
-      <Section 
-        title="Text Colors"
-        description="Text color variants for different contexts and emphasis levels"
+      <Section
+        title="Semantic Colors - Text"
+        description="Text color variants for different contexts"
       >
         {Object.entries(textColors).map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}
             value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
-          />
-        ))}
-      </Section>
-
-      <Section 
-        title="Greyscale"
-        description="Neutral gray tones for backgrounds, borders, and UI elements"
-      >
-        {Object.entries(greyscaleColors).map(([key, value]) => (
-          <ColorSwatch
-            key={key}
-            name={key}
-            value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
-          />
-        ))}
-      </Section>
-
-      <Section 
-        title="Black & White"
-        description="Pure black and white colors for high contrast elements"
-      >
-        {Object.entries(bwColors).map(([key, value]) => (
-          <ColorSwatch
-            key={key}
-            name={key}
-            value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
-          />
-        ))}
-      </Section>
-
-      <Section 
-        title="Green Scale"
-        description="Green color variations for nature and growth themes"
-      >
-        {Object.entries(greenColors).map(([key, value]) => (
-          <ColorSwatch
-            key={key}
-            name={key}
-            value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
+            cssVar={`--color-text-${key}`}
           />
         ))}
       </Section>
 
       <Section
-        title="Secondary Colors"
-        description="Additional color palette for accents and variety"
+        title="Primitive Colors - Green Scale"
+        description="Green color variations from Figma"
+      >
+        {Object.entries(colorGroups.Green).map(([key, value]) => (
+          <ColorSwatch
+            key={key}
+            name={key}
+            value={value}
+            cssVar={`--primitive-${key}`}
+          />
+        ))}
+      </Section>
+
+      <Section
+        title="Primitive Colors - Greyscale"
+        description="Neutral gray tones from Figma"
+      >
+        {Object.entries(colorGroups.Greyscale).map(([key, value]) => (
+          <ColorSwatch
+            key={key}
+            name={key}
+            value={value}
+            cssVar={`--primitive-${key}`}
+          />
+        ))}
+      </Section>
+
+      <Section
+        title="Primitive Colors - System States"
+        description="Info, Success, Warning, and Error primitives from Figma"
       >
         {[
-          ...Object.entries(brownColors),
-          ...Object.entries(orangeColors),
-          ...Object.entries(peachColors),
-          ...Object.entries(blueColors),
-          ...Object.entries(purpleColors),
-          ...Object.entries(yellowColors)
+          ...Object.entries(colorGroups['System-Info']),
+          ...Object.entries(colorGroups['System-Success']),
+          ...Object.entries(colorGroups['System-Warning']),
+          ...Object.entries(colorGroups['System-Error'])
         ].map(([key, value]) => (
           <ColorSwatch
             key={key}
             name={key}
             value={value}
-            cssVar={`--color-${key.toLowerCase()}`}
+            cssVar={`--primitive-${key}`}
+          />
+        ))}
+      </Section>
+
+      <Section
+        title="Primitive Colors - Secondary Palette"
+        description="Additional color palette for accents and variety"
+      >
+        {[
+          ...Object.entries(colorGroups['Secondary-Brown']),
+          ...Object.entries(colorGroups['Secondary-Orange']),
+          ...Object.entries(colorGroups['Secondary-Peach']),
+          ...Object.entries(colorGroups['Secondary-Blue']),
+          ...Object.entries(colorGroups['Secondary-Purple']),
+          ...Object.entries(colorGroups['Secondary-Yellow'])
+        ].map(([key, value]) => (
+          <ColorSwatch
+            key={key}
+            name={key}
+            value={value}
+            cssVar={`--primitive-${key}`}
           />
         ))}
       </Section>
@@ -545,40 +579,40 @@ export const Spacing: Story = {
         description="Consistent spacing scale for margins, padding, and gaps throughout your application. Size tokens define component dimensions for a cohesive layout system."
       />
 
-      <Section 
-        title="Spacing Scale" 
+      <Section
+        title="Spacing Scale"
         layout="list"
         description="Spacing values from 0px to 48px for consistent margins, padding, and gaps"
       >
-        {Object.entries(spacing).map(([key, value]) => (
+        {Object.entries(primitiveSpacing).map(([key, value]) => (
           <SpacingToken
             key={key}
             name={key}
             value={value}
-            cssVar={`--spacing-${key}`}
+            cssVar={`--primitive-${key}`}
           />
         ))}
       </Section>
 
       <ExampleCard title="Usage Example">
         <CodeBlock>{`.card {
-  padding: var(--spacing-space-medium);  /* 16px */
-  margin-bottom: var(--spacing-space-large);  /* 20px */
-  gap: var(--spacing-space-small);  /* 12px */
+  padding: var(--primitive-Spacing-space-medium);  /* 16px */
+  margin-bottom: var(--primitive-Spacing-space-large);  /* 20px */
+  gap: var(--primitive-Spacing-space-small);  /* 12px */
 }`}</CodeBlock>
       </ExampleCard>
 
-      <Section 
-        title="Size Scale (Beta)" 
+      <Section
+        title="Size Scale"
         layout="list"
         description="Component size tokens for buttons, inputs, and other UI elements"
       >
-        {Object.entries(size).map(([key, value]) => (
+        {Object.entries(primitiveSize).map(([key, value]) => (
           <SpacingToken
             key={key}
             name={key}
             value={value}
-            cssVar={`--size-${key}`}
+            cssVar={`--primitive-${key}`}
           />
         ))}
       </Section>
@@ -597,32 +631,32 @@ export const Radius: Story = {
         description="Border radius values for creating rounded corners and fully circular elements. From sharp edges to perfect circles, these tokens ensure consistent corner styling."
       />
 
-      <Section 
-        title="Border Radius Scale" 
+      <Section
+        title="Border Radius Scale"
         layout="list"
-        description="Radius values from 0px (sharp) to 9999px (fully rounded)"
+        description="Radius values from 0px (sharp) to 999px (fully rounded)"
       >
-        {Object.entries(radius).map(([key, value]) => (
+        {Object.entries(primitiveRadius).map(([key, value]) => (
           <RadiusToken
             key={key}
             name={key}
             value={value}
-            cssVar={`--radius-${key}`}
+            cssVar={`--primitive-${key}`}
           />
         ))}
       </Section>
 
       <ExampleCard title="Usage Example">
         <CodeBlock>{`.button {
-  border-radius: var(--radius-radius-small);  /* 12px */
+  border-radius: var(--primitive-Radius-radius-small);  /* 12px */
 }
 
 .card {
-  border-radius: var(--radius-radius-medium);  /* 16px */
+  border-radius: var(--primitive-Radius-radius-medium);  /* 16px */
 }
 
 .avatar {
-  border-radius: var(--radius-radius-full);  /* fully circular */
+  border-radius: var(--primitive-Radius-radius-full);  /* fully circular */
 }`}</CodeBlock>
       </ExampleCard>
     </PageContainer>

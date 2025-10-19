@@ -1,17 +1,17 @@
 /**
  * Radius Tokens - Auto-generated from Figma
+ * Source: imported-from-figma/Shapes.json
  * DO NOT EDIT MANUALLY - Run 'npm run tokens:transform' to regenerate
  */
 
 :root {
-  /* Border Radius */
-  --radius-radius-none: 0px; /* Radius/radius-none */
-  --radius-radius-x-small: 8px; /* Radius/radius-x-small */
-  --radius-radius-medium: 16px; /* Radius/radius-medium */
-  --radius-radius-large: 20px; /* Radius/radius-large */
-  --radius-radius-2x-small: 6px; /* Radius/radius-2x-small */
-  --radius-radius-x-large: 24px; /* Radius/radius-x-large */
-  --radius-radius-2x-large: 32px; /* Radius/radius-2x-large */
-  --radius-radius-small: 12px; /* Radius/radius-small */
-  --radius-radius-full: 9999px; /* Radius/radius-full */
+  --primitive-Radius-radius-none: 0px;
+  --primitive-Radius-radius-2x-small: 6px;
+  --primitive-Radius-radius-x-small: 8px;
+  --primitive-Radius-radius-small: 12px;
+  --primitive-Radius-radius-medium: 16px;
+  --primitive-Radius-radius-large: 20px;
+  --primitive-Radius-radius-x-large: 24px;
+  --primitive-Radius-radius-2x-large: 32px;
+  --primitive-Radius-radius-full: 999px;
 }

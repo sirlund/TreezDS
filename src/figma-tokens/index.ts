@@ -1,13 +1,8 @@
 /**
- * Design Tokens - Central Export
- * Auto-generated from Figma
+ * Figma Primitive Tokens Index
+ * Auto-generated - DO NOT EDIT MANUALLY
  */
 
-// Colors
 export * from './colors/colors';
-
-// Spacing & Sizes
-export * from './spacing/spacing';
-
-// Radius
 export * from './radius/radius';
+export * from './spacing/spacing';

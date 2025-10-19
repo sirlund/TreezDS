@@ -1,0 +1,50 @@
+/**
+ * Semantic Spacing Tokens - CSS Variables
+ * Component-level spacing tokens
+ *
+ * Source: src/design-tokens/semantic-spacing.ts
+ * Primitives: src/figma-tokens/spacing/spacing.ts
+ *
+ * IMPORTANT: All values MUST reference --primitive-* variables - NO hardcoded values!
+ */
+
+/* Import primitive spacing tokens */
+@import '../figma-tokens/spacing/spacing.css';
+
+:root {
+  /* Button Spacing */
+  --spacing-button-gap: var(--primitive-Spacing-space-x-small);
+  --spacing-button-small-vertical: var(--primitive-Spacing-space-2x-small);
+  --spacing-button-small-horizontal: var(--primitive-Spacing-space-small);
+  --spacing-button-small-tertiary: var(--primitive-Spacing-space-x-small);
+  --spacing-button-medium-vertical: var(--primitive-Spacing-space-x-small);
+  --spacing-button-medium-horizontal: var(--primitive-Spacing-space-large);
+  --spacing-button-medium-tertiary: var(--primitive-Spacing-space-small);
+  --spacing-button-large-vertical: var(--primitive-Spacing-space-small);
+  --spacing-button-large-horizontal: var(--primitive-Spacing-space-x-large);
+  --spacing-button-large-tertiary: var(--primitive-Spacing-space-small);
+
+  /* Input Spacing */
+  --spacing-input-gap: var(--primitive-Spacing-space-x-small);
+  --spacing-input-small: var(--primitive-Spacing-space-x-small);
+  --spacing-input-medium: var(--primitive-Spacing-space-small);
+  --spacing-input-large: var(--primitive-Spacing-space-medium);
+
+  /* Card Spacing */
+  --spacing-card-compact: var(--primitive-Spacing-space-small);
+  --spacing-card-comfortable: var(--primitive-Spacing-space-medium);
+  --spacing-card-spacious: var(--primitive-Spacing-space-x-large);
+  --spacing-card-gap: var(--primitive-Spacing-space-medium);
+
+  /* General Spacing Scale */
+  --spacing-none: var(--primitive-Spacing-space-none);
+  --spacing-3xs: var(--primitive-Spacing-space-3x-small);
+  --spacing-2xs: var(--primitive-Spacing-space-2x-small);
+  --spacing-xs: var(--primitive-Spacing-space-x-small);
+  --spacing-sm: var(--primitive-Spacing-space-small);
+  --spacing-md: var(--primitive-Spacing-space-medium);
+  --spacing-lg: var(--primitive-Spacing-space-large);
+  --spacing-xl: var(--primitive-Spacing-space-x-large);
+  --spacing-2xl: var(--primitive-Spacing-space-2x-large);
+  --spacing-3xl: var(--primitive-Spacing-space-3x-large);
+}

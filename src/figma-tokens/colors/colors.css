@@ -1,171 +1,71 @@
 /**
- * Primitive Color Tokens from Figma
- *
- * These are the raw color values extracted from Figma.
- * Components should use semantic tokens from design-tokens/semantic-colors.css
- *
- * NOTE: This file was manually created. Future automation will regenerate it.
+ * Color Tokens - Auto-generated from Figma
+ * Source: imported-from-figma/Colors.json
+ * DO NOT EDIT MANUALLY - Run 'npm run tokens:transform' to regenerate
  */
 
 :root {
-
-  /* Green Colors */
-  --primitive-green01: #fcfff5;
-  --primitive-green02: #f3fae6;
-  --primitive-green03: #e8f7cd;
-  --primitive-green04: #dbf5b3;
-  --primitive-green05: #a9e079;
-  --primitive-green06: #8ccc52;
-  --primitive-green07: #6baa32;
-  --primitive-green08: #3e7a18;
-  --primitive-green09: #295c07;
-  --primitive-green10: #1a4007;
-
-  /* Primary Colors */
-  --primitive-primary-main: #a9e079;
-  --primitive-primary-light: #e8f7cd;
-  --primitive-primary-dark: #8ccc52;
-
-  /* Black & White Colors */
-  --primitive-bw-primary-black: #1a1a1a;
-  --primitive-bw-primary-white: #ffffff;
-
-  /* Greyscale Colors */
-  --primitive-grey01: #f7f7f7;
-  --primitive-grey02: #f5f5f5;
-  --primitive-grey03: #f0f0f0;
-  --primitive-grey04: #e6e6e6;
-  --primitive-grey05: #bfbfbf;
-  --primitive-grey06: #8c8c8c;
-  --primitive-grey07: #737373;
-  --primitive-grey08: #595959;
-  --primitive-grey09: #404040;
-  --primitive-grey10: #262626;
-
-  /* Secondary Colors - Browns */
-  --primitive-brown00: #f1eae6;
-  --primitive-brown01: #e2ccc0;
-  --primitive-brown02: #c69278;
-
-  /* Secondary Colors - Oranges */
-  --primitive-orange00: #f9e7da;
-  --primitive-orange01: #fcc8a2;
-  --primitive-orange02: #fba466;
-
-  /* Secondary Colors - Peach/Red */
-  --primitive-peach00: #ffeded;
-  --primitive-peach01: #f1d9d9;
-  --primitive-peach02: #ff9696;
-
-  /* Secondary Colors - Blues */
-  --primitive-blue00: #f0f8ff;
-  --primitive-blue01: #cfdeed;
-  --primitive-blue02: #95c1ee;
-
-  /* Secondary Colors - Purples */
-  --primitive-purple00: #faf2fe;
-  --primitive-purple01: #e0c6ec;
-  --primitive-purple02: #c992e3;
-
-  /* Secondary Colors - Yellows */
-  --primitive-yellow00: #fdf8e5;
-  --primitive-yellow01: #fbf1cf;
-  --primitive-yellow02: #fde28b;
-
-  /* System Colors - Info */
-  --primitive-info-main: #437dcf;
-  --primitive-info-light: #e1eefa;
-  --primitive-info-dark: #3774ac;
-
-  /* System Colors - Success */
-  --primitive-success-main: #309f56;
-  --primitive-success-light: #e5f9ec;
-  --primitive-success-dark: #2e834b;
-
-  /* System Colors - Warning */
-  --primitive-warning-main: #e26815;
-  --primitive-warning-light: #fff3e1;
-  --primitive-warning-dark: #b45210;
-
-  /* System Colors - Error */
-  --primitive-error-main: #da5050;
-  --primitive-error-light: #fde3e3;
-  --primitive-error-dark: #bd4141;
-
-  /* Text Colors */
-  --primitive-text-primary-black-text: #0f1709;
-  --primitive-text-secondary-text: #595959;
-  --primitive-text-tertiary-text: #7a7a7a;
-  --primitive-text-disabled-text: #949494;
-  --primitive-text-primary-white-text: #fafafa;
-
-  /* Brand Colors */
-  --primitive-brand-brand-green: #6baa32;
-  --primitive-brand-sativa-green: #a9e079;
-  --primitive-brand-midrib-green: #dbf5b3;
-
-  /* RGB values for alpha manipulation */
-  --primitive-green01-rgb: 252, 255, 245;
-  --primitive-green02-rgb: 243, 250, 230;
-  --primitive-green03-rgb: 232, 247, 205;
-  --primitive-green04-rgb: 219, 245, 179;
-  --primitive-green05-rgb: 169, 224, 121;
-  --primitive-green06-rgb: 140, 204, 82;
-  --primitive-green07-rgb: 107, 170, 50;
-  --primitive-green08-rgb: 62, 122, 24;
-  --primitive-green09-rgb: 41, 92, 7;
-  --primitive-green10-rgb: 26, 64, 7;
-  --primitive-primary-main-rgb: 169, 224, 121;
-  --primitive-primary-light-rgb: 232, 247, 205;
-  --primitive-primary-dark-rgb: 140, 204, 82;
-  --primitive-bw-primary-black-rgb: 26, 26, 26;
-  --primitive-bw-primary-white-rgb: 255, 255, 255;
-  --primitive-grey01-rgb: 247, 247, 247;
-  --primitive-grey02-rgb: 245, 245, 245;
-  --primitive-grey03-rgb: 240, 240, 240;
-  --primitive-grey04-rgb: 230, 230, 230;
-  --primitive-grey05-rgb: 191, 191, 191;
-  --primitive-grey06-rgb: 140, 140, 140;
-  --primitive-grey07-rgb: 115, 115, 115;
-  --primitive-grey08-rgb: 89, 89, 89;
-  --primitive-grey09-rgb: 64, 64, 64;
-  --primitive-grey10-rgb: 38, 38, 38;
-  --primitive-brown00-rgb: 241, 234, 230;
-  --primitive-brown01-rgb: 226, 204, 192;
-  --primitive-brown02-rgb: 198, 146, 120;
-  --primitive-orange00-rgb: 249, 231, 218;
-  --primitive-orange01-rgb: 252, 200, 162;
-  --primitive-orange02-rgb: 251, 164, 102;
-  --primitive-peach00-rgb: 255, 237, 237;
-  --primitive-peach01-rgb: 241, 217, 217;
-  --primitive-peach02-rgb: 255, 150, 150;
-  --primitive-blue00-rgb: 240, 248, 255;
-  --primitive-blue01-rgb: 207, 222, 237;
-  --primitive-blue02-rgb: 149, 193, 238;
-  --primitive-purple00-rgb: 250, 242, 254;
-  --primitive-purple01-rgb: 224, 198, 236;
-  --primitive-purple02-rgb: 201, 146, 227;
-  --primitive-yellow00-rgb: 253, 248, 229;
-  --primitive-yellow01-rgb: 251, 241, 207;
-  --primitive-yellow02-rgb: 253, 226, 139;
-  --primitive-info-main-rgb: 67, 125, 207;
-  --primitive-info-light-rgb: 225, 238, 250;
-  --primitive-info-dark-rgb: 55, 116, 172;
-  --primitive-success-main-rgb: 48, 159, 86;
-  --primitive-success-light-rgb: 229, 249, 236;
-  --primitive-success-dark-rgb: 46, 131, 75;
-  --primitive-warning-main-rgb: 226, 104, 21;
-  --primitive-warning-light-rgb: 255, 243, 225;
-  --primitive-warning-dark-rgb: 180, 82, 16;
-  --primitive-error-main-rgb: 218, 80, 80;
-  --primitive-error-light-rgb: 253, 227, 227;
-  --primitive-error-dark-rgb: 189, 65, 65;
-  --primitive-text-primary-black-text-rgb: 15, 23, 9;
-  --primitive-text-secondary-text-rgb: 89, 89, 89;
-  --primitive-text-tertiary-text-rgb: 122, 122, 122;
-  --primitive-text-disabled-text-rgb: 148, 148, 148;
-  --primitive-text-primary-white-text-rgb: 250, 250, 250;
-  --primitive-brand-brand-green-rgb: 107, 170, 50;
-  --primitive-brand-sativa-green-rgb: 169, 224, 121;
-  --primitive-brand-midrib-green-rgb: 219, 245, 179;
+  --primitive-Primary-primaryMain: #a9e079;
+  --primitive-Primary-primaryLight: #e8f7cd;
+  --primitive-Primary-primaryDark: #8ccc52;
+  --primitive-B&W-primaryBlack: #1a1a1a;
+  --primitive-B&W-primaryWhite: #ffffff;
+  --primitive-Text-primaryBlackText: #0f1709;
+  --primitive-Text-secondaryText: #595959;
+  --primitive-Text-tertiaryText: #7a7a7a;
+  --primitive-Text-disabledText: #949494;
+  --primitive-Text-primaryWhiteText: #fafafa;
+  --primitive-Green-green01: #fcfff5;
+  --primitive-Green-green02: #f3fae6;
+  --primitive-Green-green03: #e8f7cd;
+  --primitive-Green-green04: #dbf5b3;
+  --primitive-Green-green05: #a9e079;
+  --primitive-Green-green06: #8ccc52;
+  --primitive-Green-green07: #6baa32;
+  --primitive-Green-green08: #3e7a18;
+  --primitive-Green-green09: #295c07;
+  --primitive-Green-green10: #1a4007;
+  --primitive-Greyscale-grey01: #f7f7f7;
+  --primitive-Greyscale-grey02: #f5f5f5;
+  --primitive-Greyscale-grey03: #f0f0f0;
+  --primitive-Greyscale-grey04: #e6e6e6;
+  --primitive-Greyscale-grey05: #bfbfbf;
+  --primitive-Greyscale-grey06: #8c8c8c;
+  --primitive-Greyscale-grey07: #737373;
+  --primitive-Greyscale-grey08: #595959;
+  --primitive-Greyscale-grey09: #404040;
+  --primitive-Greyscale-grey10: #262626;
+  --primitive-Secondary-Brown-brown00: #f1eae6;
+  --primitive-Secondary-Brown-brown01: #e2ccc0;
+  --primitive-Secondary-Brown-brown02: #c69278;
+  --primitive-Secondary-Orange-orange00: #f9e7da;
+  --primitive-Secondary-Orange-orange01: #fcc8a2;
+  --primitive-Secondary-Orange-orange02: #fba466;
+  --primitive-Secondary-Peach-peach00: #ffeded;
+  --primitive-Secondary-Peach-peach01: #f1d9d9;
+  --primitive-Secondary-Peach-peach02: #ff9696;
+  --primitive-Secondary-Blue-blue00: #f0f8ff;
+  --primitive-Secondary-Blue-blue01: #cfdeed;
+  --primitive-Secondary-Blue-blue02: #95c1ee;
+  --primitive-Secondary-Purple-purple00: #faf2fe;
+  --primitive-Secondary-Purple-purple01: #e0c6ec;
+  --primitive-Secondary-Purple-purple02: #c992e3;
+  --primitive-Secondary-Yellow-yellow00: #fdf8e5;
+  --primitive-Secondary-Yellow-yellow01: #fbf1cf;
+  --primitive-Secondary-Yellow-yellow02: #fde28b;
+  --primitive-Brand-brandGreen: #6baa32;
+  --primitive-Brand-sativaGreen: #a9e079;
+  --primitive-Brand-midribGreen: #dbf5b3;
+  --primitive-System-Info-infoMain: #437dcf;
+  --primitive-System-Info-infoLight: #e1eefa;
+  --primitive-System-Info-infoDark: #3774ac;
+  --primitive-System-Success-successMain: #309f56;
+  --primitive-System-Success-successLight: #e5f9ec;
+  --primitive-System-Success-successDark: #2e834b;
+  --primitive-System-Warning-warningMain: #e26815;
+  --primitive-System-Warning-warningLight: #fff3e1;
+  --primitive-System-Warning-warningDark: #b45210;
+  --primitive-System-Error-errorMain: #da5050;
+  --primitive-System-Error-errorLight: #fde3e3;
+  --primitive-System-Error-errorDark: #bd4141;
 }

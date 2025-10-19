@@ -327,7 +327,7 @@ export const TechnicalSpecs: Story = {
         <div style={{ padding: '20px', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '12px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              <Button iconBefore="product">With Icon</Button>
+              <Button iconBefore="category">With Icon</Button>
               <Button>Without Icon</Button>
             </div>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>

@@ -11,8 +11,8 @@ export interface IconProps {
    * Icon name from the design system
    *
    * Material Design icons: admin_panel_settings, settings, group, verified, account_circle,
-   * storefront, integration_instructions, rocket_launch, product, dashboard, loyalty,
-   * redeem, payments, apps, auto_graph
+   * storefront, integration_instructions, rocket_launch, category, dashboard, loyalty,
+   * redeem, payments, apps, auto_graph, inventory, smart_toy
    *
    * Custom Treez icons: beverage, cbd, edible, extracts, flower, preroll
    */

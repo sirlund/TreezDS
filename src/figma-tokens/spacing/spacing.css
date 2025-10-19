@@ -1,27 +1,28 @@
 /**
  * Spacing & Size Tokens - Auto-generated from Figma
+ * Source: imported-from-figma/Size&Spacing.json
  * DO NOT EDIT MANUALLY - Run 'npm run tokens:transform' to regenerate
  */
 
 :root {
-  /* Spacing */
-  --spacing-space-2x-small: 4px; /* Spacing/space-2x-small */
-  --spacing-space-x-small: 8px; /* Spacing/space-x-small */
-  --spacing-space-small: 12px; /* Spacing/space-small */
-  --spacing-space-medium: 16px; /* Spacing/space-medium */
-  --spacing-space-large: 20px; /* Spacing/space-large */
-  --spacing-space-x-large: 24px; /* Spacing/space-x-large */
-  --spacing-space-2x-large: 32px; /* Spacing/space-2x-large */
-  --spacing-space-3x-large: 48px; /* Spacing/space-3x-large */
-  --spacing-space-none: 0px; /* Spacing/space-none */
-  --spacing-space-3x-small: 2px; /* Spacing/space-3x-small */
+  /* Spacing Tokens */
+  --primitive-Spacing-space-none: 0px;
+  --primitive-Spacing-space-3x-small: 2px;
+  --primitive-Spacing-space-2x-small: 4px;
+  --primitive-Spacing-space-x-small: 8px;
+  --primitive-Spacing-space-small: 12px;
+  --primitive-Spacing-space-medium: 16px;
+  --primitive-Spacing-space-large: 20px;
+  --primitive-Spacing-space-x-large: 24px;
+  --primitive-Spacing-space-2x-large: 32px;
+  --primitive-Spacing-space-3x-large: 48px;
 
-  /* Sizes (beta) */
-  ---size-beta-size-x-small: 12px; /* 🚧 Size (beta)/size-x-small */
-  ---size-beta-size-small: 18px; /* 🚧 Size (beta)/size-small */
-  ---size-beta-size-medium: 20px; /* 🚧 Size (beta)/size-medium */
-  ---size-beta-size-large: 24px; /* 🚧 Size (beta)/size-large */
-  ---size-beta-size-2x-large: 48px; /* 🚧 Size (beta)/size-2x-large */
-  ---size-beta-size-3x-large: 64px; /* 🚧 Size (beta)/size-3x-large */
-  ---size-beta-size-x-large: 32px; /* 🚧 Size (beta)/size-x-large */
+  /* Size Tokens */
+  --primitive-Size-size-x-small: 12px;
+  --primitive-Size-size-small: 18px;
+  --primitive-Size-size-medium: 20px;
+  --primitive-Size-size-large: 24px;
+  --primitive-Size-size-x-large: 32px;
+  --primitive-Size-size-2x-large: 48px;
+  --primitive-Size-size-3x-large: 64px;
 }

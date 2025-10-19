@@ -6,6 +6,30 @@ Project history and major changes for TreezDS Design System.
 
 ## [Current] 2025-10-18
 
+### Storybook CSS Integration Fix
+- **Fixed missing CSS imports**: Added `semantic-spacing.css` and `semantic-radius.css` to Storybook preview configuration
+- **Button styling fixed**: All CSS variables now properly loaded - padding, border-radius, and gap display correctly
+- **Complete import chain**: Storybook now loads primitives → semantic tokens → components correctly
+
+### Icon System Correction
+- **Fixed invalid icon**: Replaced non-existent "product" Material icon with "category"
+- **Updated documentation**: Icon component JSDoc now lists all valid Material Symbol icons
+- **Button stories updated**: Changed icon usage from `iconBefore="product"` to `iconBefore="category"`
+
+### Token System Rebuild
+- **Transform script created**: `npm run tokens:transform` regenerates all primitive tokens from imported Figma JSONs
+- **All primitive tokens rebuilt**: 63 colors + 9 radius + 10 spacing + 7 size tokens auto-generated
+- **Semantic tokens updated**: ALL semantic tokens (TS & CSS) now reference primitives - NO hardcoded values
+- **Single source of truth**: Figma → imported JSON → primitive tokens → semantic tokens → components
+- **Documentation added**: Clear comments in all files enforcing "MUST reference primitives" rule
+
+### Token System Expansion
+- **Semantic radius tokens**: Created component-specific radius tokens (`button`, `input`, `card`, `modal`, `badge`, `avatar`) + general scale
+- **Semantic spacing tokens**: Created component-specific spacing tokens (`button`, `input`, `card`) + general scale
+- **Button component updated**: Replaced all hardcoded `border-radius`, `gap`, and `padding` with CSS variables
+- **CSS variables added**: `--radius-*` and `--spacing-*` variables now available globally
+- **TypeScript + CSS exports**: Both formats available for all tokens (radius and spacing)
+
 ### Scripts Cleanup
 - **MCP scripts removed**: Deleted 3 incomplete template scripts (`extract-design.js`, `extract-colors.js`, `generate-tokens.js`)
 - **npm commands cleaned**: Removed `mcp:extract`, `mcp:colors`, `mcp:tokens` (were non-functional)
@@ -120,4 +144,4 @@ Project history and major changes for TreezDS Design System.
 
 ---
 
-**Last Updated**: 2025-10-18
+**Last Updated**: 2025-10-19

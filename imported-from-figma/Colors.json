@@ -1,1 +1,290 @@
-{"id":"VariableCollectionId:15418:91993","name":"🎨 Colors","modes":{"15418:0":"Mode 1"},"variableIds":["VariableID:15725:91997","VariableID:15725:92017","VariableID:15725:92018","VariableID:15472:91996","VariableID:15472:91997","VariableID:15725:92028","VariableID:15725:92029","VariableID:15725:92030","VariableID:15725:92031","VariableID:15731:92732","VariableID:15418:91994","VariableID:15418:91995","VariableID:15418:91996","VariableID:15418:91997","VariableID:15418:91998","VariableID:15418:91999","VariableID:15418:92000","VariableID:15418:92001","VariableID:15418:92002","VariableID:15418:92003","VariableID:15472:91998","VariableID:15472:92003","VariableID:15472:92004","VariableID:15472:92005","VariableID:15472:92006","VariableID:15472:92007","VariableID:15472:92008","VariableID:15472:92009","VariableID:15472:92010","VariableID:15472:92024","VariableID:15725:92001","VariableID:15725:91999","VariableID:15725:92000","VariableID:15725:92002","VariableID:15725:92003","VariableID:15725:92004","VariableID:15725:92005","VariableID:15725:92006","VariableID:15725:92007","VariableID:15725:92008","VariableID:15725:92009","VariableID:15725:92010","VariableID:15725:92011","VariableID:15725:92012","VariableID:15725:92013","VariableID:15725:92014","VariableID:15725:92015","VariableID:15725:92016","VariableID:15731:92729","VariableID:15731:92730","VariableID:15731:92731","VariableID:15472:92025","VariableID:15472:92026","VariableID:15472:92027","VariableID:15725:92019","VariableID:15725:92020","VariableID:15725:92021","VariableID:15725:92022","VariableID:15725:92023","VariableID:15725:92024","VariableID:15725:92025","VariableID:15725:92026","VariableID:15725:92027"],"variables":[{"id":"VariableID:15418:91994","name":"Green/green01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9882352948188782,"g":1,"b":0.9607843160629272,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9882352948188782,"g":1,"b":0.9607843160629272,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:91995","name":"Green/green02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9529411792755127,"g":0.9803921580314636,"b":0.9019607901573181,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9529411792755127,"g":0.9803921580314636,"b":0.9019607901573181,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:91996","name":"Green/green03","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9098039269447327,"g":0.9686274528503418,"b":0.8039215803146362,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9098039269447327,"g":0.9686274528503418,"b":0.8039215803146362,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:91997","name":"Green/green04","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8588235378265381,"g":0.9607843160629272,"b":0.7019608020782471,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8588235378265381,"g":0.9607843160629272,"b":0.7019608020782471,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:91998","name":"Green/green05","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.6627451181411743,"g":0.8784313797950745,"b":0.4745098054409027,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.6627451181411743,"g":0.8784313797950745,"b":0.4745098054409027,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:91999","name":"Green/green06","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.5490196347236633,"g":0.800000011920929,"b":0.32156863808631897,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.5490196347236633,"g":0.800000011920929,"b":0.32156863808631897,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:92000","name":"Green/green07","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.41960784792900085,"g":0.6666666865348816,"b":0.19607843458652496,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.41960784792900085,"g":0.6666666865348816,"b":0.19607843458652496,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:92001","name":"Green/green08","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.24313725531101227,"g":0.47843137383461,"b":0.0941176488995552,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.24313725531101227,"g":0.47843137383461,"b":0.0941176488995552,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:92002","name":"Green/green09","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.16078431904315948,"g":0.3607843220233917,"b":0.027450980618596077,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.16078431904315948,"g":0.3607843220233917,"b":0.027450980618596077,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15418:92003","name":"Green/green10","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.10196078568696976,"g":0.250980406999588,"b":0.027450980618596077,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.10196078568696976,"g":0.250980406999588,"b":0.027450980618596077,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:91996","name":"B&W/primaryBlack","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.10196078568696976,"g":0.10196078568696976,"b":0.10196078568696976,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.10196078568696976,"g":0.10196078568696976,"b":0.10196078568696976,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:91997","name":"B&W/primaryWhite","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":1,"g":1,"b":1,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":1,"g":1,"b":1,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:91998","name":"Greyscale/grey01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9686274528503418,"g":0.9686274528503418,"b":0.9686274528503418,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9686274528503418,"g":0.9686274528503418,"b":0.9686274528503418,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92003","name":"Greyscale/grey02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9607843160629272,"g":0.9607843160629272,"b":0.9607843160629272,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9607843160629272,"g":0.9607843160629272,"b":0.9607843160629272,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92004","name":"Greyscale/grey03","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9411764740943909,"g":0.9411764740943909,"b":0.9411764740943909,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9411764740943909,"g":0.9411764740943909,"b":0.9411764740943909,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92005","name":"Greyscale/grey04","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9019607901573181,"g":0.9019607901573181,"b":0.9019607901573181,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9019607901573181,"g":0.9019607901573181,"b":0.9019607901573181,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92006","name":"Greyscale/grey05","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.7490196228027344,"g":0.7490196228027344,"b":0.7490196228027344,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.7490196228027344,"g":0.7490196228027344,"b":0.7490196228027344,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92007","name":"Greyscale/grey06","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.5490196347236633,"g":0.5490196347236633,"b":0.5490196347236633,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.5490196347236633,"g":0.5490196347236633,"b":0.5490196347236633,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92008","name":"Greyscale/grey07","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.45098039507865906,"g":0.45098039507865906,"b":0.45098039507865906,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.45098039507865906,"g":0.45098039507865906,"b":0.45098039507865906,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92009","name":"Greyscale/grey08","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.3490196168422699,"g":0.3490196168422699,"b":0.3490196168422699,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.3490196168422699,"g":0.3490196168422699,"b":0.3490196168422699,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92010","name":"Greyscale/grey09","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.250980406999588,"g":0.250980406999588,"b":0.250980406999588,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.250980406999588,"g":0.250980406999588,"b":0.250980406999588,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92024","name":"Greyscale/grey10","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.14901961386203766,"g":0.14901961386203766,"b":0.14901961386203766,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.14901961386203766,"g":0.14901961386203766,"b":0.14901961386203766,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92025","name":"System/Info/infoMain","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.26274511218070984,"g":0.4901960790157318,"b":0.8117647171020508,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.26274511218070984,"g":0.4901960790157318,"b":0.8117647171020508,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92026","name":"System/Info/infoLight","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8823529481887817,"g":0.9333333373069763,"b":0.9803921580314636,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8823529481887817,"g":0.9333333373069763,"b":0.9803921580314636,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15472:92027","name":"System/Info/infoDark","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.21568627655506134,"g":0.45490196347236633,"b":0.6745098233222961,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.21568627655506134,"g":0.45490196347236633,"b":0.6745098233222961,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:91997","name":"Primary/primaryMain","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:91998"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.6627451181411743,"g":0.8784313797950745,"b":0.4745098054409027,"a":1},"alias":"VariableID:15418:91998","aliasName":"Green/green05"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:91999","name":"Secondary/Brown/brown01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.886274516582489,"g":0.800000011920929,"b":0.7529411911964417,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.886274516582489,"g":0.800000011920929,"b":0.7529411911964417,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92000","name":"Secondary/Brown/brown02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.7764706015586853,"g":0.572549045085907,"b":0.47058823704719543,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.7764706015586853,"g":0.572549045085907,"b":0.47058823704719543,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92001","name":"Secondary/Brown/brown00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9450980424880981,"g":0.9176470637321472,"b":0.9019607901573181,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9450980424880981,"g":0.9176470637321472,"b":0.9019607901573181,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92002","name":"Secondary/Orange/orange00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9764705896377563,"g":0.9058823585510254,"b":0.8549019694328308,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9764705896377563,"g":0.9058823585510254,"b":0.8549019694328308,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92003","name":"Secondary/Orange/orange01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9882352948188782,"g":0.7843137383460999,"b":0.6352941393852234,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9882352948188782,"g":0.7843137383460999,"b":0.6352941393852234,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92004","name":"Secondary/Orange/orange02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9843137264251709,"g":0.6431372761726379,"b":0.4000000059604645,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9843137264251709,"g":0.6431372761726379,"b":0.4000000059604645,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92005","name":"Secondary/Peach/peach00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":1,"g":0.929411768913269,"b":0.929411768913269,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":1,"g":0.929411768913269,"b":0.929411768913269,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92006","name":"Secondary/Peach/peach01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9450980424880981,"g":0.8509804010391235,"b":0.8509804010391235,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9450980424880981,"g":0.8509804010391235,"b":0.8509804010391235,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92007","name":"Secondary/Peach/peach02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":1,"g":0.5882353186607361,"b":0.5882353186607361,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":1,"g":0.5882353186607361,"b":0.5882353186607361,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92008","name":"Secondary/Blue/blue00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9411764740943909,"g":0.9725490212440491,"b":1,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9411764740943909,"g":0.9725490212440491,"b":1,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92009","name":"Secondary/Blue/blue01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8117647171020508,"g":0.8705882430076599,"b":0.929411768913269,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8117647171020508,"g":0.8705882430076599,"b":0.929411768913269,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92010","name":"Secondary/Blue/blue02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.5843137502670288,"g":0.7568627595901489,"b":0.9333333373069763,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.5843137502670288,"g":0.7568627595901489,"b":0.9333333373069763,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92011","name":"Secondary/Purple/purple00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9803921580314636,"g":0.9490196108818054,"b":0.9960784316062927,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9803921580314636,"g":0.9490196108818054,"b":0.9960784316062927,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92012","name":"Secondary/Purple/purple01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8784313797950745,"g":0.7764706015586853,"b":0.9254902005195618,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8784313797950745,"g":0.7764706015586853,"b":0.9254902005195618,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92013","name":"Secondary/Purple/purple02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.7882353067398071,"g":0.572549045085907,"b":0.8901960849761963,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.7882353067398071,"g":0.572549045085907,"b":0.8901960849761963,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92014","name":"Secondary/Yellow/yellow00","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9921568632125854,"g":0.9725490212440491,"b":0.8980392217636108,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9921568632125854,"g":0.9725490212440491,"b":0.8980392217636108,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92015","name":"Secondary/Yellow/yellow01","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9843137264251709,"g":0.9450980424880981,"b":0.8117647171020508,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9843137264251709,"g":0.9450980424880981,"b":0.8117647171020508,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92016","name":"Secondary/Yellow/yellow02","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9921568632125854,"g":0.886274516582489,"b":0.545098066329956,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9921568632125854,"g":0.886274516582489,"b":0.545098066329956,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92017","name":"Primary/primaryLight","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:91996"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9098039269447327,"g":0.9686274528503418,"b":0.8039215803146362,"a":1},"alias":"VariableID:15418:91996","aliasName":"Green/green03"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92018","name":"Primary/primaryDark","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:91999"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.5490196347236633,"g":0.800000011920929,"b":0.32156863808631897,"a":1},"alias":"VariableID:15418:91999","aliasName":"Green/green06"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92019","name":"System/Success/successMain","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.1882352977991104,"g":0.6235294342041016,"b":0.33725491166114807,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.1882352977991104,"g":0.6235294342041016,"b":0.33725491166114807,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92020","name":"System/Success/successLight","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8980392217636108,"g":0.9764705896377563,"b":0.9254902005195618,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8980392217636108,"g":0.9764705896377563,"b":0.9254902005195618,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92021","name":"System/Success/successDark","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.18039216101169586,"g":0.5137255191802979,"b":0.29411765933036804,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.18039216101169586,"g":0.5137255191802979,"b":0.29411765933036804,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92022","name":"System/Warning/warningMain","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.886274516582489,"g":0.40784314274787903,"b":0.08235294371843338,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.886274516582489,"g":0.40784314274787903,"b":0.08235294371843338,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92023","name":"System/Warning/warningLight","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":1,"g":0.9529411792755127,"b":0.8823529481887817,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":1,"g":0.9529411792755127,"b":0.8823529481887817,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92024","name":"System/Warning/warningDark","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.7058823704719543,"g":0.32156863808631897,"b":0.062745101749897,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.7058823704719543,"g":0.32156863808631897,"b":0.062745101749897,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92025","name":"System/Error/errorMain","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.8549019694328308,"g":0.3137255012989044,"b":0.3137255012989044,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8549019694328308,"g":0.3137255012989044,"b":0.3137255012989044,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92026","name":"System/Error/errorLight","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9921568632125854,"g":0.8901960849761963,"b":0.8901960849761963,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9921568632125854,"g":0.8901960849761963,"b":0.8901960849761963,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92027","name":"System/Error/errorDark","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.7411764860153198,"g":0.2549019753932953,"b":0.2549019753932953,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.7411764860153198,"g":0.2549019753932953,"b":0.2549019753932953,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92028","name":"Text/primaryBlackText","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.05882352963089943,"g":0.09019608050584793,"b":0.03529411926865578,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.05882352963089943,"g":0.09019608050584793,"b":0.03529411926865578,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92029","name":"Text/secondaryText","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15472:92009"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.3490196168422699,"g":0.3490196168422699,"b":0.3490196168422699,"a":1},"alias":"VariableID:15472:92009","aliasName":"Greyscale/grey08"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92030","name":"Text/tertiaryText","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.47843137383461,"g":0.47843137383461,"b":0.47843137383461,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.47843137383461,"g":0.47843137383461,"b":0.47843137383461,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15725:92031","name":"Text/disabledText","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.5803921818733215,"g":0.5803921818733215,"b":0.5803921818733215,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.5803921818733215,"g":0.5803921818733215,"b":0.5803921818733215,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15731:92729","name":"Brand/brandGreen","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:92000"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.41960784792900085,"g":0.6666666865348816,"b":0.19607843458652496,"a":1},"alias":"VariableID:15418:92000","aliasName":"Green/green07"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15731:92730","name":"Brand/sativaGreen","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:91998"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.6627451181411743,"g":0.8784313797950745,"b":0.4745098054409027,"a":1},"alias":"VariableID:15418:91998","aliasName":"Green/green05"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15731:92731","name":"Brand/midribGreen","description":"","type":"COLOR","valuesByMode":{"15418:0":{"type":"VARIABLE_ALIAS","id":"VariableID:15418:91997"}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.8588235378265381,"g":0.9607843160629272,"b":0.7019608020782471,"a":1},"alias":"VariableID:15418:91997","aliasName":"Green/green04"}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15731:92732","name":"Text/primaryWhiteText","description":"","type":"COLOR","valuesByMode":{"15418:0":{"r":0.9803921580314636,"g":0.9803921580314636,"b":0.9803921580314636,"a":1}},"resolvedValuesByMode":{"15418:0":{"resolvedValue":{"r":0.9803921580314636,"g":0.9803921580314636,"b":0.9803921580314636,"a":1},"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}}]}
+{
+  "Primary": {
+    "primaryMain": {
+      "$type": "color",
+      "$value": "{Green.green05}"
+    },
+    "primaryLight": {
+      "$type": "color",
+      "$value": "{Green.green03}"
+    },
+    "primaryDark": {
+      "$type": "color",
+      "$value": "{Green.green06}"
+    }
+  },
+  "B&W": {
+    "primaryBlack": {
+      "$type": "color",
+      "$value": "#1a1a1a"
+    },
+    "primaryWhite": {
+      "$type": "color",
+      "$value": "#ffffff"
+    }
+  },
+  "Text": {
+    "primaryBlackText": {
+      "$type": "color",
+      "$value": "#0f1709"
+    },
+    "secondaryText": {
+      "$type": "color",
+      "$value": "{Greyscale.grey08}"
+    },
+    "tertiaryText": {
+      "$type": "color",
+      "$value": "#7a7a7a"
+    },
+    "disabledText": {
+      "$type": "color",
+      "$value": "#949494"
+    },
+    "primaryWhiteText": {
+      "$type": "color",
+      "$value": "#fafafa"
+    }
+  },
+  "Green": {
+    "green01": {
+      "$type": "color",
+      "$value": "#fcfff5"
+    },
+    "green02": {
+      "$type": "color",
+      "$value": "#f3fae6"
+    },
+    "green03": {
+      "$type": "color",
+      "$value": "#e8f7cd"
+    },
+    "green04": {
+      "$type": "color",
+      "$value": "#dbf5b3"
+    },
+    "green05": {
+      "$type": "color",
+      "$value": "#a9e079"
+    },
+    "green06": {
+      "$type": "color",
+      "$value": "#8ccc52"
+    },
+    "green07": {
+      "$type": "color",
+      "$value": "#6baa32"
+    },
+    "green08": {
+      "$type": "color",
+      "$value": "#3e7a18"
+    },
+    "green09": {
+      "$type": "color",
+      "$value": "#295c07"
+    },
+    "green10": {
+      "$type": "color",
+      "$value": "#1a4007"
+    }
+  },
+  "Greyscale": {
+    "grey01": {
+      "$type": "color",
+      "$value": "#f7f7f7"
+    },
+    "grey02": {
+      "$type": "color",
+      "$value": "#f5f5f5"
+    },
+    "grey03": {
+      "$type": "color",
+      "$value": "#f0f0f0"
+    },
+    "grey04": {
+      "$type": "color",
+      "$value": "#e6e6e6"
+    },
+    "grey05": {
+      "$type": "color",
+      "$value": "#bfbfbf"
+    },
+    "grey06": {
+      "$type": "color",
+      "$value": "#8c8c8c"
+    },
+    "grey07": {
+      "$type": "color",
+      "$value": "#737373"
+    },
+    "grey08": {
+      "$type": "color",
+      "$value": "#595959"
+    },
+    "grey09": {
+      "$type": "color",
+      "$value": "#404040"
+    },
+    "grey10": {
+      "$type": "color",
+      "$value": "#262626"
+    }
+  },
+  "Secondary": {
+    "Brown": {
+      "brown00": {
+        "$type": "color",
+        "$value": "#f1eae6"
+      },
+      "brown01": {
+        "$type": "color",
+        "$value": "#e2ccc0"
+      },
+      "brown02": {
+        "$type": "color",
+        "$value": "#c69278"
+      }
+    },
+    "Orange": {
+      "orange00": {
+        "$type": "color",
+        "$value": "#f9e7da"
+      },
+      "orange01": {
+        "$type": "color",
+        "$value": "#fcc8a2"
+      },
+      "orange02": {
+        "$type": "color",
+        "$value": "#fba466"
+      }
+    },
+    "Peach": {
+      "peach00": {
+        "$type": "color",
+        "$value": "#ffeded"
+      },
+      "peach01": {
+        "$type": "color",
+        "$value": "#f1d9d9"
+      },
+      "peach02": {
+        "$type": "color",
+        "$value": "#ff9696"
+      }
+    },
+    "Blue": {
+      "blue00": {
+        "$type": "color",
+        "$value": "#f0f8ff"
+      },
+      "blue01": {
+        "$type": "color",
+        "$value": "#cfdeed"
+      },
+      "blue02": {
+        "$type": "color",
+        "$value": "#95c1ee"
+      }
+    },
+    "Purple": {
+      "purple00": {
+        "$type": "color",
+        "$value": "#faf2fe"
+      },
+      "purple01": {
+        "$type": "color",
+        "$value": "#e0c6ec"
+      },
+      "purple02": {
+        "$type": "color",
+        "$value": "#c992e3"
+      }
+    },
+    "Yellow": {
+      "yellow00": {
+        "$type": "color",
+        "$value": "#fdf8e5"
+      },
+      "yellow01": {
+        "$type": "color",
+        "$value": "#fbf1cf"
+      },
+      "yellow02": {
+        "$type": "color",
+        "$value": "#fde28b"
+      }
+    }
+  },
+  "Brand": {
+    "brandGreen": {
+      "$type": "color",
+      "$value": "{Green.green07}"
+    },
+    "sativaGreen": {
+      "$type": "color",
+      "$value": "{Green.green05}"
+    },
+    "midribGreen": {
+      "$type": "color",
+      "$value": "{Green.green04}"
+    }
+  },
+  "System": {
+    "Info": {
+      "infoMain": {
+        "$type": "color",
+        "$value": "#437dcf"
+      },
+      "infoLight": {
+        "$type": "color",
+        "$value": "#e1eefa"
+      },
+      "infoDark": {
+        "$type": "color",
+        "$value": "#3774ac"
+      }
+    },
+    "Success": {
+      "successMain": {
+        "$type": "color",
+        "$value": "#309f56"
+      },
+      "successLight": {
+        "$type": "color",
+        "$value": "#e5f9ec"
+      },
+      "successDark": {
+        "$type": "color",
+        "$value": "#2e834b"
+      }
+    },
+    "Warning": {
+      "warningMain": {
+        "$type": "color",
+        "$value": "#e26815"
+      },
+      "warningLight": {
+        "$type": "color",
+        "$value": "#fff3e1"
+      },
+      "warningDark": {
+        "$type": "color",
+        "$value": "#b45210"
+      }
+    },
+    "Error": {
+      "errorMain": {
+        "$type": "color",
+        "$value": "#da5050"
+      },
+      "errorLight": {
+        "$type": "color",
+        "$value": "#fde3e3"
+      },
+      "errorDark": {
+        "$type": "color",
+        "$value": "#bd4141"
+      }
+    }
+  }
+}

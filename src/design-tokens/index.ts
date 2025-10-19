@@ -8,3 +8,9 @@ export * from './semantic-colors';
 
 // Export typography tokens (primitives + semantics)
 export * from './typography';
+
+// Export semantic radius
+export * from './semantic-radius';
+
+// Export semantic spacing
+export * from './semantic-spacing';

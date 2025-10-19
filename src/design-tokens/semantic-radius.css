@@ -1,0 +1,49 @@
+/**
+ * Semantic Radius Tokens - CSS Variables
+ * Component-level border radius tokens
+ *
+ * Source: src/design-tokens/semantic-radius.ts
+ * Primitives: src/figma-tokens/radius/radius.ts
+ *
+ * IMPORTANT: All values MUST reference --primitive-* variables - NO hardcoded values!
+ */
+
+/* Import primitive radius tokens */
+@import '../figma-tokens/radius/radius.css';
+
+:root {
+  /* Button Radius */
+  --radius-button-small: var(--primitive-Radius-radius-small);
+  --radius-button-medium: var(--primitive-Radius-radius-medium);
+  --radius-button-large: var(--primitive-Radius-radius-medium);
+
+  /* Input Radius */
+  --radius-input-small: var(--primitive-Radius-radius-x-small);
+  --radius-input-medium: var(--primitive-Radius-radius-small);
+  --radius-input-large: var(--primitive-Radius-radius-small);
+
+  /* Card Radius */
+  --radius-card-small: var(--primitive-Radius-radius-small);
+  --radius-card-medium: var(--primitive-Radius-radius-medium);
+  --radius-card-large: var(--primitive-Radius-radius-large);
+
+  /* Modal Radius */
+  --radius-modal-default: var(--primitive-Radius-radius-medium);
+
+  /* Badge Radius */
+  --radius-badge-default: var(--primitive-Radius-radius-full);
+
+  /* Avatar Radius */
+  --radius-avatar-default: var(--primitive-Radius-radius-full);
+
+  /* General Radius Scale */
+  --radius-none: var(--primitive-Radius-radius-none);
+  --radius-xs: var(--primitive-Radius-radius-2x-small);
+  --radius-sm: var(--primitive-Radius-radius-x-small);
+  --radius-md: var(--primitive-Radius-radius-small);
+  --radius-lg: var(--primitive-Radius-radius-medium);
+  --radius-xl: var(--primitive-Radius-radius-large);
+  --radius-2xl: var(--primitive-Radius-radius-x-large);
+  --radius-3xl: var(--primitive-Radius-radius-2x-large);
+  --radius-full: var(--primitive-Radius-radius-full);
+}

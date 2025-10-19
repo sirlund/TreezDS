@@ -1,1 +1,74 @@
-{"id":"VariableCollectionId:15780:94886","name":"📐 Size & Spacing","modes":{"15780:1":"Mode 1"},"variableIds":["VariableID:16561:110785","VariableID:16561:110786","VariableID:15780:94888","VariableID:15780:94889","VariableID:15780:94890","VariableID:15780:94891","VariableID:15780:94892","VariableID:15780:94893","VariableID:15780:94894","VariableID:15780:94895","VariableID:15780:94896","VariableID:15780:94897","VariableID:15780:94898","VariableID:15780:94899","VariableID:17225:22672","VariableID:15780:94900","VariableID:15780:94901"],"variables":[{"id":"VariableID:15780:94888","name":"Spacing/space-2x-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":4},"resolvedValuesByMode":{"15780:1":{"resolvedValue":4,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94889","name":"Spacing/space-x-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":8},"resolvedValuesByMode":{"15780:1":{"resolvedValue":8,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94890","name":"Spacing/space-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":12},"resolvedValuesByMode":{"15780:1":{"resolvedValue":12,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94891","name":"Spacing/space-medium","description":"","type":"FLOAT","valuesByMode":{"15780:1":16},"resolvedValuesByMode":{"15780:1":{"resolvedValue":16,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94892","name":"Spacing/space-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":20},"resolvedValuesByMode":{"15780:1":{"resolvedValue":20,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94893","name":"Spacing/space-x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":24},"resolvedValuesByMode":{"15780:1":{"resolvedValue":24,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94894","name":"Spacing/space-2x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":32},"resolvedValuesByMode":{"15780:1":{"resolvedValue":32,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94895","name":"Spacing/space-3x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":48},"resolvedValuesByMode":{"15780:1":{"resolvedValue":48,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94896","name":"🚧 Size (beta)/size-x-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":12},"resolvedValuesByMode":{"15780:1":{"resolvedValue":12,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94897","name":"🚧 Size (beta)/size-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":18},"resolvedValuesByMode":{"15780:1":{"resolvedValue":18,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94898","name":"🚧 Size (beta)/size-medium","description":"","type":"FLOAT","valuesByMode":{"15780:1":20},"resolvedValuesByMode":{"15780:1":{"resolvedValue":20,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94899","name":"🚧 Size (beta)/size-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":24},"resolvedValuesByMode":{"15780:1":{"resolvedValue":24,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94900","name":"🚧 Size (beta)/size-2x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":48},"resolvedValuesByMode":{"15780:1":{"resolvedValue":48,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:15780:94901","name":"🚧 Size (beta)/size-3x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":64},"resolvedValuesByMode":{"15780:1":{"resolvedValue":64,"alias":null}},"scopes":["WIDTH_HEIGHT"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:16561:110785","name":"Spacing/space-none","description":"","type":"FLOAT","valuesByMode":{"15780:1":0},"resolvedValuesByMode":{"15780:1":{"resolvedValue":0,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:16561:110786","name":"Spacing/space-3x-small","description":"","type":"FLOAT","valuesByMode":{"15780:1":2},"resolvedValuesByMode":{"15780:1":{"resolvedValue":2,"alias":null}},"scopes":["GAP"],"hiddenFromPublishing":false,"codeSyntax":{}},{"id":"VariableID:17225:22672","name":"🚧 Size (beta)/size-x-large","description":"","type":"FLOAT","valuesByMode":{"15780:1":32},"resolvedValuesByMode":{"15780:1":{"resolvedValue":32,"alias":null}},"scopes":["ALL_SCOPES"],"hiddenFromPublishing":false,"codeSyntax":{}}]}
+{
+  "Spacing": {
+    "space-none": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "space-3x-small": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "space-2x-small": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "space-x-small": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "space-small": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "space-medium": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "space-large": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "space-x-large": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "space-2x-large": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "space-3x-large": {
+      "$type": "dimension",
+      "$value": "48px"
+    }
+  },
+  "Size": {
+    "size-x-small": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "size-small": {
+      "$type": "dimension",
+      "$value": "18px"
+    },
+    "size-medium": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "size-large": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "size-x-large": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "size-2x-large": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "size-3x-large": {
+      "$type": "dimension",
+      "$value": "64px"
+    }
+  }
+}
