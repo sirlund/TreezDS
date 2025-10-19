@@ -5,13 +5,13 @@
  */
 
 :root {
-  --primitive-Radius-radius-none: 0px;
-  --primitive-Radius-radius-2x-small: 6px;
-  --primitive-Radius-radius-x-small: 8px;
-  --primitive-Radius-radius-small: 12px;
-  --primitive-Radius-radius-medium: 16px;
-  --primitive-Radius-radius-large: 20px;
-  --primitive-Radius-radius-x-large: 24px;
-  --primitive-Radius-radius-2x-large: 32px;
-  --primitive-Radius-radius-full: 999px;
+  --primitive-radius-none: 0px;
+  --primitive-radius-2x-small: 6px;
+  --primitive-radius-x-small: 8px;
+  --primitive-radius-small: 12px;
+  --primitive-radius-medium: 16px;
+  --primitive-radius-large: 20px;
+  --primitive-radius-x-large: 24px;
+  --primitive-radius-2x-large: 32px;
+  --primitive-radius-full: 999px;
 }

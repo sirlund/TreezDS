@@ -35,6 +35,48 @@ function resolveTokenValue(value, allTokens) {
 }
 
 /**
+ * Remove redundant prefixes from token names
+ * Examples:
+ * - "Radius-radius-small" → "radius-small"
+ * - "Spacing-space-small" → "space-small"
+ * - "Primary-primaryMain" → "primary-main"
+ * - "B&W-primaryBlack" → "b-w-primary-black"
+ */
+function cleanTokenName(name) {
+  // Split by dash
+  const parts = name.split('-');
+
+  // Remove first part if it's redundant with second part
+  if (parts.length >= 2) {
+    const firstPart = parts[0].toLowerCase();
+    const secondPart = parts[1].toLowerCase();
+
+    // Check if both share a common root (e.g., "spacing"/"space", "radius"/"radius")
+    // Or if second part starts with first part (e.g., "primary"/"primaryMain")
+    const longestCommonPrefix = (a, b) => {
+      let i = 0;
+      while (i < a.length && i < b.length && a[i] === b[i]) i++;
+      return i;
+    };
+
+    const commonLength = longestCommonPrefix(firstPart, secondPart);
+
+    // If they share at least 4 characters, or second starts with first, remove first part
+    if (commonLength >= 4 || secondPart.startsWith(firstPart) || firstPart.startsWith(secondPart)) {
+      parts.shift();
+    }
+  }
+
+  // Convert camelCase to kebab-case (e.g., "primaryMain" → "primary-main")
+  // Also handle special characters like & → -
+  return parts
+    .join('-')
+    .replace(/&/g, '-')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .toLowerCase();
+}
+
+/**
  * Flatten nested token structure and resolve references
  * Handles both 2-level and 3-level nesting
  */
@@ -58,7 +100,8 @@ function flattenTokens(data, prefix = '') {
   // Resolve references
   const resolved = {};
   for (const [key, value] of Object.entries(flat)) {
-    resolved[key] = resolveTokenValue(value, data);
+    const cleanedKey = cleanTokenName(key);
+    resolved[cleanedKey] = resolveTokenValue(value, data);
   }
 
   return resolved;
@@ -196,9 +239,9 @@ function transformSpacing() {
   const sizeTokens = {};
 
   for (const [key, value] of Object.entries(allTokens)) {
-    if (key.startsWith('Spacing-')) {
+    if (key.startsWith('space-')) {
       spacingTokens[key] = value;
-    } else if (key.startsWith('Size-')) {
+    } else if (key.startsWith('size-')) {
       sizeTokens[key] = value;
     }
   }

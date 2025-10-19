@@ -5,26 +5,26 @@
  */
 
 export const primitiveSpacing = {
-  'Spacing-space-none': '0px', // Spacing/space/none
-  'Spacing-space-3x-small': '2px', // Spacing/space/3x/small
-  'Spacing-space-2x-small': '4px', // Spacing/space/2x/small
-  'Spacing-space-x-small': '8px', // Spacing/space/x/small
-  'Spacing-space-small': '12px', // Spacing/space/small
-  'Spacing-space-medium': '16px', // Spacing/space/medium
-  'Spacing-space-large': '20px', // Spacing/space/large
-  'Spacing-space-x-large': '24px', // Spacing/space/x/large
-  'Spacing-space-2x-large': '32px', // Spacing/space/2x/large
-  'Spacing-space-3x-large': '48px', // Spacing/space/3x/large
+  'space-none': '0px', // space/none
+  'space-3x-small': '2px', // space/3x/small
+  'space-2x-small': '4px', // space/2x/small
+  'space-x-small': '8px', // space/x/small
+  'space-small': '12px', // space/small
+  'space-medium': '16px', // space/medium
+  'space-large': '20px', // space/large
+  'space-x-large': '24px', // space/x/large
+  'space-2x-large': '32px', // space/2x/large
+  'space-3x-large': '48px', // space/3x/large
 } as const;
 
 export const primitiveSize = {
-  'Size-size-x-small': '12px', // Size/size/x/small
-  'Size-size-small': '18px', // Size/size/small
-  'Size-size-medium': '20px', // Size/size/medium
-  'Size-size-large': '24px', // Size/size/large
-  'Size-size-x-large': '32px', // Size/size/x/large
-  'Size-size-2x-large': '48px', // Size/size/2x/large
-  'Size-size-3x-large': '64px', // Size/size/3x/large
+  'size-x-small': '12px', // size/x/small
+  'size-small': '18px', // size/small
+  'size-medium': '20px', // size/medium
+  'size-large': '24px', // size/large
+  'size-x-large': '32px', // size/x/large
+  'size-2x-large': '48px', // size/2x/large
+  'size-3x-large': '64px', // size/3x/large
 } as const;
 
 export type PrimitiveSpacingToken = keyof typeof primitiveSpacing;

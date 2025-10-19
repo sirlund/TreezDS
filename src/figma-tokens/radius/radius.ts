@@ -5,15 +5,15 @@
  */
 
 export const primitiveRadius = {
-  'Radius-radius-none': '0px', // Radius/radius/none
-  'Radius-radius-2x-small': '6px', // Radius/radius/2x/small
-  'Radius-radius-x-small': '8px', // Radius/radius/x/small
-  'Radius-radius-small': '12px', // Radius/radius/small
-  'Radius-radius-medium': '16px', // Radius/radius/medium
-  'Radius-radius-large': '20px', // Radius/radius/large
-  'Radius-radius-x-large': '24px', // Radius/radius/x/large
-  'Radius-radius-2x-large': '32px', // Radius/radius/2x/large
-  'Radius-radius-full': '999px', // Radius/radius/full
+  'radius-none': '0px', // radius/none
+  'radius-2x-small': '6px', // radius/2x/small
+  'radius-x-small': '8px', // radius/x/small
+  'radius-small': '12px', // radius/small
+  'radius-medium': '16px', // radius/medium
+  'radius-large': '20px', // radius/large
+  'radius-x-large': '24px', // radius/x/large
+  'radius-2x-large': '32px', // radius/2x/large
+  'radius-full': '999px', // radius/full
 } as const;
 
 export type PrimitiveRadiusToken = keyof typeof primitiveRadius;

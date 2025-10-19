@@ -6,23 +6,23 @@
 
 :root {
   /* Spacing Tokens */
-  --primitive-Spacing-space-none: 0px;
-  --primitive-Spacing-space-3x-small: 2px;
-  --primitive-Spacing-space-2x-small: 4px;
-  --primitive-Spacing-space-x-small: 8px;
-  --primitive-Spacing-space-small: 12px;
-  --primitive-Spacing-space-medium: 16px;
-  --primitive-Spacing-space-large: 20px;
-  --primitive-Spacing-space-x-large: 24px;
-  --primitive-Spacing-space-2x-large: 32px;
-  --primitive-Spacing-space-3x-large: 48px;
+  --primitive-space-none: 0px;
+  --primitive-space-3x-small: 2px;
+  --primitive-space-2x-small: 4px;
+  --primitive-space-x-small: 8px;
+  --primitive-space-small: 12px;
+  --primitive-space-medium: 16px;
+  --primitive-space-large: 20px;
+  --primitive-space-x-large: 24px;
+  --primitive-space-2x-large: 32px;
+  --primitive-space-3x-large: 48px;
 
   /* Size Tokens */
-  --primitive-Size-size-x-small: 12px;
-  --primitive-Size-size-small: 18px;
-  --primitive-Size-size-medium: 20px;
-  --primitive-Size-size-large: 24px;
-  --primitive-Size-size-x-large: 32px;
-  --primitive-Size-size-2x-large: 48px;
-  --primitive-Size-size-3x-large: 64px;
+  --primitive-size-x-small: 12px;
+  --primitive-size-small: 18px;
+  --primitive-size-medium: 20px;
+  --primitive-size-large: 24px;
+  --primitive-size-x-large: 32px;
+  --primitive-size-2x-large: 48px;
+  --primitive-size-3x-large: 64px;
 }
