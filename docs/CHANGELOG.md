@@ -6,6 +6,44 @@ Project history and major changes for TreezDS Design System.
 
 ## [Current] 2025-10-19
 
+### Typography Token System Refactor
+- **Corrected token hierarchy**: Moved primitive typography to `figma-tokens/` where all Figma-sourced primitives belong
+  - **Primitives** (from Figma): `figma-tokens/typography/typography.ts`, `typography/typography.css`
+  - **Semantics** (design decisions): `design-tokens/semantic-typography.ts`, `semantic-typography.css`
+  - Now follows correct pattern: Figma exports → `figma-tokens/` → `design-tokens/` → Components
+  - Matches structure of colors, spacing, and radius tokens
+- **Font family assignment corrected**: Updated semantic tokens to follow proper content hierarchy
+  - **Roboto (primary)**: Base content - body text, links, lists, paragraphs (body & link variants)
+  - **Circular Std (secondary)**: Featured/UI elements - headings, buttons, labels, chips, navigation (heading, label & caps variants)
+  - Updated all semantic typography tokens (.ts and .css) to reference correct font families
+  - Updated Typography stories to reflect correct usage patterns
+- **Button component updated**: Migrated from old to new typography variable naming convention
+  - Old: `--typography-label-large-bold-*`, `--typography-label-small-bold-*`
+  - New: `--typo-label-large-strong-*`, `--typo-label-small-strong-*`
+  - Buttons now correctly use Circular Std font (UI elements) per design system rules
+- **Font weight standardization**: Simplified Circular Std to use only 2 weights following design system standards
+  - **Circular Std Book (400)**: Regular weight for normal UI text (labels, caps regular)
+  - **Circular Std Medium (500)**: Strong weight for emphasized UI text (headings, labels-strong, caps-strong)
+  - Removed duplicate font-weight declarations (450 and 600)
+  - Updated all headings from `medium` (450) to `strong` (500)
+  - Added `strong` as new font-weight token, `semibold` aliased to 500
+  - Note: Roboto can still use multiple weights (400, 500, 600, 700) for body content
+- **Simplified variants**: Reduced from 37 legacy variants to 26 clean, well-organized variants
+  - 7 headings: h1-h7
+  - 3 body: body-large, body-medium, body-small
+  - 8 labels: label-large, label-large-strong, label-medium, label-medium-strong, label-small, label-small-strong, label-x-small, label-x-small-strong
+  - 4 links: link-large, link-medium, link-small, link-x-small
+  - 3 caps: caps-large, caps-large-strong, caps-small-strong
+- **Shortened variable names**: Reduced verbosity from `--typography-headings-h1-font-family` (39 chars) to `--typo-h1-family` (16 chars)
+  - Pattern: `--typo-{variant}-{property}` where property is: family, weight, size, line, spacing, transform
+  - 59% reduction in CSS variable name length for better readability and maintainability
+- **Simplified component API**: Typography component now uses direct variant names
+  - Old: `<Typography variant="headings-h1">`
+  - New: `<Typography variant="h1">`
+  - Clean, intuitive naming that matches HTML semantics
+- **Updated stories**: All Typography stories updated to use clean 26 variants with better organization
+- **Import order**: Updated index.css and Storybook preview to import primitives from figma-tokens first, then semantics from design-tokens
+
 ### Design Token System Enhancement
 - **Base color tokens added**: Added `base-black` (#1a1a1a) and `base-white` (#ffffff) as primitive foundation colors
 - **Semantic naming updated**: Renamed `neutralColors.black/white` to `primaryBlack/primaryWhite` for clarity

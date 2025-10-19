@@ -12,8 +12,8 @@
   box-sizing: border-box;
 
   /* Typography */
-  font-family: var(--typography-label-large-font-family);
-  font-weight: var(--typography-label-large-bold-font-weight);
+  font-family: var(--typo-label-large-strong-family);
+  font-weight: var(--typo-label-large-strong-weight);
   text-decoration: none;
   white-space: nowrap;
 
@@ -124,9 +124,9 @@
   height: 32px;
   padding: var(--spacing-button-small-vertical) var(--spacing-button-small-horizontal);
   border-radius: var(--radius-button-small);
-  font-size: var(--typography-label-small-bold-font-size);
-  line-height: var(--typography-label-small-bold-line-height);
-  font-weight: var(--typography-label-small-bold-font-weight);
+  font-size: var(--typo-label-small-strong-size);
+  line-height: var(--typo-label-small-strong-line);
+  font-weight: var(--typo-label-small-strong-weight);
 
   &.tertiary {
     padding: var(--spacing-button-small-vertical) var(--spacing-button-small-tertiary);
@@ -138,9 +138,9 @@
   height: 40px;
   padding: var(--spacing-button-medium-vertical) var(--spacing-button-medium-horizontal);
   border-radius: var(--radius-button-medium);
-  font-size: var(--typography-label-large-bold-font-size);
-  line-height: var(--typography-label-large-bold-line-height);
-  font-weight: var(--typography-label-large-bold-font-weight);
+  font-size: var(--typo-label-large-strong-size);
+  line-height: var(--typo-label-large-strong-line);
+  font-weight: var(--typo-label-large-strong-weight);
 
   &.tertiary {
     padding: var(--spacing-button-medium-vertical) var(--spacing-button-medium-tertiary);
@@ -152,9 +152,9 @@
   height: 52px;
   padding: var(--spacing-button-large-vertical) var(--spacing-button-large-horizontal);
   border-radius: var(--radius-button-large);
-  font-size: var(--typography-label-large-bold-font-size);
-  line-height: var(--typography-label-large-bold-line-height);
-  font-weight: var(--typography-label-large-bold-font-weight);
+  font-size: var(--typo-label-large-strong-size);
+  line-height: var(--typo-label-large-strong-line);
+  font-weight: var(--typo-label-large-strong-weight);
 
   &.tertiary {
     padding: var(--spacing-button-large-vertical) var(--spacing-button-large-tertiary);

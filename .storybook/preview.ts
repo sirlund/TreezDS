@@ -1,14 +1,14 @@
 import type { Preview } from '@storybook/react-vite'
 import '../src/styles/fonts.css'
-import '../src/design-tokens/typography/primitives.css'
-import '../src/design-tokens/typography/semantic.css'
+import '../src/figma-tokens/typography/typography.css'
+import '../src/figma-tokens/colors/colors.css'
+import '../src/figma-tokens/spacing/spacing.css'
+import '../src/figma-tokens/radius/radius.css'
+import '../src/design-tokens/semantic-typography.css'
 import '../src/design-tokens/semantic-colors.css'
 import '../src/design-tokens/semantic-spacing.css'
 import '../src/design-tokens/semantic-radius.css'
 import '../src/design-tokens/semantic-sizes.css'
-import '../src/figma-tokens/colors/colors.css'
-import '../src/figma-tokens/spacing/spacing.css'
-import '../src/figma-tokens/radius/radius.css'
 
 const preview: Preview = {
   parameters: {

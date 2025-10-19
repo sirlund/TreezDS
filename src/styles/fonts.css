@@ -17,28 +17,11 @@
   font-display: swap;
 }
 
-/* Circular Std Medium (Weight 450/500) */
-@font-face {
-  font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
-  font-weight: 450;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Circular Std Medium (Strong - Weight 500) */
 @font-face {
   font-family: 'Circular Std';
   src: url('/fonts/CircularStd-Medium.otf') format('opentype');
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Circular Std Bold (Weight 600) */
-@font-face {
-  font-family: 'Circular Std';
-  src: url('/fonts/CircularStd-Bold.otf') format('opentype');
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

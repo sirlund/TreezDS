@@ -1,0 +1,59 @@
+/**
+ * Primitive Typography Tokens - CSS Variables
+ * Base-level tokens that define raw typography values
+ *
+ * These should not be used directly in components - use semantic tokens instead
+ * Source: src/figma-tokens/typography/typography.ts
+ */
+
+/* Import font families from centralized fonts.css */
+@import '../../styles/fonts.css';
+
+:root {
+  /* Font Families - Reference fonts.css for centralized fallback management */
+  --font-family-primary: var(--font-family-roboto);
+  --font-family-secondary: var(--font-family-circular);
+
+  /* Font Sizes */
+  --font-size-10: 10px;
+  --font-size-11: 11px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-17: 17px;
+  --font-size-23: 23px;
+  --font-size-28: 28px;
+  --font-size-32: 32px;
+  --font-size-36: 36px;
+  --font-size-45: 45px;
+
+  /* Font Weights */
+  /* Circular Std: Only use 400 (regular) and 500 (strong) */
+  /* Roboto: Can use 400, 500, 600, 700 as needed */
+  --font-weight-regular: 400;   /* Circular Book, Roboto Regular */
+  --font-weight-strong: 500;    /* Circular Medium, Roboto Medium */
+  --font-weight-semibold: 500;  /* Alias for strong (deprecated) */
+  --font-weight-bold: 600;      /* Roboto Bold (not for Circular) */
+
+  /* Line Heights */
+  --line-height-12: 12px;
+  --line-height-16: 16px;
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-32: 32px;
+  --line-height-36: 36px;
+  --line-height-40: 40px;
+  --line-height-44: 44px;
+  --line-height-52: 52px;
+
+  /* Letter Spacing */
+  --letter-spacing-normal: normal;
+  --letter-spacing-tight: 0.15px;
+  --letter-spacing-wide: 0.18px;
+
+  /* Text Transform */
+  --text-transform-none: none;
+  --text-transform-uppercase: uppercase;
+  --text-transform-lowercase: lowercase;
+  --text-transform-capitalize: capitalize;
+}

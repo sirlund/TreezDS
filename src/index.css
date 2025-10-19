@@ -1,9 +1,11 @@
 /* Import fonts first */
 @import './styles/fonts.css';
 
-/* Import design tokens */
-@import './design-tokens/typography/primitives.css';
-@import './design-tokens/typography/semantic.css';
+/* Import primitive tokens from Figma */
+@import './figma-tokens/typography/typography.css';
+
+/* Import semantic design tokens */
+@import './design-tokens/semantic-typography.css';
 @import './design-tokens/semantic-colors.css';
 @import './design-tokens/semantic-radius.css';
 @import './design-tokens/semantic-spacing.css';

@@ -1,15 +1,17 @@
 /**
  * Typography Primitives
- * Base-level tokens that define the raw values
+ * Base-level tokens that define raw typography values
+ *
  * These should not be used directly in components - use semantic tokens instead
  */
 
 // Font Families
 // Uses CSS custom properties from fonts.css for centralized fallback management
-// Edit fallbacks in src/styles/fonts.css - they apply automatically everywhere
+// Primary (Roboto): Body content - paragraphs, links, lists, base text
+// Secondary (Circular): Featured/UI - headings, buttons, chips, navigation
 export const fontFamilies = {
-  primary: 'var(--font-family-roboto)',
-  secondary: 'var(--font-family-circular)',
+  primary: 'var(--font-family-roboto)',     // Body content
+  secondary: 'var(--font-family-circular)', // Featured/UI elements
 } as const;
 
 // Font Sizes
@@ -28,11 +30,13 @@ export const fontSizes = {
 } as const;
 
 // Font Weights
+// Circular Std: Only use 400 (regular) and 500 (strong)
+// Roboto: Can use 400, 500, 600, 700 as needed
 export const fontWeights = {
-  regular: 400,
-  medium: 450,
-  semibold: 500,
-  bold: 600,
+  regular: 400,   // Circular Book, Roboto Regular
+  strong: 500,    // Circular Medium, Roboto Medium
+  semibold: 500,  // Alias for strong (deprecated)
+  bold: 600,      // Roboto Bold (not for Circular)
 } as const;
 
 // Line Heights
@@ -63,20 +67,10 @@ export const textTransform = {
   capitalize: 'capitalize',
 } as const;
 
-// Shadow Tokens
-export const shadows = {
-  xs: '0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.1)',
-  sm: '0px 6px 10px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.1)',
-  md: '0px 10px 15px rgba(0, 0, 0, 0.15), 0px 4px 6px rgba(0, 0, 0, 0.1)',
-  lg: '0px 20px 40px rgba(0, 0, 0, 0.1), 0px 4px 12px rgba(0, 0, 0, 0.1)',
-  xl: '0px 28px 48px rgba(0, 0, 0, 0.25)',
-} as const;
-
-// TypeScript types for type safety
+// TypeScript types
 export type FontFamily = typeof fontFamilies[keyof typeof fontFamilies];
 export type FontSize = typeof fontSizes[keyof typeof fontSizes];
 export type FontWeight = typeof fontWeights[keyof typeof fontWeights];
 export type LineHeight = typeof lineHeights[keyof typeof lineHeights];
 export type LetterSpacing = typeof letterSpacing[keyof typeof letterSpacing];
 export type TextTransform = typeof textTransform[keyof typeof textTransform];
-export type Shadow = typeof shadows[keyof typeof shadows];

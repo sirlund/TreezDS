@@ -1,0 +1,219 @@
+/**
+ * Semantic Typography Tokens - CSS Variables
+ * Component-level typography tokens
+ *
+ * Source: src/design-tokens/semantic-typography.ts
+ * Primitives: src/figma-tokens/typography/typography.css
+ *
+ * IMPORTANT: All values MUST reference primitive variables - NO hardcoded values!
+ * Variable naming convention: --typo-{variant}-{property}
+ */
+
+/* Import primitive typography tokens */
+@import '../figma-tokens/typography/typography.css';
+
+:root {
+  /* ============================================
+     Heading Typography (h1-h7)
+     Font: Circular (secondary) - Featured content
+     Weight: 500 (strong) - Circular Medium
+     ============================================ */
+
+  /* H1 - 45px/52px */
+  --typo-h1-family: var(--font-family-secondary); /* Circular */
+  --typo-h1-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h1-size: var(--font-size-45);
+  --typo-h1-line: var(--line-height-52);
+  --typo-h1-spacing: var(--letter-spacing-normal);
+
+  /* H2 - 36px/44px */
+  --typo-h2-family: var(--font-family-secondary);
+  --typo-h2-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h2-size: var(--font-size-36);
+  --typo-h2-line: var(--line-height-44);
+  --typo-h2-spacing: var(--letter-spacing-normal);
+
+  /* H3 - 32px/40px */
+  --typo-h3-family: var(--font-family-secondary);
+  --typo-h3-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h3-size: var(--font-size-32);
+  --typo-h3-line: var(--line-height-40);
+  --typo-h3-spacing: var(--letter-spacing-normal);
+
+  /* H4 - 28px/36px */
+  --typo-h4-family: var(--font-family-secondary);
+  --typo-h4-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h4-size: var(--font-size-28);
+  --typo-h4-line: var(--line-height-36);
+  --typo-h4-spacing: var(--letter-spacing-normal);
+
+  /* H5 - 23px/32px */
+  --typo-h5-family: var(--font-family-secondary);
+  --typo-h5-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h5-size: var(--font-size-23);
+  --typo-h5-line: var(--line-height-32);
+  --typo-h5-spacing: var(--letter-spacing-normal);
+
+  /* H6 - 17px/24px */
+  --typo-h6-family: var(--font-family-secondary);
+  --typo-h6-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h6-size: var(--font-size-17);
+  --typo-h6-line: var(--line-height-24);
+  --typo-h6-spacing: var(--letter-spacing-normal);
+
+  /* H7 - 15px/20px */
+  --typo-h7-family: var(--font-family-secondary);
+  --typo-h7-weight: var(--font-weight-strong);    /* 500 - Circular Medium */
+  --typo-h7-size: var(--font-size-15);
+  --typo-h7-line: var(--line-height-20);
+  --typo-h7-spacing: var(--letter-spacing-normal);
+
+  /* ============================================
+     Body Typography
+     Font: Roboto (primary) - Base content
+     ============================================ */
+
+  /* Body Large - 17px/24px */
+  --typo-body-large-family: var(--font-family-primary); /* Roboto */
+  --typo-body-large-weight: var(--font-weight-regular);
+  --typo-body-large-size: var(--font-size-17);
+  --typo-body-large-line: var(--line-height-24);
+  --typo-body-large-spacing: var(--letter-spacing-normal);
+
+  /* Body Medium - 15px/20px */
+  --typo-body-medium-family: var(--font-family-primary);
+  --typo-body-medium-weight: var(--font-weight-regular);
+  --typo-body-medium-size: var(--font-size-15);
+  --typo-body-medium-line: var(--line-height-20);
+  --typo-body-medium-spacing: var(--letter-spacing-normal);
+
+  /* Body Small - 12px/16px */
+  --typo-body-small-family: var(--font-family-primary);
+  --typo-body-small-weight: var(--font-weight-regular);
+  --typo-body-small-size: var(--font-size-12);
+  --typo-body-small-line: var(--line-height-16);
+  --typo-body-small-spacing: var(--letter-spacing-normal);
+
+  /* ============================================
+     Label Typography
+     Font: Circular (secondary) - UI elements
+     ============================================ */
+
+  /* Label Large - 17px/24px */
+  --typo-label-large-family: var(--font-family-secondary); /* Circular */
+  --typo-label-large-weight: var(--font-weight-regular);
+  --typo-label-large-size: var(--font-size-17);
+  --typo-label-large-line: var(--line-height-24);
+  --typo-label-large-spacing: var(--letter-spacing-normal);
+
+  /* Label Large Strong - 17px/24px Strong */
+  --typo-label-large-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-label-large-strong-weight: var(--font-weight-strong);
+  --typo-label-large-strong-size: var(--font-size-17);
+  --typo-label-large-strong-line: var(--line-height-24);
+  --typo-label-large-strong-spacing: var(--letter-spacing-normal);
+
+  /* Label Medium - 15px/20px */
+  --typo-label-medium-family: var(--font-family-secondary); /* Circular */
+  --typo-label-medium-weight: var(--font-weight-regular);
+  --typo-label-medium-size: var(--font-size-15);
+  --typo-label-medium-line: var(--line-height-20);
+  --typo-label-medium-spacing: var(--letter-spacing-normal);
+
+  /* Label Medium Strong - 15px/20px Strong */
+  --typo-label-medium-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-label-medium-strong-weight: var(--font-weight-strong);
+  --typo-label-medium-strong-size: var(--font-size-15);
+  --typo-label-medium-strong-line: var(--line-height-20);
+  --typo-label-medium-strong-spacing: var(--letter-spacing-normal);
+
+  /* Label Small - 14px/20px */
+  --typo-label-small-family: var(--font-family-secondary); /* Circular */
+  --typo-label-small-weight: var(--font-weight-regular);
+  --typo-label-small-size: var(--font-size-14);
+  --typo-label-small-line: var(--line-height-20);
+  --typo-label-small-spacing: var(--letter-spacing-normal);
+
+  /* Label Small Strong - 14px/20px Strong */
+  --typo-label-small-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-label-small-strong-weight: var(--font-weight-strong);
+  --typo-label-small-strong-size: var(--font-size-14);
+  --typo-label-small-strong-line: var(--line-height-20);
+  --typo-label-small-strong-spacing: var(--letter-spacing-normal);
+
+  /* Label X-Small - 12px/16px */
+  --typo-label-x-small-family: var(--font-family-secondary); /* Circular */
+  --typo-label-x-small-weight: var(--font-weight-regular);
+  --typo-label-x-small-size: var(--font-size-12);
+  --typo-label-x-small-line: var(--line-height-16);
+  --typo-label-x-small-spacing: var(--letter-spacing-normal);
+
+  /* Label X-Small Strong - 12px/16px Strong */
+  --typo-label-x-small-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-label-x-small-strong-weight: var(--font-weight-strong);
+  --typo-label-x-small-strong-size: var(--font-size-12);
+  --typo-label-x-small-strong-line: var(--line-height-16);
+  --typo-label-x-small-strong-spacing: var(--letter-spacing-normal);
+
+  /* ============================================
+     Link Typography
+     Font: Roboto (primary) - Base content
+     ============================================ */
+
+  /* Link Large - 17px/24px */
+  --typo-link-large-family: var(--font-family-primary); /* Roboto */
+  --typo-link-large-weight: var(--font-weight-regular);
+  --typo-link-large-size: var(--font-size-17);
+  --typo-link-large-line: var(--line-height-24);
+  --typo-link-large-spacing: var(--letter-spacing-normal);
+
+  /* Link Medium - 15px/20px */
+  --typo-link-medium-family: var(--font-family-primary);
+  --typo-link-medium-weight: var(--font-weight-regular);
+  --typo-link-medium-size: var(--font-size-15);
+  --typo-link-medium-line: var(--line-height-20);
+  --typo-link-medium-spacing: var(--letter-spacing-normal);
+
+  /* Link Small - 14px/20px */
+  --typo-link-small-family: var(--font-family-primary);
+  --typo-link-small-weight: var(--font-weight-regular);
+  --typo-link-small-size: var(--font-size-14);
+  --typo-link-small-line: var(--line-height-20);
+  --typo-link-small-spacing: var(--letter-spacing-normal);
+
+  /* Link X-Small - 12px/16px */
+  --typo-link-x-small-family: var(--font-family-primary);
+  --typo-link-x-small-weight: var(--font-weight-regular);
+  --typo-link-x-small-size: var(--font-size-12);
+  --typo-link-x-small-line: var(--line-height-16);
+  --typo-link-x-small-spacing: var(--letter-spacing-normal);
+
+  /* ============================================
+     Caps Typography (Uppercase)
+     Font: Circular (secondary) - UI elements
+     ============================================ */
+
+  /* Caps Large - 14px/20px */
+  --typo-caps-large-family: var(--font-family-secondary); /* Circular */
+  --typo-caps-large-weight: var(--font-weight-regular);
+  --typo-caps-large-size: var(--font-size-14);
+  --typo-caps-large-line: var(--line-height-20);
+  --typo-caps-large-spacing: var(--letter-spacing-wide);
+  --typo-caps-large-transform: var(--text-transform-uppercase);
+
+  /* Caps Large Strong - 14px/20px Bold */
+  --typo-caps-large-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-caps-large-strong-weight: var(--font-weight-bold);
+  --typo-caps-large-strong-size: var(--font-size-14);
+  --typo-caps-large-strong-line: var(--line-height-20);
+  --typo-caps-large-strong-spacing: var(--letter-spacing-wide);
+  --typo-caps-large-strong-transform: var(--text-transform-uppercase);
+
+  /* Caps Small Strong - 11px/16px Bold */
+  --typo-caps-small-strong-family: var(--font-family-secondary); /* Circular */
+  --typo-caps-small-strong-weight: var(--font-weight-bold);
+  --typo-caps-small-strong-size: var(--font-size-11);
+  --typo-caps-small-strong-line: var(--line-height-16);
+  --typo-caps-small-strong-spacing: var(--letter-spacing-tight);
+  --typo-caps-small-strong-transform: var(--text-transform-uppercase);
+}
