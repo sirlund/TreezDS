@@ -4,7 +4,66 @@ Project history and major changes for TreezDS Design System.
 
 ---
 
-## [Current] 2025-10-18
+## [Current] 2025-10-19
+
+### Design Token System Enhancement
+- **Base color tokens added**: Added `base-black` (#1a1a1a) and `base-white` (#ffffff) as primitive foundation colors
+- **Semantic naming updated**: Renamed `neutralColors.black/white` to `primaryBlack/primaryWhite` for clarity
+- **Text color primitives**: Updated all text colors to reference primitive tokens (base-black, grey-06, grey-07, grey-01)
+- **Token transformation**: Updated transform script to include "Base" group alongside Green, Greyscale, and Secondary color groups
+- **Complete primitive chain**: All color tokens now follow: Figma JSON → Primitive tokens → Semantic tokens → CSS variables → Components
+
+### Component CSS Refactoring - Button
+- **Full tokenization**: Replaced ALL hardcoded values with design token variables
+- **Typography tokens**: Font-family, font-weight, font-size, line-height all use `--typography-*` variables
+- **Color tokens**: All colors reference `--color-*` variables (text, button, neutral, state)
+- **Spacing tokens**: Gap, padding use `--spacing-button-*` variables
+- **Radius tokens**: Border-radius uses `--radius-button-*` variables
+- **Focus state**: Replaced hardcoded `#1a4007` with `var(--primitive-green-10)`
+- **Modern CSS organization**: Added section headers, property grouping, and CSS nesting for better maintainability
+- **CSS structure**: Organized into 4 clear sections (Base, Variants, Sizes, Layout Modifiers)
+
+### Component CSS Refactoring - Icon
+- **Size tokens created**: New semantic size token system for icons (xs: 12px, s: 18px, m: 20px, l: 24px, xl: 48px)
+- **Full tokenization**: Replaced all hardcoded pixel sizes with `--size-icon-*` variables
+- **Modern CSS organization**: Added section headers and CSS nesting for Material Symbol variants
+- **CSS structure**: Organized into 3 clear sections (Base, Material Symbols, Size Variants)
+- **Improved comments**: Added pixel value comments and clearer descriptions
+
+### Component CSS Refactoring - Typography
+- **CSS organization**: Added section header and explanatory comments
+- **Already token-based**: Component correctly uses inline styles from design tokens
+
+### Typography Token Integration
+- **Missing imports added**: Added `typography/primitives.css` and `typography/semantic.css` to main app and Storybook
+- **Font variable fix**: Updated primitives to reference `--font-family-roboto` and `--font-family-circular` from fonts.css
+- **Complete font chain**: fonts.css (with fallbacks) → primitives.css → semantic.css → Button component
+- **Fixed rendering**: Button now correctly renders with Circular Std font instead of Roboto
+
+### Design Token System - Sizes
+- **New token file**: Created `semantic-sizes.ts` and `semantic-sizes.css` for component size tokens
+- **Icon sizes**: Added semantic tokens for all icon sizes (xs, s, m, l, xl)
+- **Avatar sizes**: Prepared size tokens for future avatar component (xs, sm, md, lg)
+- **General scale**: Added general purpose size scale (xs through 3xl)
+- **Global availability**: Imported in both main app and Storybook
+
+### CSS Architecture Improvements
+- **Consistent structure**: All component CSS files now follow same organization pattern
+- **Section headers**: Clear visual separators with descriptive titles
+- **Property grouping**: Logical organization (Layout, Typography, Appearance, States)
+- **Modern nesting**: CSS nesting used for pseudo-classes and compound selectors
+- **Documentation**: Comments showing pixel values and explaining purpose
+- **Maintainability**: Reduced repetition, easier to scan and understand
+
+### Token Chain Complete
+All components now follow the complete token hierarchy:
+1. **Figma** → exported JSON files
+2. **Primitive tokens** → auto-generated from JSON (colors, spacing, radius, sizes)
+3. **Semantic tokens** → component-specific meanings (button, icon, text, etc.)
+4. **CSS variables** → global availability
+5. **Components** → consume via CSS variables
+
+## [Previous] 2025-10-18
 
 ### Storybook CSS Integration Fix
 - **Fixed missing CSS imports**: Added `semantic-spacing.css` and `semantic-radius.css` to Storybook preview configuration
@@ -144,4 +203,4 @@ Project history and major changes for TreezDS Design System.
 
 ---
 
-**Last Updated**: 2025-10-19
+**Last Updated**: 2025-10-19 (evening)
