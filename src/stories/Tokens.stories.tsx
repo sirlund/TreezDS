@@ -413,9 +413,9 @@ export const Overview: Story = {
       >
         <ExampleCard title="CSS Custom Properties">
           <CodeBlock>{`.button {
-  background-color: var(--primitive-Green-green05);
-  padding: var(--primitive-Spacing-space-medium);
-  border-radius: var(--primitive-Radius-radius-small);
+  background-color: var(--primitive-green-05);
+  padding: var(--primitive-space-medium);
+  border-radius: var(--primitive-radius-small);
 }`}</CodeBlock>
         </ExampleCard>
 
@@ -425,8 +425,8 @@ import { primitiveSpacing } from '@/figma-tokens';
 
 const Button = () => (
   <button style={{
-    backgroundColor: primitiveColors['Green-green05'],
-    padding: primitiveSpacing['Spacing-space-medium']
+    backgroundColor: primitiveColors['green-05'],
+    padding: primitiveSpacing['space-medium']
   }}>
     Click me
   </button>

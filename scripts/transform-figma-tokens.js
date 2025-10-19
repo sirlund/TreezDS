@@ -39,20 +39,24 @@ function resolveTokenValue(value, allTokens) {
  * Examples:
  * - "Radius-radius-small" → "radius-small"
  * - "Spacing-space-small" → "space-small"
+ * - "Secondary-Brown-brown00" → "brown-00"
  * - "Primary-primaryMain" → "primary-main"
- * - "B&W-primaryBlack" → "b-w-primary-black"
  */
 function cleanTokenName(name) {
   // Split by dash
-  const parts = name.split('-');
+  let parts = name.split('-');
+
+  // Remove "Secondary" prefix if present (it's just a grouping in Figma)
+  if (parts[0].toLowerCase() === 'secondary' && parts.length >= 3) {
+    parts.shift(); // Remove "Secondary"
+  }
 
   // Remove first part if it's redundant with second part
   if (parts.length >= 2) {
     const firstPart = parts[0].toLowerCase();
     const secondPart = parts[1].toLowerCase();
 
-    // Check if both share a common root (e.g., "spacing"/"space", "radius"/"radius")
-    // Or if second part starts with first part (e.g., "primary"/"primaryMain")
+    // Check if both share a common root (e.g., "spacing"/"space", "brown"/"brown")
     const longestCommonPrefix = (a, b) => {
       let i = 0;
       while (i < a.length && i < b.length && a[i] === b[i]) i++;
@@ -67,12 +71,13 @@ function cleanTokenName(name) {
     }
   }
 
-  // Convert camelCase to kebab-case (e.g., "primaryMain" → "primary-main")
+  // Convert camelCase to kebab-case (e.g., "brown00" → "brown-00")
   // Also handle special characters like & → -
   return parts
     .join('-')
     .replace(/&/g, '-')
     .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/([a-z])(\d)/g, '$1-$2') // Add dash before numbers (brown00 → brown-00)
     .toLowerCase();
 }
 
@@ -109,6 +114,14 @@ function flattenTokens(data, prefix = '') {
 
 /**
  * Transform Colors.json
+ * Only processes PRIMITIVE color tokens (pure scales without semantic meaning)
+ *
+ * Primitive groups (included):
+ * - Green, Greyscale: Pure color scales (green01-10, grey01-10)
+ * - Secondary: Color palette scales (Brown, Orange, Peach, Blue, Purple, Yellow)
+ *
+ * Semantic groups (excluded - should be in semantic-colors.ts):
+ * - Primary, B&W, Text, Brand, System
  */
 function transformColors() {
   console.log('🎨 Transforming Colors...');
@@ -116,7 +129,17 @@ function transformColors() {
   const colorsPath = path.join(IMPORTED_DIR, 'Colors.json');
   const colorsData = JSON.parse(fs.readFileSync(colorsPath, 'utf-8'));
 
-  const flatTokens = flattenTokens(colorsData);
+  // Only process primitive color groups (pure scales without semantic meaning)
+  const PRIMITIVE_COLOR_GROUPS = ['Green', 'Greyscale', 'Secondary'];
+  const primitiveData = {};
+
+  for (const group of PRIMITIVE_COLOR_GROUPS) {
+    if (colorsData[group]) {
+      primitiveData[group] = colorsData[group];
+    }
+  }
+
+  const flatTokens = flattenTokens(primitiveData);
 
   // Generate TypeScript
   let ts = `/**

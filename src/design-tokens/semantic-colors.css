@@ -1,12 +1,12 @@
 /**
- * Semantic Color Variables for Treez Design System
+ * Semantic Color CSS Variables
+ * Context-aware color tokens for components
  *
- * ARCHITECTURE:
- * - Primitive tokens (from Figma) are imported from figma-tokens/colors/colors.css
- * - Semantic tokens (this file) reference primitive tokens using var()
- * - Components use semantic tokens for better maintainability and theming
+ * IMPORTANT: Values reference primitiveColors or are semantic constants
  *
- * IMPORTANT: All values MUST reference --primitive-* variables - NO hardcoded values!
+ * Token Structure:
+ * - Primitive CSS vars = --primitive-green-01, --primitive-grey-05, etc.
+ * - Semantic CSS vars = --color-brand-primary, --color-text-primary, etc.
  */
 
 /* Import primitive tokens from Figma */
@@ -14,86 +14,99 @@
 
 :root {
   /* Brand Colors */
-  --color-brand-primary: var(--primitive-Green-green05);
-  --color-brand-primary-light: var(--primitive-Primary-primaryLight);
-  --color-brand-primary-dark: var(--primitive-Green-green07);
-  --color-brand-primary-text: var(--primitive-Text-primaryBlackText);
-  --color-brand-secondary: var(--primitive-Green-green10);
+  --color-brand-primary: var(--primitive-green-05);        /* #a9e079 */
+  --color-brand-primary-light: var(--primitive-green-03);  /* #e8f7cd */
+  --color-brand-primary-dark: var(--primitive-green-06);   /* #8ccc52 */
+  --color-brand-green: var(--primitive-green-07);          /* #6baa32 */
+  --color-brand-sativa: var(--primitive-green-05);         /* #a9e079 */
+  --color-brand-midrib: var(--primitive-green-04);         /* #dbf5b3 */
 
   /* Neutral Colors */
-  --color-neutral-black: var(--primitive-B&W-primaryBlack);
-  --color-neutral-grey-900: var(--primitive-Greyscale-grey10);
-  --color-neutral-grey-800: var(--primitive-Greyscale-grey09);
-  --color-neutral-grey-700: var(--primitive-Greyscale-grey08);
-  --color-neutral-grey-600: var(--primitive-Greyscale-grey07);
-  --color-neutral-grey-500: var(--primitive-Greyscale-grey06);
-  --color-neutral-grey-400: var(--primitive-Greyscale-grey05);
-  --color-neutral-grey-300: var(--primitive-Greyscale-grey04);
-  --color-neutral-grey-200: var(--primitive-Greyscale-grey03);
-  --color-neutral-grey-100: var(--primitive-Greyscale-grey02);
-  --color-neutral-grey-50: var(--primitive-Greyscale-grey01);
-  --color-neutral-white: var(--primitive-B&W-primaryWhite);
-
-  /* Background Colors */
-  --color-bg-beige: var(--primitive-Secondary-Brown-brown00);
-  --color-bg-peach: var(--primitive-Secondary-Orange-orange00);
-  --color-bg-red: var(--primitive-Secondary-Peach-peach00);
-  --color-bg-blue: var(--primitive-Secondary-Blue-blue00);
-  --color-bg-purple: var(--primitive-Secondary-Purple-purple00);
-  --color-bg-yellow: var(--primitive-Secondary-Yellow-yellow00);
-
-  /* State Colors */
-  --color-state-info: var(--primitive-System-Info-infoMain);
-  --color-state-info-light: var(--primitive-System-Info-infoLight);
-  --color-state-info-dark: var(--primitive-System-Info-infoDark);
-
-  --color-state-success: var(--primitive-System-Success-successMain);
-  --color-state-success-light: var(--primitive-System-Success-successLight);
-  --color-state-success-dark: var(--primitive-System-Success-successDark);
-
-  --color-state-warning: var(--primitive-System-Warning-warningMain);
-  --color-state-warning-light: var(--primitive-System-Warning-warningLight);
-  --color-state-warning-dark: var(--primitive-System-Warning-warningDark);
-
-  --color-state-error: var(--primitive-System-Error-errorMain);
-  --color-state-error-light: var(--primitive-System-Error-errorLight);
-  --color-state-error-dark: var(--primitive-System-Error-errorDark);
-
-  --color-state-accent: var(--primitive-Secondary-Yellow-yellow02);
+  --color-neutral-black: #1a1a1a;
+  --color-neutral-white: #ffffff;
+  --color-neutral-grey-01: var(--primitive-grey-01);       /* #f7f7f7 */
+  --color-neutral-grey-02: var(--primitive-grey-02);       /* #f5f5f5 */
+  --color-neutral-grey-03: var(--primitive-grey-03);       /* #f0f0f0 */
+  --color-neutral-grey-04: var(--primitive-grey-04);       /* #e6e6e6 */
+  --color-neutral-grey-05: var(--primitive-grey-05);       /* #bfbfbf */
+  --color-neutral-grey-06: var(--primitive-grey-06);       /* #8c8c8c */
+  --color-neutral-grey-07: var(--primitive-grey-07);       /* #737373 */
+  --color-neutral-grey-08: var(--primitive-grey-08);       /* #595959 */
+  --color-neutral-grey-09: var(--primitive-grey-09);       /* #404040 */
+  --color-neutral-grey-10: var(--primitive-grey-10);       /* #262626 */
 
   /* Text Colors */
-  --color-text-primary: var(--primitive-Text-primaryBlackText);
-  --color-text-secondary: var(--primitive-Text-secondaryText);
-  --color-text-tertiary: var(--primitive-Text-tertiaryText);
-  --color-text-disabled: var(--primitive-Text-disabledText);
-  --color-text-white: var(--primitive-Text-primaryWhiteText);
+  --color-text-primary: #0f1709;
+  --color-text-secondary: var(--primitive-grey-08);        /* #595959 */
+  --color-text-tertiary: #7a7a7a;
+  --color-text-disabled: #949494;
+  --color-text-inverse: #fafafa;
 
-  /* Button Colors - Primary Variant */
-  --color-button-primary-bg: var(--primitive-Primary-primaryMain);
-  --color-button-primary-text: var(--primitive-Text-primaryBlackText);
-  --color-button-primary-hover: var(--primitive-Primary-primaryDark);
-  --color-button-primary-active: var(--primitive-Primary-primaryDark);
+  /* State Colors */
+  --color-state-success: #309f56;
+  --color-state-success-light: #e5f9ec;
+  --color-state-success-dark: #2e834b;
 
-  /* Button Colors - Secondary Variant */
-  --color-button-secondary-bg: var(--primitive-B&W-primaryWhite);
-  --color-button-secondary-border: var(--primitive-Greyscale-grey05);
-  --color-button-secondary-text: var(--primitive-Text-primaryBlackText);
-  --color-button-secondary-hover-bg: var(--primitive-Greyscale-grey03);
-  --color-button-secondary-hover-border: var(--primitive-B&W-primaryBlack);
-  --color-button-secondary-active-bg: var(--primitive-Greyscale-grey04);
-  --color-button-secondary-active-border: var(--primitive-B&W-primaryBlack);
+  --color-state-error: #da5050;
+  --color-state-error-light: #fde3e3;
+  --color-state-error-dark: #bd4141;
 
-  /* Button Colors - Tertiary Variant */
-  --color-button-tertiary-bg: transparent;
-  --color-button-tertiary-text: var(--primitive-Text-primaryBlackText);
-  --color-button-tertiary-hover-bg: var(--primitive-Greyscale-grey03);
-  --color-button-tertiary-active-bg: var(--primitive-Greyscale-grey04);
+  --color-state-warning: #e26815;
+  --color-state-warning-light: #fff3e1;
+  --color-state-warning-dark: #b45210;
 
-  /* Button Colors - Disabled State */
-  --color-button-disabled-bg: var(--primitive-Greyscale-grey04);
-  --color-button-disabled-text: var(--primitive-Text-disabledText);
-  --color-button-disabled-border: var(--primitive-Greyscale-grey04);
+  --color-state-info: #437dcf;
+  --color-state-info-light: #e1eefa;
+  --color-state-info-dark: #3774ac;
 
-  /* Button Colors - Focus State */
-  --color-button-focus-outline: var(--primitive-Green-green10);
+  /* Accent Colors */
+  --color-accent-brown-00: var(--primitive-brown-00);      /* #f1eae6 */
+  --color-accent-brown-01: var(--primitive-brown-01);      /* #e2ccc0 */
+  --color-accent-brown-02: var(--primitive-brown-02);      /* #c69278 */
+
+  --color-accent-orange-00: var(--primitive-orange-00);    /* #f9e7da */
+  --color-accent-orange-01: var(--primitive-orange-01);    /* #fcc8a2 */
+  --color-accent-orange-02: var(--primitive-orange-02);    /* #fba466 */
+
+  --color-accent-peach-00: var(--primitive-peach-00);      /* #ffeded */
+  --color-accent-peach-01: var(--primitive-peach-01);      /* #f1d9d9 */
+  --color-accent-peach-02: var(--primitive-peach-02);      /* #ff9696 */
+
+  --color-accent-blue-00: var(--primitive-blue-00);        /* #f0f8ff */
+  --color-accent-blue-01: var(--primitive-blue-01);        /* #cfdeed */
+  --color-accent-blue-02: var(--primitive-blue-02);        /* #95c1ee */
+
+  --color-accent-purple-00: var(--primitive-purple-00);    /* #faf2fe */
+  --color-accent-purple-01: var(--primitive-purple-01);    /* #e0c6ec */
+  --color-accent-purple-02: var(--primitive-purple-02);    /* #c992e3 */
+
+  --color-accent-yellow-00: var(--primitive-yellow-00);    /* #fdf8e5 */
+  --color-accent-yellow-01: var(--primitive-yellow-01);    /* #fbf1cf */
+  --color-accent-yellow-02: var(--primitive-yellow-02);    /* #fde28b */
+
+  /* Component Colors - Button */
+  --color-button-primary: var(--primitive-green-05);       /* #a9e079 */
+  --color-button-primary-hover: var(--primitive-green-06); /* #8ccc52 */
+  --color-button-primary-active: var(--primitive-green-07); /* #6baa32 */
+  --color-button-primary-text: var(--color-text-primary);  /* #0f1709 */
+
+  --color-button-secondary: var(--color-neutral-white);    /* #ffffff */
+  --color-button-secondary-border: var(--primitive-grey-05); /* #bfbfbf */
+  --color-button-secondary-hover: var(--primitive-grey-03); /* #f0f0f0 */
+  --color-button-secondary-active: var(--primitive-grey-04); /* #e6e6e6 */
+
+  --color-button-disabled: var(--primitive-grey-04);       /* #e6e6e6 */
+  --color-button-disabled-text: var(--color-text-disabled); /* #949494 */
+
+  /* Component Colors - Input */
+  --color-input-border: var(--primitive-grey-05);          /* #bfbfbf */
+  --color-input-border-focus: var(--primitive-green-05);   /* #a9e079 */
+  --color-input-border-error: var(--color-state-error);    /* #da5050 */
+  --color-input-background: var(--color-neutral-white);    /* #ffffff */
+  --color-input-disabled: var(--primitive-grey-03);        /* #f0f0f0 */
+
+  /* Component Colors - Link */
+  --color-link: var(--primitive-green-07);                 /* #6baa32 */
+  --color-link-hover: var(--primitive-green-08);           /* #3e7a18 */
+  --color-link-visited: var(--primitive-green-09);         /* #295c07 */
 }
