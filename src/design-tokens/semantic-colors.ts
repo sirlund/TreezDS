@@ -32,8 +32,8 @@ export const brandColors = {
  * Black, white, and grayscale for general UI use
  */
 export const neutralColors = {
-  black: '#1a1a1a',                            // Soft black
-  white: '#ffffff',                            // Pure white
+  primaryBlack: primitiveColors['base-black'], // #1a1a1a - Soft black
+  primaryWhite: primitiveColors['base-white'], // #ffffff - Pure white
 
   // Grayscale palette
   grey01: primitiveColors['grey-01'],         // #f7f7f7 (lightest)
@@ -53,11 +53,11 @@ export const neutralColors = {
  * Semantic colors for text content
  */
 export const textColors = {
-  primary: '#0f1709',                         // Primary black text
+  primary: primitiveColors['base-black'],     // #1a1a1a - Primary black text
   secondary: primitiveColors['grey-08'],      // #595959 - Secondary text
-  tertiary: '#7a7a7a',                        // Tertiary text
-  disabled: '#949494',                        // Disabled text
-  inverse: '#fafafa',                         // Text on dark backgrounds
+  tertiary: primitiveColors['grey-07'],       // #737373 - Tertiary text
+  disabled: primitiveColors['grey-06'],       // #8c8c8c - Disabled text
+  inverse: primitiveColors['grey-01'],        // #f7f7f7 - Text on dark backgrounds
 } as const;
 
 /**
@@ -133,7 +133,7 @@ export const componentColors = {
   buttonPrimaryActive: primitiveColors['green-07'],   // #6baa32
   buttonPrimaryText: textColors.primary,              // #0f1709
 
-  buttonSecondary: neutralColors.white,               // #ffffff
+  buttonSecondary: neutralColors.primaryWhite,        // #ffffff
   buttonSecondaryBorder: primitiveColors['grey-05'],  // #bfbfbf
   buttonSecondaryHover: primitiveColors['grey-03'],   // #f0f0f0
   buttonSecondaryActive: primitiveColors['grey-04'],  // #e6e6e6
@@ -145,7 +145,7 @@ export const componentColors = {
   inputBorder: primitiveColors['grey-05'],            // #bfbfbf
   inputBorderFocus: primitiveColors['green-05'],      // #a9e079
   inputBorderError: stateColors.error,                // #da5050
-  inputBackground: neutralColors.white,               // #ffffff
+  inputBackground: neutralColors.primaryWhite,        // #ffffff
   inputDisabled: primitiveColors['grey-03'],          // #f0f0f0
 
   // Link colors

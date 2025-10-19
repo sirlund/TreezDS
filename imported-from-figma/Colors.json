@@ -13,12 +13,12 @@
       "$value": "{Green.green06}"
     }
   },
-  "B&W": {
-    "primaryBlack": {
+  "Base": {
+    "black": {
       "$type": "color",
       "$value": "#1a1a1a"
     },
-    "primaryWhite": {
+    "white": {
       "$type": "color",
       "$value": "#ffffff"
     }

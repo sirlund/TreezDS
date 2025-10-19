@@ -16,7 +16,7 @@
 
 .button:disabled {
   cursor: not-allowed;
-  color: #949494; /* text-disabled */
+  color: var(--color-text-disabled);
 }
 
 .button:not(:disabled):focus-visible {
@@ -38,65 +38,65 @@
 
 /* Primary (Filled) variant */
 .primary {
-  background-color: #a9e079; /* primary-main */
-  color: #0f1709; /* text-primary */
+  background-color: var(--color-button-primary);
+  color: var(--color-text-primary);
   border: 1px solid transparent;
 }
 
 .primary:not(:disabled):hover {
-  background-color: #8ccc52; /* primary-dark */
+  background-color: var(--color-button-primary-hover);
 }
 
 .primary:not(:disabled):active {
-  background-color: #8ccc52; /* primary-dark */
+  background-color: var(--color-button-primary-active);
 }
 
 .primary:disabled {
-  background-color: #e6e6e6; /* neutral-grey04 */
-  color: #949494; /* text-disabled */
+  background-color: var(--color-button-disabled);
+  color: var(--color-text-disabled);
 }
 
 /* Secondary (Outlined) variant */
 .secondary {
-  background-color: #ffffff; /* neutral-white */
-  color: #0f1709; /* text-primary */
-  border: 1px solid #bfbfbf; /* neutral-grey05 */
+  background-color: var(--color-button-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-button-secondary-border);
 }
 
 .secondary:not(:disabled):hover {
-  background-color: #f0f0f0; /* neutral-grey03 */
-  border-color: #1a1a1a; /* neutral-black */
+  background-color: var(--color-button-secondary-hover);
+  border-color: var(--color-neutral-primary-black);
 }
 
 .secondary:not(:disabled):active {
-  background-color: #e6e6e6; /* neutral-grey04 */
-  border-color: #1a1a1a; /* neutral-black */
+  background-color: var(--color-button-secondary-active);
+  border-color: var(--color-neutral-primary-black);
 }
 
 .secondary:disabled {
-  background-color: #ffffff; /* neutral-white */
-  border-color: #e6e6e6; /* neutral-grey04 */
-  color: #949494; /* text-disabled */
+  background-color: var(--color-button-secondary);
+  border-color: var(--color-button-disabled);
+  color: var(--color-text-disabled);
 }
 
 /* Tertiary (Text) variant */
 .tertiary {
   background-color: transparent;
-  color: #0f1709; /* text-primary */
+  color: var(--color-text-primary);
   border: none;
 }
 
 .tertiary:not(:disabled):hover {
-  background-color: #f0f0f0; /* neutral-grey03 */
+  background-color: var(--color-button-secondary-hover);
 }
 
 .tertiary:not(:disabled):active {
-  background-color: #e6e6e6; /* neutral-grey04 */
+  background-color: var(--color-button-secondary-active);
 }
 
 .tertiary:disabled {
   background-color: transparent;
-  color: #949494; /* text-disabled */
+  color: var(--color-text-disabled);
 }
 
 /* Size variants - from Figma exact measurements */

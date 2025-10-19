@@ -22,8 +22,8 @@
   --color-brand-midrib: var(--primitive-green-04);         /* #dbf5b3 */
 
   /* Neutral Colors */
-  --color-neutral-black: #1a1a1a;
-  --color-neutral-white: #ffffff;
+  --color-neutral-primary-black: var(--primitive-base-black); /* #1a1a1a */
+  --color-neutral-primary-white: var(--primitive-base-white); /* #ffffff */
   --color-neutral-grey-01: var(--primitive-grey-01);       /* #f7f7f7 */
   --color-neutral-grey-02: var(--primitive-grey-02);       /* #f5f5f5 */
   --color-neutral-grey-03: var(--primitive-grey-03);       /* #f0f0f0 */
@@ -36,11 +36,11 @@
   --color-neutral-grey-10: var(--primitive-grey-10);       /* #262626 */
 
   /* Text Colors */
-  --color-text-primary: #0f1709;
+  --color-text-primary: var(--primitive-base-black);       /* #1a1a1a */
   --color-text-secondary: var(--primitive-grey-08);        /* #595959 */
-  --color-text-tertiary: #7a7a7a;
-  --color-text-disabled: #949494;
-  --color-text-inverse: #fafafa;
+  --color-text-tertiary: var(--primitive-grey-07);         /* #737373 */
+  --color-text-disabled: var(--primitive-grey-06);         /* #8c8c8c */
+  --color-text-inverse: var(--primitive-grey-01);          /* #f7f7f7 */
 
   /* State Colors */
   --color-state-success: #309f56;
@@ -90,7 +90,7 @@
   --color-button-primary-active: var(--primitive-green-07); /* #6baa32 */
   --color-button-primary-text: var(--color-text-primary);  /* #0f1709 */
 
-  --color-button-secondary: var(--color-neutral-white);    /* #ffffff */
+  --color-button-secondary: var(--color-neutral-primary-white); /* #ffffff */
   --color-button-secondary-border: var(--primitive-grey-05); /* #bfbfbf */
   --color-button-secondary-hover: var(--primitive-grey-03); /* #f0f0f0 */
   --color-button-secondary-active: var(--primitive-grey-04); /* #e6e6e6 */
@@ -102,7 +102,7 @@
   --color-input-border: var(--primitive-grey-05);          /* #bfbfbf */
   --color-input-border-focus: var(--primitive-green-05);   /* #a9e079 */
   --color-input-border-error: var(--color-state-error);    /* #da5050 */
-  --color-input-background: var(--color-neutral-white);    /* #ffffff */
+  --color-input-background: var(--color-neutral-primary-white); /* #ffffff */
   --color-input-disabled: var(--primitive-grey-03);        /* #f0f0f0 */
 
   /* Component Colors - Link */

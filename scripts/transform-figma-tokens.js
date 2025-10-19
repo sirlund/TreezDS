@@ -130,7 +130,7 @@ function transformColors() {
   const colorsData = JSON.parse(fs.readFileSync(colorsPath, 'utf-8'));
 
   // Only process primitive color groups (pure scales without semantic meaning)
-  const PRIMITIVE_COLOR_GROUPS = ['Green', 'Greyscale', 'Secondary'];
+  const PRIMITIVE_COLOR_GROUPS = ['Green', 'Greyscale', 'Secondary', 'Base'];
   const primitiveData = {};
 
   for (const group of PRIMITIVE_COLOR_GROUPS) {

@@ -43,6 +43,8 @@ export const primitiveColors = {
   'yellow-00': '#fdf8e5', // yellow/00
   'yellow-01': '#fbf1cf', // yellow/01
   'yellow-02': '#fde28b', // yellow/02
+  'base-black': '#1a1a1a', // base/black
+  'base-white': '#ffffff', // base/white
 } as const;
 
 export type PrimitiveColorToken = keyof typeof primitiveColors;
