@@ -6,9 +6,9 @@
 
 :root {
   /* Font Families */
-  /* Note: Circular Std is a commercial font, falls back to Inter */
-  --font-family-primary: Roboto;
-  --font-family-secondary: Circular Std;
+  /* Note: Font stacks with fallbacks are defined in src/styles/fonts.css */
+  --font-family-primary: var(--font-family-roboto);
+  --font-family-secondary: var(--font-family-circular);
 
   /* Font Sizes */
   --font-size-10: 10px;

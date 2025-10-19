@@ -1,4 +1,12 @@
+/* ============================================
+   Typography Component
+   Applies Figma design system text styles
+   ============================================ */
+
 .typography {
+  /* Reset default spacing */
   margin: 0;
   padding: 0;
+
+  /* Typography styles applied via inline styles from design tokens */
 }

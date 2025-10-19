@@ -1,29 +1,40 @@
-/* Base button styles from Figma Button v2 (beta) component */
+/* ============================================
+   Base Button Styles
+   From Figma Button v2 (beta) component
+   ============================================ */
+
 .button {
+  /* Layout */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-button-gap);
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-family-circular);
-  font-weight: 500;
-  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+
+  /* Typography */
+  font-family: var(--typography-label-large-font-family);
+  font-weight: var(--typography-label-large-bold-font-weight);
   text-decoration: none;
   white-space: nowrap;
-  box-sizing: border-box;
+
+  /* Appearance */
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  /* States */
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--color-text-disabled);
+  }
+
+  &:not(:disabled):focus-visible {
+    outline: 2px solid var(--primitive-green-10);
+    outline-offset: 2px;
+  }
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  color: var(--color-text-disabled);
-}
-
-.button:not(:disabled):focus-visible {
-  outline: 2px solid #1a4007; /* accent-green10 */
-  outline-offset: 2px;
-}
-
+/* Button Content Elements */
 .icon {
   display: inline-flex;
   align-items: center;
@@ -36,113 +47,124 @@
   align-items: center;
 }
 
-/* Primary (Filled) variant */
+/* ============================================
+   Variant Styles
+   ============================================ */
+
+/* Primary (Filled) - Brand color background */
 .primary {
   background-color: var(--color-button-primary);
   color: var(--color-text-primary);
   border: 1px solid transparent;
+
+  &:not(:disabled):hover {
+    background-color: var(--color-button-primary-hover);
+  }
+
+  &:not(:disabled):active {
+    background-color: var(--color-button-primary-active);
+  }
+
+  &:disabled {
+    background-color: var(--color-button-disabled);
+    color: var(--color-text-disabled);
+  }
 }
 
-.primary:not(:disabled):hover {
-  background-color: var(--color-button-primary-hover);
-}
-
-.primary:not(:disabled):active {
-  background-color: var(--color-button-primary-active);
-}
-
-.primary:disabled {
-  background-color: var(--color-button-disabled);
-  color: var(--color-text-disabled);
-}
-
-/* Secondary (Outlined) variant */
+/* Secondary (Outlined) - Border with transparent background */
 .secondary {
   background-color: var(--color-button-secondary);
   color: var(--color-text-primary);
   border: 1px solid var(--color-button-secondary-border);
+
+  &:not(:disabled):hover {
+    background-color: var(--color-button-secondary-hover);
+    border-color: var(--color-neutral-primary-black);
+  }
+
+  &:not(:disabled):active {
+    background-color: var(--color-button-secondary-active);
+    border-color: var(--color-neutral-primary-black);
+  }
+
+  &:disabled {
+    background-color: var(--color-button-secondary);
+    border-color: var(--color-button-disabled);
+    color: var(--color-text-disabled);
+  }
 }
 
-.secondary:not(:disabled):hover {
-  background-color: var(--color-button-secondary-hover);
-  border-color: var(--color-neutral-primary-black);
-}
-
-.secondary:not(:disabled):active {
-  background-color: var(--color-button-secondary-active);
-  border-color: var(--color-neutral-primary-black);
-}
-
-.secondary:disabled {
-  background-color: var(--color-button-secondary);
-  border-color: var(--color-button-disabled);
-  color: var(--color-text-disabled);
-}
-
-/* Tertiary (Text) variant */
+/* Tertiary (Text) - No background or border */
 .tertiary {
   background-color: transparent;
   color: var(--color-text-primary);
   border: none;
+
+  &:not(:disabled):hover {
+    background-color: var(--color-button-secondary-hover);
+  }
+
+  &:not(:disabled):active {
+    background-color: var(--color-button-secondary-active);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: var(--color-text-disabled);
+  }
 }
 
-.tertiary:not(:disabled):hover {
-  background-color: var(--color-button-secondary-hover);
-}
+/* ============================================
+   Size Variants
+   From Figma exact measurements
+   ============================================ */
 
-.tertiary:not(:disabled):active {
-  background-color: var(--color-button-secondary-active);
-}
-
-.tertiary:disabled {
-  background-color: transparent;
-  color: var(--color-text-disabled);
-}
-
-/* Size variants - from Figma exact measurements */
-/* Small: 32px height */
+/* Small - 32px height */
 .small {
   height: 32px;
   padding: var(--spacing-button-small-vertical) var(--spacing-button-small-horizontal);
   border-radius: var(--radius-button-small);
-  font-size: 12px; /* labelSmallStrong */
-  line-height: 16px;
-  font-weight: 500;
+  font-size: var(--typography-label-small-bold-font-size);
+  line-height: var(--typography-label-small-bold-line-height);
+  font-weight: var(--typography-label-small-bold-font-weight);
+
+  &.tertiary {
+    padding: var(--spacing-button-small-vertical) var(--spacing-button-small-tertiary);
+  }
 }
 
-.small.tertiary {
-  padding: var(--spacing-button-small-vertical) var(--spacing-button-small-tertiary);
-}
-
-/* Medium: 40px height (default) */
+/* Medium - 40px height (default) */
 .medium {
   height: 40px;
   padding: var(--spacing-button-medium-vertical) var(--spacing-button-medium-horizontal);
   border-radius: var(--radius-button-medium);
-  font-size: 15px; /* labelLargeStrong */
-  line-height: 24px;
-  font-weight: 500;
+  font-size: var(--typography-label-large-bold-font-size);
+  line-height: var(--typography-label-large-bold-line-height);
+  font-weight: var(--typography-label-large-bold-font-weight);
+
+  &.tertiary {
+    padding: var(--spacing-button-medium-vertical) var(--spacing-button-medium-tertiary);
+  }
 }
 
-.medium.tertiary {
-  padding: var(--spacing-button-medium-vertical) var(--spacing-button-medium-tertiary);
-}
-
-/* Large: 52px height */
+/* Large - 52px height */
 .large {
   height: 52px;
   padding: var(--spacing-button-large-vertical) var(--spacing-button-large-horizontal);
   border-radius: var(--radius-button-large);
-  font-size: 15px; /* labelLargeStrong */
-  line-height: 24px;
-  font-weight: 500;
+  font-size: var(--typography-label-large-bold-font-size);
+  line-height: var(--typography-label-large-bold-line-height);
+  font-weight: var(--typography-label-large-bold-font-weight);
+
+  &.tertiary {
+    padding: var(--spacing-button-large-vertical) var(--spacing-button-large-tertiary);
+  }
 }
 
-.large.tertiary {
-  padding: var(--spacing-button-large-vertical) var(--spacing-button-large-tertiary);
-}
+/* ============================================
+   Layout Modifiers
+   ============================================ */
 
-/* Full width variant */
 .fullWidth {
   width: 100%;
 }

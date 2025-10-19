@@ -1,7 +1,13 @@
+/* Import fonts first */
+@import './styles/fonts.css';
+
 /* Import design tokens */
+@import './design-tokens/typography/primitives.css';
+@import './design-tokens/typography/semantic.css';
 @import './design-tokens/semantic-colors.css';
 @import './design-tokens/semantic-radius.css';
 @import './design-tokens/semantic-spacing.css';
+@import './design-tokens/semantic-sizes.css';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

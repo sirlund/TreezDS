@@ -1,0 +1,36 @@
+/**
+ * Semantic Size Tokens - CSS Variables
+ * Component-level size tokens
+ *
+ * Source: src/design-tokens/semantic-sizes.ts
+ * Primitives: src/figma-tokens/spacing/spacing.ts
+ *
+ * IMPORTANT: All values MUST reference --primitive-* variables - NO hardcoded values!
+ */
+
+/* Import primitive size tokens */
+@import '../figma-tokens/spacing/spacing.css';
+
+:root {
+  /* Icon Sizes */
+  --size-icon-xs: var(--primitive-size-x-small);    /* 12px */
+  --size-icon-s: var(--primitive-size-small);       /* 18px */
+  --size-icon-m: var(--primitive-size-medium);      /* 20px */
+  --size-icon-l: var(--primitive-size-large);       /* 24px */
+  --size-icon-xl: var(--primitive-size-2x-large);   /* 48px */
+
+  /* Avatar Sizes */
+  --size-avatar-xs: var(--primitive-size-large);    /* 24px */
+  --size-avatar-sm: var(--primitive-size-x-large);  /* 32px */
+  --size-avatar-md: var(--primitive-size-2x-large); /* 48px */
+  --size-avatar-lg: var(--primitive-size-3x-large); /* 64px */
+
+  /* General Size Scale */
+  --size-xs: var(--primitive-size-x-small);         /* 12px */
+  --size-sm: var(--primitive-size-small);           /* 18px */
+  --size-md: var(--primitive-size-medium);          /* 20px */
+  --size-lg: var(--primitive-size-large);           /* 24px */
+  --size-xl: var(--primitive-size-x-large);         /* 32px */
+  --size-2xl: var(--primitive-size-2x-large);       /* 48px */
+  --size-3xl: var(--primitive-size-3x-large);       /* 64px */
+}
