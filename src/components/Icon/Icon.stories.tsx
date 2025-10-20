@@ -4,7 +4,7 @@ import { materialIconNames } from './materialIconMap';
 import { customIconNames } from './customIconData';
 
 const meta: Meta<typeof Icon> = {
-  title: 'Components/Icon',
+  title: 'Design System/Particles/Icon',
   component: Icon,
   parameters: {
     layout: 'centered',
