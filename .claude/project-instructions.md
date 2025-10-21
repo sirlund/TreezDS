@@ -198,29 +198,82 @@ When creating/updating components:
    - Add to `src/components/index.ts`
    - Verify in Storybook
 
-### 🎨 Design Token Usage
+### 🎨 Design Token Architecture
+
+TreezDS uses a **3-layer token system** (inspired by GitLab, Carbon, Atlassian):
+
+#### 1. Primitive Tokens (`src/figma-tokens/`)
+- **AUTO-GENERATED** from Figma JSON exports via `npm run tokens:transform`
+- Pure values with NO semantic meaning
+- Examples: `green-05` (#a9e079), `grey-08` (#595959), `space-medium` (16px)
+- **NEVER edit manually** - always regenerate from Figma
+- CSS prefix: `--primitive-*`
+
+#### 2. Semantic Tokens (`src/design-tokens/`)
+- **MANUALLY CURATED** design decisions
+- MUST reference primitive tokens (NO hardcoded values allowed)
+- Give meaning to primitives
+- Examples: `color-button-primary`, `spacing-button-gap`, `typo-h1-size`
+- CSS prefix: `--color-*`, `--spacing-*`, `--typo-*`, etc.
+
+#### 3. Component Tokens (in component CSS)
+- Component-specific applications
+- Reference semantic tokens via CSS variables
+- Example: `.button { background: var(--color-button-primary); }`
+
+#### Token Workflow
+```
+Figma Design
+    ↓
+Export to JSON (plugin) → imported-from-figma/*.json
+    ↓
+npm run tokens:transform → Auto-generate primitives
+    ↓
+src/figma-tokens/*.ts + *.css (PRIMITIVES)
+    ↓
+Manually curate → src/design-tokens/*.ts + *.css (SEMANTICS)
+    ↓
+Components consume via CSS variables
+```
+
+#### Usage Examples
 
 ```typescript
 // In TypeScript/TSX
-import { colors, buttonColors } from '@/design-tokens';
+import { primitiveColors } from '@/figma-tokens';
+import { brandColors, componentColors } from '@/design-tokens';
 
-const myColor = colors.brand.primary;      // '#a9e079'
-const btnBg = buttonColors.primaryBg;      // '#a9e079'
+const primitive = primitiveColors['green-05'];        // '#a9e079' (direct)
+const semantic = brandColors.primary;                  // '#a9e079' (via primitive ref)
+const component = componentColors.buttonPrimary;       // '#a9e079' (via semantic ref)
 ```
 
 ```css
 /* In CSS/CSS Modules */
-@import '@/design-tokens/semantic-colors.css';
-
 .button {
-  background: var(--color-button-primary-bg);
-  color: var(--color-button-primary-text);
+  /* ✅ Correct: Use semantic tokens */
+  background: var(--color-button-primary);
+  padding: var(--spacing-button-padding);
+  border-radius: var(--radius-button);
+  font-size: var(--typo-label-large-size);
+
+  /* ❌ Wrong: Don't use primitives directly */
+  /* background: var(--primitive-green-05); */
+
+  /* ❌ Wrong: Don't hardcode values */
+  /* background: #a9e079; */
 }
 
 .button:hover {
   background: var(--color-button-primary-hover);
 }
 ```
+
+#### Critical Token Rules
+
+1. **Primitives**: Auto-generated only, never edit manually, never use directly in components
+2. **Semantics**: Must reference primitives (TS imports or CSS var()), no hardcoded hex/px
+3. **Components**: Use CSS variables from semantic tokens only
 
 ### 📝 Code Quality Standards
 
