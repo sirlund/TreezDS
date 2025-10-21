@@ -4,7 +4,38 @@ Project history and major changes for TreezDS Design System.
 
 ---
 
-## [Current] 2025-10-19
+## [Current] 2025-10-21
+
+### AI Agent System - Design Tokens Agent v2.0
+- **Universal token transformation**: Agent now works with ANY design system, not just TreezDS
+- **Config-driven architecture**: Project behavior defined in `tokens.config.js` (source of truth)
+- **Heuristic classification**: Smart token categorization as primitive vs semantic based on patterns and keywords
+- **Naming Convention Manifesto**: Clear distinction between Private API (primitives - verbose, namespaced) and Public API (semantics - concise, intent-based)
+- **Three semantic modes**:
+  - Manual curation (TreezDS uses this - full developer control)
+  - Assisted suggestions (agent suggests, developer decides)
+  - Auto-generation (future - requires Figma to export semantics)
+- **Semantic suggestion system**: When enabled, agent analyzes Figma exports and generates intelligent suggestions
+  - Confidence levels: HIGH (exact match), MEDIUM (approximate), LOW (needs review)
+  - Suggests TypeScript and CSS mappings to primitives
+  - Reports saved to `.claude/reports/semantic-suggestions.md`
+  - Developer can accept, reject, or modify suggestions
+- **Source of Truth strategy documented**:
+  - Primitives: Figma SSoT (never edit in code, always regenerate)
+  - Semantics: Code SSoT (manually curated mappings to primitives)
+  - Components: Code SSoT (use semantic tokens only)
+- **Agent infrastructure**:
+  - `.claude/agents/design-tokens-agent.md` - Comprehensive agent instructions (v2.0)
+  - `.claude/commands/` - Slash commands for common workflows
+  - `.claude/reports/` - Auto-generated audit and suggestion reports
+  - `tokens.config.js` - Project-specific configuration
+  - `types/tokens-config.d.ts` - TypeScript types for config validation
+- **Quality auditing**: Automated checks for hardcoded values, broken references, naming conventions
+- **Industry best practices**: Patterns from GitLab, Carbon, and Atlassian design systems
+- **Token transformation workflow**: 5-phase process (Load Config → Classify → Transform → Generate → Validate)
+- **Classification report**: Detailed breakdown of primitives generated, semantics detected, and uncertain classifications
+
+## [Previous] 2025-10-19
 
 ### Typography Token System Refactor
 - **Corrected token hierarchy**: Moved primitive typography to `figma-tokens/` where all Figma-sourced primitives belong
