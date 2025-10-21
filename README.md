@@ -22,7 +22,7 @@ A React component library built from Figma design system tokens, featuring Story
 
 ### Font Note
 
-The design system uses **Roboto** (via Google Fonts) and **Circular Std**. Since Circular Std is a commercial font, the project currently uses **Inter** as a fallback. See [docs/development/FONTS.md](./docs/development/FONTS.md) for instructions on adding the actual Circular Std font files.
+The design system uses **Roboto** (via Google Fonts) and **Circular Std**. Since Circular Std is a commercial font, the project currently uses **Inter** as a fallback. See [`docs/guides/fonts.md`](./docs/guides/fonts.md) for instructions on adding the actual Circular Std font files.
 
 ### Installation
 
@@ -56,41 +56,49 @@ npm run build-storybook
 
 ## Design Tokens
 
-Design tokens are automatically extracted from the Figma design system and converted to:
+The token system follows a **two-layer architecture** with clear separation:
 
-- **CSS Variables** (`src/design-tokens/tokens.css`)
-- **TypeScript Tokens** (`src/design-tokens/tokens.ts`)
-- **JSON** (`src/design-tokens/tokens.json`)
+- **Primitive Tokens** (`src/figma-tokens/`) - Raw, auto-generated values from Figma (colors, spacing, radius, typography scales)
+- **Semantic Tokens** (`src/design-tokens/`) - Manually curated, context-aware tokens that reference primitives
+
+This architecture ensures:
+- ✅ **Scalability**: Easy theming (light/dark mode, brand variants)
+- ✅ **Maintainability**: Single source of truth for raw values
+- ✅ **Type Safety**: Full TypeScript support with auto-generated types
+
+### AI-Powered Token Transformation
+
+An intelligent AI agent ([`.claude/agents/design-tokens-agent.md`](./.claude/agents/design-tokens-agent.md)) automatically transforms Figma exports:
+
+**How it works:**
+1. **Classifies** tokens as primitive or semantic using heuristic rules
+2. **Transforms** names to follow naming conventions (namespaced primitives, concise semantics)
+3. **Generates** files with proper references (semantics → primitives, no hardcoded values)
+4. **Audits** for violations (hardcoded values, broken references, naming issues)
+
+**Configuration:** Behavior is driven by [`tokens.config.js`](./tokens.config.js), making it adaptable to any design system.
+
+**Learn more:** See [`docs/guides/tokens.md`](./docs/guides/tokens.md) for architecture details and [`.claude/agents/design-tokens-agent.md`](./.claude/agents/design-tokens-agent.md) for the complete agent workflow.
 
 ### Updating Design Tokens
 
-**With Figma MCP** (Recommended):
 ```bash
-# Interactive extraction workflow
-npm run mcp:extract
+# Generate tokens from Figma JSON exports
+npm run tokens:generate
 
-# Extract only colors
-npm run mcp:colors
+# Watch for icon changes and auto-update
+npm run watch:icons
 
-# Generate all tokens
-npm run mcp:tokens
+# Update existing icon components
+npm run update:icons
 ```
-
-See [scripts/mcp/README.md](./scripts/mcp/README.md) for complete workflow documentation.
-
-**Legacy Scripts** (⚠️ Deprecated):
-```bash
-# These scripts will be removed - use MCP instead
-npm run tokens:extract   # ⚠️ Deprecated
-npm run tokens:generate  # ⚠️ Deprecated
-npm run tokens:update    # ⚠️ Deprecated
-```
-
-See [CHANGELOG.md](./docs/CHANGELOG.md) for migration history.
 
 ### Available Token Categories
 
-- **Typography**: 25 text styles (Headings, Body, Labels, Links)
+- **Colors**: Primitive scales (green, blue, neutral) + semantic roles (brand, success, error)
+- **Spacing**: 4px to 96px scale for consistent layout
+- **Radius**: Border radius tokens from 0px to full rounded
+- **Typography**: 25 text styles (Headings, Body, Labels, Links) with primitive font properties
 - **Shadows**: 5 shadow variants (Extra Small to Extra Large)
 
 ## Components
@@ -162,22 +170,19 @@ TreezDS/
 
 ## Figma Integration
 
-This project uses the Figma REST API to extract design system data. To update from Figma:
+This project uses Figma JSON exports to generate design tokens through an AI-powered transformation pipeline:
 
-1. Set your Figma access token:
-   ```bash
-   export FIGMA_ACCESS_TOKEN="your-token-here"
-   ```
+1. **Export from Figma**: Use a Figma plugin to export tokens as JSON files to `imported-from-figma/`
+2. **Run Agent**: Execute `npm run tokens:generate` to process JSON files
+3. **Intelligent Processing**: 
+   - Agent classifies tokens (primitive vs semantic) using heuristic rules
+   - Cleans and standardizes names per naming conventions
+   - Creates proper references (semantics always reference primitives)
+   - Generates TypeScript, CSS, and JSON outputs
 
-2. Run the update command:
-   ```bash
-   npm run tokens:update
-   ```
+**Result**: Clean, hierarchical token system ready for theming and scaling.
 
-The scripts will:
-- Fetch all text and effect styles from Figma
-- Convert them to CSS variables and TypeScript constants
-- Generate type definitions for type-safe component development
+See [`.claude/agents/design-tokens-agent.md`](./.claude/agents/design-tokens-agent.md) for the complete transformation workflow.
 
 ## Scripts Reference
 
@@ -187,9 +192,9 @@ The scripts will:
 | `npm run build` | Build the component library |
 | `npm run storybook` | Start Storybook development server |
 | `npm run build-storybook` | Build static Storybook |
-| `npm run tokens:extract` | Extract design data from Figma |
-| `npm run tokens:generate` | Generate tokens from extracted data |
-| `npm run tokens:update` | Extract and generate tokens (both) |
+| `npm run tokens:generate` | Transform Figma JSON exports into token files |
+| `npm run watch:icons` | Watch for icon changes and auto-update |
+| `npm run update:icons` | Update existing icon components from SVG files |
 
 ## Tech Stack
 
@@ -198,7 +203,7 @@ The scripts will:
 - **Vite** - Build tool
 - **Storybook 9** - Component development and documentation
 - **CSS Modules** - Scoped styling
-- **Figma MCP** - Design token extraction
+- **AI Agent** - Intelligent token transformation and classification
 
 ## Documentation
 
